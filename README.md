@@ -8,4 +8,4 @@ Authors: Denis Kirienko, Vitaly Pavlenko, Alexander Garkusha
 License
 ---
 
-The content is licensed under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/): any non-profit use is allowed as long as you mention the link https://snakify.org/, any commercial use requires a permit from [**@vpavlenko**](https://github.com/vpavlenko/)
+This curriculum is licensed under the Creative Commons Attribution Non-Commercial Share-alike License (http://creativecommons.org/licenses/by-nc-sa/4.0/), which means you may share and adapt this material for non-commercial uses as long as you attribute its original source, and retain these same licensing terms.
