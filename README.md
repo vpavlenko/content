@@ -8,4 +8,4 @@ Authors: Denis Kirienko, Vitaly Pavlenko, Alexander Garkusha
 License
 ---
 
-This curriculum is licensed under the Creative Commons Attribution Non-Commercial Share-alike License (http://creativecommons.org/licenses/by-nc-sa/4.0/), which means you may share and adapt this material for non-commercial uses as long as you attribute its original source, and retain these same licensing terms.
+This content is licensed under the Creative Commons Attribution Non-Commercial Share-alike License (http://creativecommons.org/licenses/by-nc-sa/4.0/), which means you may share and adapt this material for non-commercial uses as long as you attribute its original source, and retain these same licensing terms.
