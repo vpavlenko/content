@@ -1,0 +1,33 @@
+Name:
+The intersection of sets
+
+Statement:
+<p>Given two lists of numbers.
+Find all the numbers that occur in both the first and the second list and print them in ascending order.</p>
+
+<p>Even this task can be solved in one line of code.</p>
+
+Test:
+1 3 2
+4 3 2
+
+Answer:
+2 3
+
+
+Test:
+1 2 6 4 5 7
+10 2 3 4 8
+
+Answer:
+2 4
+
+
+Test:
+82 54 91 100 70 33 88 14 52 48 56 20 63 16 22 23 30 8 84 75 45
+10 44 77 90 43 75 25 24 5 21 71 70 83 68 18 92 81 57 27 67 48 6
+
+
+Answer:
+48 70 75
+

@@ -1,0 +1,39 @@
+Name:
+The number of equal numbers
+
+Statement:
+<p>Given two lists of numbers.
+Count how many numbers occur in both of them.</p>
+
+<p>This task can be solved in one line of code.</p>
+
+Test:
+1 3 2
+4 3 2
+
+Answer:
+2
+
+
+Test:
+1 2 6 4 5 7
+10 2 3 4 8
+
+Answer:
+2
+
+
+Test:
+1 7 3 8 10 2 5
+6 5 2 8 4 3 7
+
+Answer:
+5
+
+
+Test:
+75 8 65 66 3 30 38 45 82 93 89 81 68 20 10 99 84 71 59 36 54 50 14 86 91 16 96 37 80 79 69 52 64 88 32 28 53 2 55 95 21 62 31 5 85 22 39 78 7 83 43 18 48 33 97 11 19 100 41 12 29 58 74
+26 94 17 71 84 75 5 29 21 38 2 35 6 78 89 53 58 86 93 63 36 74 27 72 76 49 52 64 65 100 28 69 8 1 48 39 50 87 73 90 70 13 11 62 66 80 37 15 14 54 67 34 59 44 43 20 57 82 45 95 92 56 47 51 33 10 98
+
+Answer:
+41

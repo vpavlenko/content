@@ -1,0 +1,57 @@
+Name:
+Remove the fragment
+
+Statement:
+<p>Given a string in which the letter <code>h</code> occurs at least twice.
+Remove from that string the first and the last occurrence of the letter <code>h</code>,
+as well as all the characters between them.
+
+Test:
+In the hole in the ground there lived a hobbit
+
+Answer:
+In tobbit
+
+
+Test:
+qwertyhasdfghzxcvb
+
+Answer:
+qwertyzxcvb
+
+
+Test:
+asdfghhzxcvb
+
+Answer:
+asdfgzxcvb
+
+
+Test:
+ahahahahaha
+
+Answer:
+aa
+
+
+Test:
+haaaaaaaaaaaaaaaaaah
+
+Answer:
+
+
+
+Test:
+hh
+
+Answer:
+
+
+
+Test:
+ahaha
+
+Answer:
+aa
+
+

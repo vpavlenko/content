@@ -1,0 +1,256 @@
+{% section "The number of vertices in a given connected component" %}
+
+<p>On the previous level we discussed three ways to store a graph in memory. This time, we will study algorithms on graphs. Let's settle that from now on, we only consider undirected graphs without loops and without multiple edges. 
+
+<p>Consider the following problem: given a graph with coloured vertex <code>s</code>, find all the vertices belonging to the same connected component. In other words, this algorithm has somehow to figure out what vertices are reachable, starting in vertex <code>s</code>. We assume the graph is given by its adjacency list:
+
+{% noprogram %}
+#
+#   2--0--6--7   1--9   5
+#   |  |  |
+#   3--4  8 
+#
+n = 10  # the number of vertices
+adj_list = [[2, 4, 6],
+            [9],
+            [0, 3],
+            [2, 4],
+            [0, 3],
+            [],
+            [0, 7, 8],
+            [6],
+            [6],
+            [1]]
+s = 0
+{% endnoprogram %}
+
+<p>Our algorithm will be recursive one; we want to describe the idea of it. Look at the vertex <code>s</code>, then look at all of its neighbors. Visit each of them. When we visit a neighbor, have a look at a neighbor, and so on. When we visit a vertex, we call <code>dfs(v)</code>, passing <code>v</code> &mdash; the number of this vertex &mdash; as a parameter. The sketch of the code is as follows:
+
+{% noprogram %}
+def dfs(v):  # dfs is an acronym for "depth-first search"
+    for w in adj_list[v]:  # variable w runs over all the neighbors of v
+        dfs(w)
+
+dfs(s)
+{% endnoprogram %}
+
+<p>This code doesn't work; let's think of what happens and why. First, the function <code>dfs(0)</code> is called. Inside of the function the variable <code>w</code> becomes equal to 2, and <code>dfs(2)</code> is called. Looking at neighbors of vertex 2, the code sees the neighbor 0 and calls <code>dfs(0)</code> again. We're in the trap of infinite recursion. Functions <code>dfs(0)</code> and <code>dfs(2)</code> will continue calling each other, creating new frames in functions' stack calls, till the interpretator's limit on recursion depth is exceeded. *a ton of scary words*
+
+<p>Now, how to fix this issue? We have to mark the vertices where we've already been to; and, of course, we shouldn't visit those that are already marked.
+
+<p>Let's bring up an array <code>visited</code> of size <code>n</code>, with 1 element for each vertex. Element <code>visited[v]</code> will be <code>False</code>, if the algorithm hadn't visited vertex <code>v</code> yet, and will be <code>True</code>, if it had. Stepping onto the vertex <code>v</code> for the first time, we change the value of <code>visited[v]</code> from <code>False</code> to <code>True</code>.
+
+{% program %}
+#
+#   2--0--6--7   1--9   5
+#   |  |  |
+#   3--4  8 
+#
+n = 10
+adj_list = [[2, 4, 6],
+            [9],
+            [0, 3],
+            [2, 4],
+            [0, 3],
+            [],
+            [0, 7, 8],
+            [6],
+            [6],
+            [1]]
+s = 0
+
+visited = [False] * n  # array "has the vertex been visited?"
+
+def dfs(v):
+    visited[v] = True
+    for w in adj_list[v]:
+        if visited[w] == False:  # has the current neighbor been visited?
+            dfs(w)
+
+dfs(s)
+{% endprogram %}
+
+<p>Now our code works. Using our visualizer, look in what order does <code>dfs()</code> visit the vertices. Also keep eye on the functions' calls stack. Note that the values of local variables <code>v</code>, appearing in calls stack, are exactly the vertices of path by which we have come from <code>s</code> to the current vertex. (We'll use this a bit later.) 
+
+<p>It is always a good idea to remember what problem we were solving. We wanted to count the number of vertices, reachable from <code>v</code>. But that vertices are exactly those who were visited by the function <code>dfs()</code>. In array <code>visited</code> those vertices have the value <code>True</code>. The answer can be obtained in no time:
+{% noprogram %}
+print(visited.count(True))
+{% endnoprogram %}
+
+{% smartsnippet %}
+One small remark on the programming style. The string
+{% noprogram %}
+if visited[w] == False:
+{% endnoprogram %}
+tells you are beginner in Python. A skilled Python developer would write
+{% noprogram %}
+if not visited[w]:
+{% endnoprogram %}
+Recall that <code>not</code> is logical <a href="https://en.wikipedia.org/wiki/Unary_operation">unary</a> operator working as follows:
+{% noprogram %}
+not True == False
+not False == True
+{% endnoprogram %}
+The operation <code>not</code> allows you to write a code which sounds naturally, which sounds like English language. 
+{% endsmartsnippet %}
+
+{% endsection %}
+
+{% section "Counting the number of connected components" %}
+Now think of another problem: the problem of counting the number of connected components in a graph. 
+
+It happens to be quite easy. Indeed, launch <code>dfs()</code> starting in vertex <code>0</code>. If all the vertices would become visited, i.e. if it would happen that all the elements of <code>visited</code> would be equal to <code>True</code>, it would imply there's only one connected component in the graph.
+
+<p>However, suppose this condition fails, and <code>visited[v] == False</code> for some vertices. Choose an arbitrary vertex from them and launch <code>dfs()</code> starting at it. Such depth-first search will reach all of the vertices of second connected component.
+
+<p>This should be performed until there are <code>False</code> values in <code>visited</code>. 
+
+{% noprogram %}
+visited = [False] * n
+for v in range(n):
+    if not visited[v]:
+        dfs(v)
+{% endnoprogram %}
+
+<p>It is easy to add the variable counting the number of connected components to this code. Do that, add such variable.
+
+<p>Now we want to estimate the total work time of program who counts the number of connected components. For that evaluation we use the <a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O notation</a>. We denote the number of vertices in the graph by <code>V</code> and the number of edges by <code>E</code>. 
+
+<p>The function <code>dfs()</code> is called once from each vertex. Thus, calling it, and performing time-constant actions inside (like changes in <code>visited[v]</code>), we do <code>O(V)</code> operations. Furthermore, looping by <code>w</code>, every neighbor of every vertex will be looked at only once. As an example, consider the edge (0, 2). Its existence means that, in time of <code>dfs(0)</code> execution the variable <code>w</code> in some moment becomes <code>2</code>. Similarly, when calling <code>dfs(2)</code> the variable <code>w</code> will become <code>0</code> only once. Thus, these operations take in total 2E = O(E) of time. There are no other actions in code, so the total <a href="https://en.wikipedia.org/wiki/Time_complexity">computational complexity</a> of the algorithm is O(V + E).
+{% endsection %}
+
+{% section "Paths between vertices" %}
+Think of the following question: &laquo;do the vertices <code>v</code> and <code>w</code> belong to the same connected component?&raquo; Suppose we want to have an algorithm to answer this question quickly. 
+
+To do this, it is a great idea to store the number of connected components for each vertex. We have to start with something, so let's introduce a variable who counts the number of connected components:
+
+{% noprogram %}
+num_components = 0
+visited = [False] * n
+for v in range(n):
+    if not visited[v]:
+        dfs(v)
+        num_components += 1
+{% endnoprogram %}
+
+<p>Now you can create array <code>component</code>, for each vertex tracking the number of its connected component. How does it work? Note that while we're visiting the vertices of the same connected component, the value of <code>num_components</code> remains unchanged. And when looking at vertices from the new connected component, this variable increases. Thus, the value of <code>num_components</code> at the moment we called <code>dfs(v)</code> should be treated as ID number of connected component for the vertex <code>v</code>. Let's store this value in the <code>component</code> array. Here's the final code:
+
+{% program %}
+#
+#   2--0--6--7   1--9   5
+#   |  |  |
+#   3--4  8 
+#
+n = 10
+adj_list = [[2, 4, 6],
+            [9],
+            [0, 3],
+            [2, 4],
+            [0, 3],
+            [],
+            [0, 7, 8],
+            [6],
+            [6],
+            [1]]
+
+visited = [False] * n
+component = [-1] * n  # for each vertex, keep the ID number of its component
+num_components = 0
+
+def dfs(v):
+    component[v] = num_components
+    visited[v] = True
+    for w in adj_list[v]:
+        if visited[w] == False:
+            dfs(w)
+
+visited = [False] * n
+for v in range(n):
+    if not visited[v]:
+        dfs(v)
+        num_components += 1
+{% endprogram %}
+
+<p>Now suppose we are given the numbers of two vertices <code>v</code> and <code>w</code>, and we're asked: is there a path between them? We just check if the values of <code>component[v]</code> and <code>component[w]</code> are equal. If they are, the vertices <code>v</code> and <code>w</code> belong to the same component, and a path exists. Otherwise, there's no path between them.
+
+<p>The problem we solved consists of two phases: the preparation phase (the pre-calculation phase) and the responding to requests phase (not represented in code). The total complexity is the sum of complexities of these tasks. In our case, the pre-calculation phase has complexity of O(V + E), and the respond time is O(1) (it doesn't depend on size of a graph).
+{% endsection %}
+
+{% section "Depth-first search on implicit graphs" %}
+<p>Until now we assumed that our graph is kept in memory as adjacency list, and that vertices are enumerated by 0, 1, 2 etc. In practice, graphs may be kept another ways, and vertices may have not numbers but names. Finally, graphs may be not kept in memory at all. Consider a maze drawn on chequered paper. Say, black cells mean the presence of space in maze, and white ones &mdash; the absence of space (the walls). 
+
+{% img "1534/11_dfs/Noisy_binary_image.png" 70 %}
+
+<p>Consider this maze as graph. The black cells (the space) will be vertices, and two cells are connected with an edge if and only if they have a side in common. Then every vertex is naturally denoted not by a single number, but with two numbers: the cell coordinates.
+
+<p>You can launch depth-first search on this graph, you can find paths between cells. In particular, with <code>dfs()</code> you can find an exit from maze. You don't have to build the graph explicitly, you don't have to construct adjacency list. The only thing required for depth-first search to work is, given a vertex, an algorithm of how to obtain a list of its neighbors.
+
+<p>Suppose we're in cell with coordinates (x, y). The neighbors are (x - 1, y), (x, y - 1), (x, y + 1) and (x + 1, y), if the resulting coordinates are non-negative.
+
+{% img "1534/11_dfs/N4-connectivity.svg.png" 70 %}
+
+<p>Here's the sketch of code allowing to iterate over all the neighbors of (x, y) elegantly. The <a href="{% url 'lesson_in_course' 'while' %}#2">multiple assignment</a> is used.
+
+{% noprogram %}
+def dfs(x, y):
+    for dx, dy in [[-1, 0], [0, -1], [0, 1], [1, 0]]:
+        dfs(x + dx, y + dy)
+{% endnoprogram %}
+
+{% endsection %}
+
+{% section "Finding paths to a vertex, finding loops" %}
+
+We already know how to check if there is a path between two vertices. Suppose for vertices <code>s</code> and <code>t</code> there is a path. Let's learn how to print it out.
+
+<p>Launch <code>dfs()</code> starting at vertex <code>s</code>. A remark: when we arrive to the vertex <code>t</code>, function stack call will contain the sequence of <code>dfs()</code> calls for all the vertices of the desired path. Hence, our path is somewhere in program's memory, but it is somewhere it's not easy to extract it from. And we want to get it easily; thus, it is our headache to store it.
+
+<p>For that, we create the global list <code>path</code>, in which the path from the vertex <code>s</code> to the current vertex is kept. When we enter a vertex, we put its ID to the end of <code>path</code>.
+
+{% noprogram %}
+path = []  # the list keeping the current path
+
+def dfs(v):
+    path.append(v)
+
+    # another actions
+
+    path.pop()  # deleting the last element of the list
+{% endnoprogram %}
+
+<p>We hope you'll readily finish this code and it will print out the desired path.
+
+{% endsection %}
+
+{% section "Bipartite graphs" %}
+<p>The last thing we want to talk about at this level are bipartite graphs. A graph is called bipartite (or a <em>bigraph</em>) if all of its vertices can be divided in two groups, such that edges connecting vertices belonging to the same group are prohibited. On the example below, groups <code>b</code> and <code>g</code> are such two groups:
+
+{% img "1534/11_dfs/15_1.gif" 50 %}
+
+<p>You can think of bigraphs as of graphs, which vertices are painted into two colors (with edges connecting the same colors prohibited). Here are some more examples of bigraphs:
+
+{% img "1534/11_dfs/BipartiteConnectedGraphs_851.gif" 50 %}
+
+<p>Some graphs can't be painted this way. The triangle graph is an easy example: there always will be the edge connecting vertices of the same color. You can draw the triangle graph and check it. Actually, one can prove the following theorem:
+
+{% theorem %}
+A graph is a bigraph if and only if it doesn't have cycles of odd length.
+{% endtheorem %}
+
+<p>We won't discuss the proof here; instead, let's learn to figure out if, given a graph, can it be colored the desired way or not.
+
+<p>We want to provide you only with hints for this problem. It is worth using the depth-first search, which should walk from vertex to vertex and paint them. You'll need the global array <code>color</code>, tracking the color of every painted vertex. At last, the current color is also worth remembering. Perhaps the best way to keep track of it is to pass the current color to the function <code>dfs()</code>; then function call will look like <code>dfs(v, curr_color)</code>. When calling the function for neighbor of current vertex, the color is changed to the opposite one.
+
+{% endsection %}
+
+
+{% section "Recursion depth restriction in Python" %}
+In Python, there's the artificial restriction on the number of nested recursive calls, by default equal to 1000 calls. If your program exceeds this limitation, it will be stopped with exception. You can use the <code>setrecursionlimit(max_depth)</code> function from module <code>sys</code> to change this default number.
+{% noprogram %}
+# add these strings to the beginning of a program
+from sys import setrecursionlimit
+setrecursionlimit(100000)  # the depth has become 100 000 calls
+{% endnoprogram %}
+<p>We recommend you to avoid thinking on the stack size in your task and make this limit a substantially big number (10<sup>6</sup> or 10<sup>9</sup>).
+
+{% endsection %}

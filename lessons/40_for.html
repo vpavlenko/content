@@ -1,0 +1,137 @@
+{% comment %}
+{% section "For loop" %}
+<p>In the previous lessons we dealt with sequential programs and conditions.
+Often the program needs to repeat some block several times. That's where the loops come in handy.
+There are <code>for</code> and <code>while</code> loop operators in Python, in this lesson we cover <code>for</code>.
+
+<p><code>for</code> loop iterates over any sequence.
+Let's see the simplest example of using for:
+{% program %}
+i = 1
+for color in 'red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet':
+    print('#', i, 'color of rainbow is', color)
+    i = i + 1
+{% endprogram %}
+
+<p>In this example the variable <code>color</code> iterates over the values <code>'red'</code>,
+<code>'orange'</code> etc, and for each value the underlying loop block is executed. Loop block contains two
+operators: call of the function <code>print()</code> that prints new data and assignment operator
+that increases the value of the variable <code>i</code> by one.
+ 
+<p>Loop variable can iterate over the objects of different types.
+In the next example the variable <code>i</code> is pointing to <code>int</code> object for the
+first three iterations and to <code>str</code> object for the last three iterations:
+{% program %}
+for i in 1, 2, 3, 'one', 'two', 'three':
+    print(i)
+{% endprogram %}
+
+In all these examples the sequence like <code>'red', 'orange', 'yellow'</code> is actually
+a compound Python object itself. It has a type <code>tuple</code> which we'll dig into more in the next lessons.
+{% endsection %}
+
+{% endcomment %}
+
+{% section "For loop with range" %}
+
+<p>In the previous lessons we dealt with sequential programs and conditions.
+Often the program needs to repeat some block several times. That's where the loops come in handy.
+There are <code>for</code> and <code>while</code> loop operators in Python, in this lesson we cover <code>for</code>.
+
+<p><code>for</code> loop iterates over any sequence. For instance, any string in Python is a sequence of
+its characters, so we can iterate over them using <code>for</code>:
+{% program %}
+for character in 'hello':
+    print(character)
+{% endprogram %}
+
+<p>Another use case for a for-loop is to iterate some integer variable in increasing or decreasing order.
+Such a sequence of integer can be created using the function <code>range(min_value, max_value)</code>:
+{% program %}
+for i in range(5, 8):
+    print(i, i ** 2)
+print('end of loop')
+# 5 25
+# 6 36
+# 7 49
+# end of loop
+{% endprogram %}
+
+<p>Function <code>range(min_value, max_value)</code> generates a sequence with numbers
+<code>min_value</code>, <code>min_value + 1</code>, ..., <code>max_value - 1</code>. The last number is not
+included.
+
+<p>There's a reduced form of range() - <code>range(max_value)</code>, in which case min_value is implicitly
+set to zero:
+{% program %}
+for i in range(3):
+    print(i)
+# 0
+# 1
+# 2
+{% endprogram %}
+
+<p>This way we can repeat some action several times:
+{% program %}
+for i in range(2 ** 2):
+    print('Hello, world!')
+{% endprogram %}
+
+<p>Same as with if-else, indentation is what specifies which instructions are controlled by <code>for</code> and which aren't.
+
+<p>Range() can define an empty sequence, like <code>range(-5)</code> or <code>range(7, 3)</code>. In this
+case the for-block won't be executed:
+{% program %}
+for i in range(-5):
+    print('Hello, world!')
+{% endprogram %}
+
+
+<p>Let's have more complex example and sum the integers from 1 to n inclusively.
+
+{% program %}
+result = 0
+n = 5
+for i in range(1, n + 1):
+    result += i
+    # this ^^ is the shorthand for
+    # result = result + i
+print(result)
+{% endprogram %}
+ 
+<p>Pay attention that maximum value in range() is <code>n + 1</code> to make <code>i</code>
+equal to n on the last step.
+ 
+<p>To iterate over a decreasing sequence, we can use an extended form of range() with three
+arguments - <code>range(start_value, end_value, step)</code>. When omitted, the step is implicitly
+equal to 1. However, can be any non-zero value. The loop always includes start_value and excludes end_value
+during iteration:
+{% program %}
+for i in range(10, 0, -2):
+    print(i)
+# 10
+# 8
+# 6
+# 4
+# 2
+{% endprogram %}
+ 
+{% endsection %}
+
+
+
+{% section "setting the function print()" %}
+By default, the function <code>print()</code> prints all its arguments separating them by a space and the puts
+a newline symbol after it. This behavior can be changed using keyword arguments <code>sep</code> (separator) and <code>end</code>.
+
+{% program %}
+print(1, 2, 3)
+print(4, 5, 6)
+print(1, 2, 3, sep=', ', end='. ')
+print(4, 5, 6, sep=', ', end='. ')
+print()
+print(1, 2, 3, sep='', end=' -- ')
+print(4, 5, 6, sep=' * ', end='.')
+{% endprogram %}
+
+{% endsection %}

@@ -1,0 +1,290 @@
+{% section "Code in your browser" %}
+
+<style type="text/css">
+    video {
+        padding-bottom: 70px;
+        width: 100%;
+        margin: 0 auto;
+        z-index: -2;
+    }
+
+    .snakify-alumni {
+        background-color: #eeeeee;
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .snakify-alumni-card {
+        display: inline-block;
+        background-color: #efe;
+        width: 300px;
+        min-height: 400px;
+        vertical-align: top;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .snakify-alumni-card:not(:last-of-type) {
+        margin-right: 40px;
+    }
+
+    .snakify-alumni-card-name {
+        font-size: 24px;
+        padding-top: 50px;
+    }
+
+    .snakify-alumni-card-location {
+        font-size: 14px;
+        padding-top: 15px;
+    }
+
+    .snakify-alumni-card img {
+        width: 150px;
+        padding-top: 30px;
+    }
+
+    .snakify-alumni-card-reference {
+        font-size: 14px;
+        padding: 30px 20px 30px 20px;
+    }
+
+    .snakify-facts {
+        margin-left: -100px;
+        background-color: #eeffee;
+        padding-left: 200px;
+        margin-top: 60px;
+        /*padding-right: 40px;*/
+    }
+
+    .snakify-facts h6 {
+        font-size: 20px;
+        font-weight: 200;
+        margin-bottom: 20px;
+    }
+
+    .snakify-facts .column {
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .snakify-facts .column h5 {
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+
+    button.snakify-button-start {
+        background-color: #ff4444;
+        width: 500px;
+        height: 80px;
+        color: white;
+        font-size: 34px;
+        border: 0;
+        margin: 70px auto 0 auto;
+        display: block;
+    }
+
+    button.snakify-button-start a {
+        color: white;
+    }
+
+    .school-logo {
+        width: 150px;
+        margin: 20px;
+    }
+</style>
+
+<p>Let's see how to add two numbers in Python. Run this example:
+
+{% program %}
+a = 5
+b = 7
+print(a + b)
+{% endprogram %}
+
+<p><b>Now let's do it in a more general way.</b> This time the program reads two numbers from its input. Run this example:
+
+{% program %}
+a = int(input())
+b = int(input())
+print(a + b)
+{% inputdata %}
+3
+8
+{% endinputdata %}
+{% endprogram %}
+
+<script type="text/javascript">
+    var problem_name = 'aplusbplusc';
+</script>
+
+<p><b>Now it's your turn.</b> Write a program that reads <i>three</i> numbers from its input and prints their sum:
+
+<div id="visualizer"></div>
+
+<pre class="input" style="display: none">2
+3
+6</pre>
+
+<div style="display: none;" id="awesome"><b>Awesome, you did it!</b> How about trying <a href="/lessons/print_input_numbers/problems/area_of_right_triangle/">the next problem</a>?</div>
+
+{% endsection %}
+
+
+
+
+{% section "About this course" %}
+<p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/drnBv_rquXQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="col-md-8">
+            <video autoplay id="bgvid" preload="auto" loop>
+                <source src="/static/new_ui/video/demo_debug_720p.mp4" type="video/mp4">
+                <source src="/static/new_ui/video/demo_debug.webm" type="video/webm">
+            </video>
+        </div>
+    </div>
+</div>
+
+<p>Welcome to our interactive manual of Python 3 programming language.
+This is an introductory course that is way different from the others.
+
+<p>
+What do we have here:
+<ul>
+    <li><b>Basic lessons</b> - we start from scratch but go in depth to what you'll really need in production
+    <li><b>Challenging problems</b> - handful of brain teasers to practice in any lesson
+    <li><b>In-browser code runner</b> - you don't need to setup anything to get started
+    <li><b>Web and mobile support</b> - code from any gadget you have
+    <li><b>Visualizer</b> - a perfect way to debug by step back and forth through program execution to see the variables
+</ul>
+
+<p>
+Searching for a means to teach Python at Key Stage 3, AP Computer Science Principles or CS1? Our course is right for you.
+
+<div style="padding: 20px 20px 10px 20px; border-radius: 10px; background-color: #effbee; box-shadow: 0 0 1px 0px #0cb500, 0 0 2px 0px #12FF01;">
+We're serious here about the interesting problems you can solve online. Look at these:
+<ul>
+    <li><b><a href="/lessons/if_then_else_conditions/problems/rook_move/">Rook move</a> [topic: conditions]</b> - given two chessboard coordinates, tell if a rook can move from one to the other in one move.
+    <li><b><a href="/lessons/while_loop/problems/least_divisor/">Least divisor</a> [topic: while loop]</b> - find the least divisor of the given integer.
+    <li><b><a href="/lessons/dictionaries_dicts/problems/number_of_occurrences_before/">Number of occurrences</a> [topic: dictionaries]</b> - count how many times you've seen each word as you scan the given text.
+</ul>
+</div>
+
+<div class="container snakify-facts">
+    <div class="row">
+        <div class="col-md-2 column">
+            <h5>24k</h5>
+            <h6>enrolled students</h6>
+        </div>
+        <div class="col-md-2 column">
+            <h5>11</h5>
+            <h6>lessons</h6>
+        </div>
+        <div class="col-md-2 column">
+            <h5>100+</h5>
+            <h6>coding problems</h6>
+        </div>
+        <div class="col-md-3 column">
+            <h5>no</h5>
+            <h6>required technical level</h6>
+        </div>
+    </div>
+</div>
+
+{% endsection %}
+
+{% section "Schools that use us" %}
+<img class="school-logo" src="/static/images/schools/guilsborough.png">
+<img class="school-logo" src="/static/images/schools/hse.png">
+<img class="school-logo" src="/static/images/schools/niles.jpeg">
+<img class="school-logo" src="/static/images/schools/mipt.jpg">
+<img class="school-logo" src="/static/images/schools/sandringham.gif">
+<img class="school-logo" src="/static/images/schools/msu.png">
+<img class="school-logo" src="/static/images/schools/smhs.jpg">
+<img class="school-logo" src="/static/images/schools/kfu.png">
+<img class="school-logo" src="/static/images/schools/uptonhigh.jpg">
+
+{% endsection %}
+
+
+{% section "What do our alumni say?" %}
+<div class="snakify-full-width" style="text-align: center;">
+    <div class="snakify-alumni-card">
+        <div class="snakify-alumni-card-name">John Sloan</div>
+        <div class="snakify-alumni-card-location">Dublin, Ireland</div>
+        <img src="/static/new_ui/img/alumni_sloan.jpeg">
+        <div class="snakify-alumni-card-reference">“I was a linguist looking to move into computational linguistics but had no background in CS. Snakify took me from absolute beginner to top of the class. I have now designed a website with online English classes and received funding for further research.”</div>
+    </div>
+
+
+    <div class="snakify-alumni-card">
+        <div class="snakify-alumni-card-name">Evgeny Serebryakov</div>
+        <div class="snakify-alumni-card-location">Saint-Petersburg, Russia</div>
+        <img src="/static/new_ui/img/alumni_serebryakov.png">
+        <div class="snakify-alumni-card-reference">“I was studying molecular biophysics at my university. In spring 2015 I completed this course and then in winter I found a first internship as a Python/Django web developer.”</div>
+    </div>
+</div>
+
+
+
+
+{% endsection %}
+
+
+{% section "Why do I learn programming?" %}
+<p><b>Programming improves your life.</b>
+Whatever you do in your life, you can start hacking it right away.
+<ul>
+    <li><b>Scientists</b> collect and process data using programs to do research
+    <li><b>Illustrators and musicians</b> automate daily routines using scripts
+    <li><b>Students</b> can get a very well-paid job in months. Just look at the salaries of
+    Software Engineers at Glassdoor
+</ul>
+{% endsection %}
+
+
+
+{% section "Why do I learn Python?" %}
+<p>Python is a great choice whether it's your first or next programming language.
+<ul>
+    <li><b>Python is very easy and flexible.</b> The programs in Python are tinier than in other languages.
+    <li><b>Powerful.</b> Due to its huge community Python is very popular as a server-side language. Google (spider, search engine, Google Maps), Netflix and Pinterest
+    use it a lot. Youtube, Quora, Reddit, Dropbox, Yahoo, Battlefield 2, Civilization 4, NASA, AlphaGene &mdash; all of them use Python; see the entire list <a href="https://wiki.python.org/moin/OrganizationsUsingPython">here</a>.
+    <li><b>High demand for programmers.</b> See open job positions on <a href="https://careers.stackoverflow.com/jobs?searchTerm=python">StackOverflow</a>
+
+{% endsection %}
+
+
+
+{% section "What websites/apps are coded in Python?" %}
+<p>Python is a great choice whether it's your first or next programming language. Here's the list of few projects/organizations that use Python: 
+<ul>
+    <li>Google, Netflix and Pinterest
+    use it a lot. Youtube, Quora, Reddit, Dropbox, Google Maps. Yahoo, Battlefield 2, Civilization 4, NASA, AlphaGene &mdash; all of them use Python; see the entire list <a href="https://wiki.python.org/moin/OrganizationsUsingPython">here</a>.
+
+{% endsection %}
+
+
+{% section "Okay, how to learn Python?" %}
+
+<p>There is a ton of way to do this, really. You can read books, or you can watch Youtube videos.
+However, <b>you better solve coding problems</b>, as you should start thinking like a programmer &mdash; and
+this skill comes with hard work.
+
+<p style="font-size: 30px;">Ready?
+<button class="snakify-button-start">Jump to the first lesson</button>
+<script>
+$(function() {
+    $('.snakify-button-start').click(function() {
+        location.href = 'https://snakify.org/lessons/print_input_numbers/';
+    });
+});
+</script>
+</p>
+
+{% endsection %}

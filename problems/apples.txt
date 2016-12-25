@@ -1,0 +1,39 @@
+Name:
+Apple sharing
+
+Statement:
+N students take K apples and distribute them among each other evenly. The remaining (the undivisible) part remains in the basket. How many apples will each single student get? How many apples will remain in the basket?
+<p>
+The program gets the numbers N and K. It should print the two numbers: answers for the questions above.
+
+Test:
+6
+50
+
+Answer:
+8
+2
+
+Test:
+1
+10
+
+Answer:
+10
+0
+
+Test:
+5
+25
+
+Answer:
+5
+0
+
+Test:
+4
+2
+
+Answer:
+0
+2

@@ -1,0 +1,42 @@
+Name:
+Replace the substring
+
+Statement:
+<p>Given a string. Replace in this string all the numbers <code>1</code> by the word
+<code>one</code>.
+
+Test:
+1+1=2
+
+Answer:
+one+one=2
+
+
+Test:
+Hello, 2345678990
+
+Answer:
+Hello, 2345678990
+
+
+Test:
+1
+
+Answer:
+one
+
+
+Test:
+1111111111111111111111111111111111
+
+Answer:
+oneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneone
+
+
+Test:
+1213141516171819101
+
+Answer:
+one2one3one4one5one6one7one8one9one0one
+
+

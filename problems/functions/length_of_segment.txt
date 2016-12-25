@@ -1,0 +1,60 @@
+Name:
+The length of the segment
+
+Statement:
+Given four real numbers: <i>x<sub>1</sub></i>, <i>y<sub>1</sub></i>, <i>x<sub>2</sub></i>, <i>y<sub>2</sub></i>. Write a function
+<code>distance(x1, y1, x2, y2)</code> that computes the distance
+between the points <i>(x<sub>1</sub>,y<sub>1</sub>)</i> and <i>(x<sub>2</sub>,y<sub>2</sub>)</i>. Read four real numbers
+and print the result of this function.
+
+<p>The formula for distance between two points can be found on <a href="http://mathworld.wolfram.com/Distance.html">Wolfram</a>.
+
+Test:
+0
+0
+1
+1
+
+Answer:
+1.41421
+
+
+Test:
+0
+0
+1
+0
+
+Answer:
+1
+
+
+Test:
+3
+-2
+-1
+7
+
+Answer:
+9.84886
+
+
+Test:
+0.1
+0.1
+0.2
+0.2
+
+Answer:
+0.141421
+
+
+Test:
+-1
+-1
+-3
+-5
+
+Answer:
+4.47214
+

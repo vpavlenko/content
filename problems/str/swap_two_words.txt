@@ -1,0 +1,45 @@
+Name:
+To swap the two words
+
+Statement:
+<p>Given a string consisting of exactly two words separated by a space. Rearrange these words
+places. Write the result to a string and print the resulting string.
+
+<p>This task should not use loops and <code>if</code>.
+
+
+Test:
+Hello, world!
+
+Answer:
+world! Hello,
+
+
+Test:
+A B
+
+Answer:
+B A
+
+
+Test:
+Q WERRTYUIOP
+
+Answer:
+WERRTYUIOP Q
+
+
+Test:
+QWERTYUIOP M
+
+Answer:
+M QWERTYUIOP
+
+
+Test:
+sadfahsjkldfhasjkdfhaklsjdfhjkl asdlkfhasdjklfhaslkdfjhalskdfgalsdf
+
+Answer:
+asdlkfhasdjklfhaslkdfjhalskdfgalsdf sadfahsjkldfhasjkdfhaklsjdfhjkl
+
+

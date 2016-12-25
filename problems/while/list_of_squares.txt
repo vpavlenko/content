@@ -1,0 +1,52 @@
+Name:
+List of squares
+
+Statement:
+For a given integer N, print all the squares of integer numbers less or equal than N, in ascending order.
+
+Test:
+50
+
+Answer:
+1 4 9 16 25 36 49 
+
+
+Test:
+10
+
+Answer:
+1 4 9 
+
+
+Test:
+9
+
+Answer:
+1 4 9 
+
+
+Test:
+4
+
+Answer:
+1 4 
+
+
+Test:
+1
+
+Answer:
+1 
+
+
+Test:
+100
+
+Answer:
+1 4 9 16 25 36 49 64 81 100 
+
+Test:
+99
+
+Answer:
+1 4 9 16 25 36 49 64 81

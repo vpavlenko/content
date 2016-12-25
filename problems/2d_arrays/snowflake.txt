@@ -1,0 +1,77 @@
+Name:
+Snowflake
+
+Statement:
+<p>Given an odd number <code>n</code>. Create a two-dimensional array of <code>n</code>&times;<code>n</code> elements filling it with characters <code>&quot;.&quot;</code> (each array element is a string of one character). Then fill in the characters <code>&quot;*&quot;</code> to the middle row, to the middle column, to the main diagonal and to the side diagonal. As a result the array will have the image of a snowflake. Print the array on the screen, separating the array elements by spaces.
+
+
+Test:
+5
+
+Answer:
+* . * . *
+. * * * .
+* * * * *
+. * * * .
+* . * . *
+
+
+Test:
+7
+
+Answer:
+* . . * . . *
+. * . * . * .
+. . * * * . .
+* * * * * * *
+. . * * * . .
+. * . * . * .
+* . . * . . *
+
+
+Test:
+9
+
+Answer:
+* . . . * . . . *
+. * . . * . . * .
+. . * . * . * . .
+. . . * * * . . .
+* * * * * * * * *
+. . . * * * . . .
+. . * . * . * . .
+. * . . * . . * .
+* . . . * . . . *
+
+
+Test:
+11
+
+Answer:
+* . . . . * . . . . *
+. * . . . * . . . * .
+. . * . . * . . * . .
+. . . * . * . * . . .
+. . . . * * * . . . .
+* * * * * * * * * * *
+. . . . * * * . . . .
+. . . * . * . * . . .
+. . * . . * . . * . .
+. * . . . * . . . * .
+* . . . . * . . . . *
+
+
+Test:
+3
+
+Answer:
+* * *
+* * *
+* * *
+
+
+Test:
+1
+
+Answer:
+*

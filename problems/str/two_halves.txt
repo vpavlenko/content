@@ -1,0 +1,52 @@
+Name:
+The two halves
+
+Statement:
+<p>Given a string. Cut it into two equal parts (if the length of the string&nbsp;&mdash; is even, and if
+the length of the string is odd, the length of the first part should be one character more). Move
+these two parts are interchanged, write the result into a new row and put it on the screen.
+
+<p>Don't use the statement <code>if</code> in this task.
+
+Test:
+Hi
+
+Answer:
+iH
+
+
+Test:
+Hello
+
+Answer:
+loHel
+
+
+Test:
+Qwerty
+
+Answer:
+rtyQwe
+
+
+Test:
+Z
+
+Answer:
+Z
+
+
+Test:
+asdfghj
+
+Answer:
+ghjasdf
+
+
+Test:
+asdfghjzxc
+
+Answer:
+hjzxcasdfg
+
+

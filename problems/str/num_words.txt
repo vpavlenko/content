@@ -1,0 +1,43 @@
+Name:
+The number of words
+
+Statement:
+<p>Given a string consisting of words separated by spaces. Determine how many words it has.
+To solve the problem, use the method <code>count</code>.
+
+
+Test:
+Hello world
+
+Answer:
+2
+
+
+Test:
+Hello
+
+Answer:
+1
+
+
+Test:
+q w e
+
+Answer:
+3
+
+
+Test:
+In the hole in the ground there lived a hobbit
+
+Answer:
+10
+
+
+Test:
+One two three four five
+
+Answer:
+5
+
+

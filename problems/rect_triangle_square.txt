@@ -1,0 +1,36 @@
+Name:
+Area of a right triangle
+
+Statement:
+Write a program that reads the two lengths of the base and the height in the right triangle and prints its area.
+Every number is given in a separate line.
+
+<p><img src="/static/images/problems/right_triangle.gif" width="400"></p>
+
+Test:
+3
+5
+
+Answer:
+7.5
+
+Test:
+10
+2
+
+Answer:
+10.0
+
+Test:
+179
+1534
+
+Answer:
+137293.0
+
+Test:
+1543
+57
+
+Answer:
+43975.5

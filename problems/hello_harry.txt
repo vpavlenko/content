@@ -1,0 +1,24 @@
+Name:
+Hello, Harry!
+
+Statement:
+Write a program that greets the user by printing the word "Hello", the comma, the name of the user and the exclamation mark after it.
+See the examples below.
+
+Test:
+Harry
+
+Answer:
+Hello, Harry!
+
+Test:
+Mr. Potter
+
+Answer:
+Hello, Mr. Potter!
+
+Test:
+Lord Voldemort
+
+Answer:
+Hello, Lord Voldemort!

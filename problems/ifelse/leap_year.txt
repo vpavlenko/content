@@ -1,0 +1,69 @@
+Name:
+Leap year
+
+Statement:
+<p>
+Given the year number. You need to check if this year is a leap year. If it is, print
+<code>LEAP</code>, otherwise print <code>COMMON</code>. 
+
+<p>
+The rules in Gregorian calendar are as follows:
+<ul>
+    <li>a year is a leap year if its number is exactly divisible by 4 and is not exactly divisible by 100
+    <li>a year is always a leap year if its number is exactly divisible by 400
+</ul>
+
+
+Test:
+2012
+
+Answer:
+LEAP
+
+Test:
+2011
+
+Answer:
+COMMON
+
+Test:
+1492
+
+Answer:
+LEAP
+
+Test:
+1861
+
+Answer:
+COMMON
+
+Test:
+1600
+
+Answer:
+LEAP
+
+Test:
+1700
+
+Answer:
+COMMON
+
+Test:
+1800
+
+Answer:
+COMMON
+
+Test:
+1900
+
+Answer:
+COMMON
+
+Test:
+2000
+
+Answer:
+LEAP

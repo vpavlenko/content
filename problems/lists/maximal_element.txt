@@ -1,0 +1,153 @@
+Name:
+The largest element
+
+Statement:
+Given a list of numbers. Print the value of the largest element in the list, then the index of this element in the list. If the highest element is not unique, print the index of the first of them.
+
+Test:
+1 2 3 2 1
+
+Answer:
+3 2
+
+
+Test:
+1 2 3
+
+Answer:
+3 2
+
+
+Test:
+1 3 2
+
+Answer:
+3 1
+
+
+Test:
+2 1 3
+
+Answer:
+3 2
+
+
+Test:
+2 3 1
+
+Answer:
+3 1
+
+
+Test:
+3 2 1
+
+Answer:
+3 0
+
+
+Test:
+3 1 2
+
+Answer:
+3 0
+
+
+Test:
+1 2 3 4 5
+
+Answer:
+5 4
+
+
+Test:
+5 4 3 2 1
+
+Answer:
+5 0
+
+
+Test:
+-1 -2 -3 -4 -5
+
+Answer:
+-1 0
+
+
+Test:
+-5 -4 -3 -2 -1
+
+Answer:
+-1 4
+
+
+Test:
+2147483647 2147483646 2147483645
+
+Answer:
+2147483647 0
+
+
+Test:
+-2147483648 -2147483647 -2147483646
+
+Answer:
+-2147483646 2
+
+
+Test:
+-2147483648 -2147483648 -2147483648
+
+Answer:
+-2147483648 0
+
+
+Test:
+-2147483646 -2147483647 -2147483648
+
+Answer:
+-2147483646 0
+
+
+Test:
+-100 -100 -100 -100 -100
+
+Answer:
+-100 0
+
+
+Test:
+-2147483648 0 2147483647
+
+Answer:
+2147483647 2
+
+
+Test:
+2147483647 0 -2147483648
+
+Answer:
+2147483647 0
+
+
+Test:
+-79 92 70 72 28 45 37 -86 -12 0 -27 -14 -69 63 -68 74 45 49 96 -20
+
+Answer:
+96 18
+
+
+Test:
+53 14 53 -77 -31 48 51 49 -73 -23 -19 93 85 -50 -73 59 67 -99 98 11
+
+Answer:
+98 18
+
+
+Test:
+-2147483648
+
+Answer:
+-2147483648 0
+
+

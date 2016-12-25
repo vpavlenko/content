@@ -1,0 +1,110 @@
+Name:
+Guess the number
+
+Statement:
+<p>Augustus and Beatrice are playing the following game. Augustus thinks of some secret integer number from 1 to n. Beatrice tries
+to guess the number, so she says some set of integer numbers. Augustus answers <code>YES</code> if his secret number is in that set, or <code>NO</code>
+otherwise. After a few questions Beatrice is totally confused and asks you to help her determine what could be a secret number of Augustus.</p>
+
+<p>The first line contains n - the maximum number that Augustus can think of. After it given a pair of lines, the first line
+contains a Beatrice question (the set of numbers separated by a space) and the Augustus response to this question.</p>
+
+<p>You should print all the possible secret numbers in ascending order
+separated by space.</p>
+
+Name:
+Угадай число - 2
+
+Statement:
+<p>Август и Беатриса <a href="/lessons/sets/problems/guess_number/">продолжают играть в игру</a>, но Август начал жульничать.
+На каждый из вопросов Беатрисы он выбирает такой вариант ответа <code>YES</code> или <code>NO</code>,
+чтобы множество возможных задуманных чисел оставалось как можно больше. Например,
+если Август задумал число от 1 до 5, а Беатриса спросила про числа 1 и 2, то Август
+ответит <code>NO</code>, а если Беатриса спросит про 1, 2, 3, то Август ответит <code>YES</code>.</p>
+
+<p>Если же Бетриса в своем вопросе перечисляет ровно половину из задуманных чисел, то Август
+из вредности всегда отвечает <code>NO</code>.
+Наконец, Август при ответе учитывает все предыдущие вопросы Беатрисы и свои ответы на них,
+то есть множество возможных задуманных чисел уменьшается.</p>
+
+<p>Первая строка содержит наибольшее число, которое мог загадать Август.
+Каждая следующая строка содержит очередной вопрос Беатрисы: набор чисел, разделенных пробелами. 
+Последняя строка входных данных содержит одно слово <code>HELP</code>.</p>
+
+<p>Для каждого вопроса Беатрисы выведите ответ Августа на этот вопрос. После этого выведите через
+пробел, в порядке возрастания, все числа, которые мог загадать Август после ответа на все вопросы
+Беатрисы.</p>
+
+Test:
+10
+1 2 3 4 5
+2 4 6 8 10
+HELP
+
+Answer:
+NO
+YES
+6 8 10
+
+
+Test:
+10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+HELP
+
+Answer:
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+10
+
+
+Test:
+16
+1 2 3 4 5 6 7 8
+9 10 11 12
+13 14
+16
+HELP
+
+Answer:
+NO
+NO
+NO
+NO
+15
+
+
+Test:
+100
+2 3 5 6 9 12 13 14 15 17 19 21 22 24 25 28 31 32 33 34 35 38 43 46 48 54 55 56 57 58 60 61 63 69 70 71 76 77 78 79 80 81 83 91 92 93 94 95 96 99
+2 5 6 7 8 11 13 14 19 24 25 26 28 29 30 31 34 36 37 38 40 42 43 46 49 50 54 55 56 57 61 62 65 68 70 71 72 75 78 79 80 81 82 83 87 90 91 96 99 100
+2 4 6 7 9 11 13 16 20 21 28 29 31 33 34 36 40 41 42 43 45 46 47 48 50 52 54 55 59 64 65 68 69 70 71 73 77 78 81 82 83 84 88 90 92 93 96 98 99 100
+1 4 5 7 9 10 12 13 15 16 18 20 22 23 25 27 28 30 31 33 34 36 38 40 41 43 48 49 50 51 52 53 57 62 63 64 69 71 76 79 80 81 84 85 89 90 93 95 98 100
+8 11 13 14 15 16 17 18 19 21 23 24 26 29 30 31 33 34 35 36 44 51 53 55 58 59 60 61 62 63 64 66 68 71 74 75 78 79 80 83 85 88 89 91 94 95 96 97 98 100
+2 3 4 8 9 11 12 18 23 24 26 28 30 32 33 34 35 36 37 39 41 42 45 54 57 59 60 62 64 66 71 72 74 78 79 80 82 83 84 86 87 88 89 90 91 92 95 97 98 100
+HELP
+
+Answer:
+NO
+NO
+NO
+YES
+YES
+NO
+51 53 85
+

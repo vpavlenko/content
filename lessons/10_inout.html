@@ -1,0 +1,112 @@
+{% section "How to read and write in Python" %}
+
+<p>
+Every program is eventually a data processor, so we should know how to input data
+into it and how to output them. There's a function <code>print()</code> to output data from Python program.
+To use it, fill in its parentheses with a comma-separated list of the values
+that you want to print. Let's see an example. Press "run" and then "next" to see how the program
+is being executed line by line:
+
+{% program %}
+print(5 + 10)
+print(3 * 7, (17 - 2) * 8)
+print(2 ** 16)  # two stars are used for exponentiation
+print(37 / 3)  # single forward slash is a division
+print(37 // 3)  # double forward slash is an integer division
+print(37 % 3)  # percent sign is a modulus operator
+        # it gives the remainder of the left value divided by the right value
+{% endprogram %}
+</p>
+
+<p>
+Use the function <code>input()</code> to input data into the program. This function reads a single text line as a string.
+</p>
+
+<p>
+Here's a program that reads the user's name and greets him:
+{% program %}
+print('What is your name?')
+name = input()  # read a single line and store it in the variable "name"
+print('Hi ' + name + '!')
+    {% inputdata %}
+John
+    {% endinputdata %}
+    {% endprogram %}
+</p>
+
+{% endsection %}
+
+
+
+{% section "Sum of numbers and strings" %}
+
+<p>
+Let's try to write a program that inputs two numbers and prints their sum. We read the two numbers
+and store them in the variables <code>a</code> and <code>b</code> using the assignment operator <code>=</code>.
+On the left side of an assignment operator we put the name of the variable. The name could be a string of latin characters.
+On the right side of an assignment operator we put any expression that Python can evaluate.
+The name starts pointing to the result of the evaluation.
+Read this example, run it and look at its output:
+    {% program %}
+a = input()
+b = input()
+s = a + b
+print(s)
+    {% inputdata %}
+5
+7
+    {% endinputdata %}
+    {% endprogram %}
+</p>
+
+<p>
+After running the example we can see that it prints <code>57</code>. As we were taught in school,
+<code>5 + 7</code> gives <code>12</code>. So, the program is wrong, and it's important to understand why.
+The thing is, in the third line <code>s = a + b</code> Python has "summed" two strings, rather than two numbers.
+The sum of two strings in Python works as follows: they are just glued one after another. It's also sometimes
+called "string concatenation".
+</p>
+
+<p>
+Do you see in the right side that the values bound to variables <code>a</code> and <code>b</code>
+are wrapped in quotes? That means that the values there are string, not numbers. Strings and values
+are represented in Python differently.
+</p>
+
+<p>
+All the values in Python are called "objects". Every object has a certain type. The number 2 corresponds to an object "number 2" of type "int"
+(i.e., an integer number). The string <code>'hello'</code> corresponds to an object "string 'hello'" of type "str".
+Every floating-point number is represented as an object of type "float". The type
+of an object specifies what kind of operations may be applied to it.
+For instance, if the two variables <code>"first"</code> and <code>"second"</code> are pointing to the objects of type <code>int</code>, Python can multiply them. However, if they are pointing to the objects of type <code>str</code>, Python can't do that:
+    {% program %}
+first = 5
+second = 7
+print(first * second)
+
+# you can use single or double quotes to define a string
+first = '5'
+second = "7"
+print(first * second)
+    {% endprogram %}
+</p>
+
+<p>
+To cast the string of digits into an integer number, we can use the function <code>int()</code>. Eg., <code>int('23')</code> gives an int object <code>23</code>. 
+</p>
+
+<p>
+    Given the information above, we can now fix our wrong program to sum the two numbers:
+    {% program %}
+a = int(input())
+b = int(input())
+s = a + b
+print(s)
+    {% inputdata %}
+5
+7
+    {% endinputdata %}
+    {% endprogram %}
+</p>
+
+{% endsection %}

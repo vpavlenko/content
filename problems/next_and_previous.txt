@@ -1,0 +1,28 @@
+Name:
+Previous and next
+
+Statement:
+Write a program that reads an integer number and prints its previous and next numbers. See the examples below.
+
+Remember that you can convert the numbers to strings using the function <code>str</code>.
+
+Test:
+179
+
+Answer:
+The next number for the number 179 is 180.
+The previous number for the number 179 is 178.
+
+Test:
+0
+
+Answer:
+The next number for the number 0 is 1.
+The previous number for the number 0 is -1.
+
+Test:
+2718281828904590
+
+Answer:
+The next number for the number 2718281828904590 is 2718281828904591.
+The previous number for the number 2718281828904590 is 2718281828904589.

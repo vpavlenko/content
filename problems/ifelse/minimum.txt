@@ -1,0 +1,33 @@
+Name:
+Minimum of two numbers
+
+Statement:
+Given the two integers, print the least of them.
+
+Test:
+3
+7
+
+Answer:
+3
+
+Test:
+2
+2
+
+Answer:
+2
+
+Test:
+15
+-8
+
+Answer:
+-8
+
+Test:
+-15
+-8
+
+Answer:
+-15

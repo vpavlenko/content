@@ -1,0 +1,131 @@
+Name:
+Access rights
+
+Statement:
+<p>The virus attacked the filesystem of the supercomputer and broke
+the control of access rights to the files. For each file
+there is a known set of operations which may be applied to it:</p>
+
+<ul>
+<li>write <code>W</code>,
+<li>read <code>R</code>,
+<li>execute <code>X</code>.
+</ul>
+
+<p>
+The first line contains the number <code>N</code> — the number of files contained in the filesystem.
+The following <code>N</code> lines contain the file names and allowed operations with them, separated by spaces.
+
+The next line contains an integer <code>M</code> — the number of operations to the files.
+In the last <code>M</code> lines specify the operations that are requested for files. 
+One file can be requested many times.
+</p>
+
+<p>You need to recover the control over the access rights to the files.
+For each request your program should return <code>OK</code>
+if the requested operation is valid or
+<code>Access denied</code> if the operation is invalid.</p>
+
+
+Test:
+4
+helloworld.exe R X
+pinglog W R
+nya R
+goodluck X W R
+5
+read nya
+write helloworld.exe
+execute nya
+read pinglog
+write pinglog
+
+Answer:
+OK
+Access denied
+Access denied
+OK
+OK
+
+
+Test:
+1
+abacaba X
+3
+read abacaba
+write abacaba
+execute abacaba
+
+Answer:
+Access denied
+Access denied
+OK
+
+
+Test:
+1
+tmp_909925047 W X R
+7
+execute tmp_909925047
+read tmp_909925047
+write tmp_909925047
+read tmp_909925047
+execute tmp_909925047
+execute tmp_909925047
+read tmp_909925047
+
+Answer:
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+
+
+Test:
+5
+tmp_1017722015 W
+tmp_897110090 X W R
+tmp_651548400 W X
+tmp_422551574 X R W
+tmp_477658548 W
+1
+write tmp_897110090
+
+Answer:
+OK
+
+
+Test:
+2
+tmp_584361681 R X
+tmp_70361076 X
+3
+read tmp_70361076
+write tmp_70361076
+write tmp_70361076
+
+Answer:
+Access denied
+Access denied
+Access denied
+
+
+Test:
+4
+tmp_796487715 X R W
+tmp_31144126 X R
+tmp_967334538 R
+tmp_264755563 R W
+3
+read tmp_264755563
+execute tmp_796487715
+execute tmp_796487715
+
+Answer:
+OK
+OK
+OK
+

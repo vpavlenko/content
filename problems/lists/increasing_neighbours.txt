@@ -1,0 +1,97 @@
+Name:
+Greater than previous
+
+Statement:
+Given a list of numbers. Print all its elements that are greater than the previous element.
+
+Test:
+1 5 2 4 3
+
+Answer:
+5 4 
+
+
+Test:
+1 2 3 4 5
+
+Answer:
+2 3 4 5 
+
+
+Test:
+5 4 3 2 1
+
+Answer:
+
+
+
+Test:
+1 5 1 5 1
+
+Answer:
+5 5 
+
+
+Test:
+5 1 5 1 5
+
+Answer:
+5 5 
+
+
+Test:
+5 5 5 5 5
+
+Answer:
+
+
+
+Test:
+1 1 1 5 1
+
+Answer:
+5 
+
+
+Test:
+345354
+
+Answer:
+
+
+
+Test:
+1 465
+
+Answer:
+465 
+
+
+Test:
+4 -54643
+
+Answer:
+
+
+
+Test:
+2147483647 0 1 2 3
+
+Answer:
+1 2 3 
+
+
+Test:
+1 2 3 4 -2147483648
+
+Answer:
+2 3 4 
+
+
+Test:
+-9 29 -100 64 26 73 -96 28 -92 11 -14 -86 -54 -67
+
+Answer:
+29 64 73 28 11 -54 
+
+

@@ -1,0 +1,87 @@
+Name:
+Maximum
+
+Statement:
+<p>Find the index of the first occurrence of the maximum element. Print two numbers: the row number and the column number where the largest element in a two-dimensional array is. If there are several such elements, print the one with smaller row number. If there are many maximums with the smallest row number, output the one which has the least column number. 
+
+<p>Program reads the size of the array <code>n</code> (number of rows) and <code>m</code> (number of columns),
+then <code>n</code> lines by <code>m</code> numbers each.
+
+Test:
+3 4
+0 3 2 4
+2 3 5 5
+5 1 2 3
+
+Answer:
+1 2
+
+
+Test:
+1 1
+1
+
+
+Answer:
+0 0
+
+
+Test:
+3 5
+1 2 3 4 5
+6 7 8 9 10
+11 12 13 14 15
+
+Answer:
+2 4
+
+
+Test:
+6 1
+1
+2
+3
+2
+1
+2
+
+
+Answer:
+2 0
+
+
+Test:
+1 6
+1 2 3 3 2 1
+
+Answer:
+0 2
+
+
+Test:
+3 5
+1 4 5 2 7
+3 4 8 0 8
+8 8 8 8 8
+
+Answer:
+1 2
+
+
+Test:
+2 2
+-3 -2
+-2 -1
+
+Answer:
+1 1
+
+
+Test:
+2 2
+-1000000003 -1000000002
+-1000000002 -1000000001
+
+Answer:
+1 1
+

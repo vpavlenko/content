@@ -1,0 +1,160 @@
+{% section "Integer arithmetics" %}
+
+<p>We already know the following operators which may be applied to numbers:
+<code>+</code>, <code>-</code>, <code>*</code> and <code>**</code>. The division operator
+<code>/</code> for integers gives a floating-point real number (an object of type <code>float</code>).
+The exponentiation <code>**</code> also returns a float when the power is negative:
+{% program %}
+print(17 / 3)  # gives 5.66666666667
+print(2 ** 4)  # gives 16
+print(2 ** -2) # gives 0.25
+{% endprogram %}
+
+<p>There's a special operation for integer division where the remainder is discarder: <code>//</code>.
+The operation that yields a remainder of such a division looks like <code>%</code>.
+Both operation always yield an object of type <code>int</code>.
+{% program %}
+print(17 / 3)   # gives 5.66666666667
+print(17 // 3)  # gives 5
+print(17 % 3)   # gives 2
+{% endprogram %}
+
+{% endsection %}
+
+
+
+{% section "Floating-point numbers" %}
+
+<p>When we read an integer value, we read a line with <code>input()</code>
+and then cast a string to integer using <code>int()</code>.
+When we read a floating-point number, we need to cast the string to
+float using <code>float()</code>:
+{% program %}
+x = float(input())
+print(x)
+
+{% inputdata %}
+1.492
+{% endinputdata %}
+{% endprogram %}
+
+<p>Floats with very big or very small absolute value can be written using a scientific notation.
+Eg., the distance from the Earth to the Sun is 1.496&middot;10<sup>11</sup>, or <code>1.496e11</code>
+in Python. The mass of one molecule of the water is 2.99&middot;10<sup>-23</sup>,
+or <code>2.99e-23</code> in Python.
+
+<p>One can cast float objects to int objects by discarding the fraction part using the <code>int()</code>
+function. This function demonstrates so called <i>rounding towards zero</i> behavior:
+{% program %}
+print(int(1.3))   # gives 1
+print(int(1.7))   # gives 1
+print(int(-1.3))  # gives -1
+print(int(-1.7))  # gives -1
+{% endprogram %}
+
+<p>There's also a function <code>round()</code> that performs the usual rounding:
+{% program %}
+print(round(1.3))   # gives 1
+print(round(1.7))   # gives 2
+print(round(-1.3))  # gives -1
+print(round(-1.7))  # gives -2
+{% endprogram %}
+
+<p>Floating-point real numbers can't be represented with exact precision due to hardware limitations.
+This can lead to cumbersome effects. <a href="https://docs.python.org/3.6/tutorial/floatingpoint.html">See the Python docs</a> for the details.
+{% program %}
+print(0.1 + 0.2)  # gives 0.30000000000000004
+{% endprogram %}
+{% endsection %}
+
+
+
+{% section "math module" %}
+
+<p>Python has many auxiliary functions for calculations with floats. They can be
+found in the <code>math</code> module.
+
+<p>To use this module, we need to import it first by writing the following instruction
+at the beginning of the program:
+<pre>import math
+</pre> 
+ 
+<p>For example, if we want to find a ceiling value for <code>x</code> - the smallest integer not less than 
+<code>x</code> - we call the appropriate function from the math module: <code>math.ceil(x)</code>.
+The syntax for calling functions from modules is always the same:
+<code>module_name.function_name(argument_1, argument_2, ...)</code>
+{% program %}
+import math
+
+x = math.ceil(4.2)
+print(x)
+print(math.ceil(1 + 3.8))
+{% endprogram %}
+</pre> 
+ 
+<p>There's another way to use functions from modules: to import the certain functions by naming them:
+{% program %}
+from math import ceil
+ 
+x = 7 / 2
+y = ceil(x)
+print(y)
+{% endprogram %}
+
+<p>Some of the functions dealing with numbers - <code>int()</code>,
+<code>round()</code> and <code>abs()</code> (absolute value aka modulus) -
+are built-in and don't require any imports.
+ 
+<p>All the functions of any standard Python module are documented on the official Python website.
+<a href="http://docs.python.org/3.6/library/math.html">Here's the description for math module</a>.
+The descritpion of some functions is given:
+ 
+<table border="1"> 
+<tr> 
+<th>Function</th> 
+<th>Description</th> 
+</tr> 
+<tr> 
+<td colspan=2>Rounding</td> 
+</tr> 
+<tr> 
+<td><b><code>floor(x)</code></b></td> 
+<td>Return the floor of x, the largest integer less than or equal to x.</td> 
+</tr> 
+<tr> 
+<td><b><code>ceil(x)</code></b></td> 
+<td>Return the ceiling of x, the smallest integer greater than or equal to x.</td> 
+</tr> 
+<tr> 
+<td colspan=2>Roots and logarithms</td> 
+</tr> 
+<tr> 
+<td><b><code>sqrt(x)</code></b></td> 
+<td>Return the square root of x</td> 
+</tr> 
+<tr> 
+<td><b><code>log(x)</code></b></td> 
+<td>With one argument, return the natural logarithm of x (to base e).
+With two arguments, return the logarithm of x to the given base
+</td> 
+</tr> 
+<tr> 
+<td><b><code>e</code></b></td> 
+<td>The mathematical constant e = 2,71828...</td> 
+</tr> 
+<tr> 
+<td colspan=2>Trigonometry</td> 
+</tr> 
+<td><b><code>sin(x)</code></b></td> 
+<td>Return the sine of x radians</td> 
+</tr> 
+<tr> 
+<td><b><code>asin(x)</code></b></td> 
+<td>Return the arcsine of x, in radians</td> 
+</tr> 
+<tr> 
+<td><b><code>pi</code></b></td> 
+<td>The mathematical constant <i>&pi;</i> = 3.1415...</td> 
+</tr> 
+</table> 
+{% endsection %}

@@ -1,0 +1,101 @@
+Name:
+Side diagonal
+
+Statement:
+<p>Given an integer <code>n</code>. Create an array of size <code>n&times;n</code> and populate it as follows: 
+
+<ul>
+<li>The numbers on the diagonal from the upper right to the lower left corner equal to 1. 
+
+<li>The numbers above this diagonal are equal to 0. 
+
+<li>The numbers below the diagonal are equal 2. 
+</ul>
+
+<p>Print the elements of such array.
+
+
+
+
+Test:
+4
+
+Answer:
+0 0 0 1 
+0 0 1 2 
+0 1 2 2 
+1 2 2 2 
+
+
+Test:
+1
+
+Answer:
+1 
+
+
+Test:
+2
+
+Answer:
+0 1 
+1 2 
+
+
+Test:
+3
+
+Answer:
+0 0 1 
+0 1 2 
+1 2 2 
+
+
+Test:
+5
+
+Answer:
+0 0 0 0 1 
+0 0 0 1 2 
+0 0 1 2 2 
+0 1 2 2 2 
+1 2 2 2 2 
+
+
+Test:
+6
+
+Answer:
+0 0 0 0 0 1 
+0 0 0 0 1 2 
+0 0 0 1 2 2 
+0 0 1 2 2 2 
+0 1 2 2 2 2 
+1 2 2 2 2 2 
+
+
+Test:
+7
+
+Answer:
+0 0 0 0 0 0 1 
+0 0 0 0 0 1 2 
+0 0 0 0 1 2 2 
+0 0 0 1 2 2 2 
+0 0 1 2 2 2 2 
+0 1 2 2 2 2 2 
+1 2 2 2 2 2 2 
+
+
+Test:
+8
+
+Answer:
+0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 1 2 
+0 0 0 0 0 1 2 2 
+0 0 0 0 1 2 2 2 
+0 0 0 1 2 2 2 2 
+0 0 1 2 2 2 2 2 
+0 1 2 2 2 2 2 2 
+1 2 2 2 2 2 2 2 

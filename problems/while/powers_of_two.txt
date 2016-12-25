@@ -1,0 +1,92 @@
+Name:
+The power of two
+
+Statement:
+<p>For a given integer number N find the greatest integer that is a power of two, less or equal than N.
+Print the exponent and the power of two itself.</p>
+
+<p>Don't use the operation <code>**</code>.</p>
+
+
+Test:
+50
+
+Answer:
+5 32
+
+
+Test:
+10
+
+Answer:
+3 8
+
+
+Test:
+8
+
+Answer:
+3 8
+
+
+Test:
+7
+
+Answer:
+2 4
+
+
+Test:
+1
+
+Answer:
+0 1
+
+
+Test:
+2
+
+Answer:
+1 2
+
+
+Test:
+3
+
+Answer:
+1 2
+
+
+Test:
+4
+
+Answer:
+2 4
+
+
+Test:
+5
+
+Answer:
+2 4
+
+
+Test:
+100
+
+Answer:
+6 64
+
+
+Test:
+1025
+
+Answer:
+10 1024
+
+
+Test:
+15431543
+
+Answer:
+23 8388608

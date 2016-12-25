@@ -1,0 +1,73 @@
+Name:
+Reverse the fragment
+
+Statement:
+<p>Given a string in which the letter <code>h</code> occurs
+at least two times. Reverse the sequence of characters
+enclosed between the first and last the appearance of the letters
+<code>h</code>.
+
+Test:
+In the hole in the ground there lived a hobbit
+
+Answer:
+In th a devil ereht dnuorg eht ni eloh ehobbit
+
+
+Test:
+qwertyhasdfghzxcvb
+
+Answer:
+qwertyhgfdsahzxcvb
+
+
+Test:
+asdfghhzxcvb
+
+Answer:
+asdfghhzxcvb
+
+
+Test:
+ahbhchdheha
+
+Answer:
+ahehdhchbha
+
+
+Test:
+habcdefgijklmnh
+
+Answer:
+hnmlkjigfedcbah
+
+
+Test:
+hh
+
+Answer:
+hh
+
+
+Test:
+hah
+
+Answer:
+hah
+
+
+Test:
+habh
+
+Answer:
+hbah
+
+
+Test:
+ahcvbhs
+
+Answer:
+ahbvchs
+
+
+

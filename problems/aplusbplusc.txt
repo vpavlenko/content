@@ -1,0 +1,30 @@
+Name:
+Sum of three numbers
+
+Statement:
+Write a program that takes three numbers and prints their sum.
+Every number is given in a separate line.
+
+Test:
+2
+3
+6
+
+Answer:
+11
+
+Test:
+0
+20
+300
+
+Answer:
+320
+
+Test:
+-5
+180
+-17
+
+Answer:
+158

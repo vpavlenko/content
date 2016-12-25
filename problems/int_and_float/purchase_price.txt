@@ -1,0 +1,97 @@
+Name:
+Total cost
+
+Statement:
+A cupcake costs A dollars and B cents. Determine, how many dollars and cents should one pay for N cupcakes.
+
+A program gets three numbers: A, B, N. It should print two numbers: total cost in dollars and cents.
+
+Test:
+2
+50
+4
+
+Answer:
+10 0
+
+
+Test:
+10
+15
+2
+
+Answer:
+20 30
+
+
+Test:
+3000
+99
+3000
+
+Answer:
+9002970 0
+
+
+Test:
+2029
+34
+1848
+
+Answer:
+3750220 32
+
+
+Test:
+1886
+73
+295
+
+Answer:
+556585 35
+
+
+Test:
+1069
+40
+1967
+
+Answer:
+2103509 80
+
+
+Test:
+905
+79
+496
+
+Answer:
+449271 84
+
+
+Test:
+1967
+91
+926
+
+Answer:
+1822284 66
+
+
+Test:
+2255
+76
+1090
+
+Answer:
+2458778 40
+
+
+Test:
+2435
+6
+1965
+
+Answer:
+4784892 90
+

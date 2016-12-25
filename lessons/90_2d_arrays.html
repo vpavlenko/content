@@ -1,0 +1,343 @@
+{% section "Nested lists: processing and printing" %}
+In real-world Often tasks have to store rectangular data table. [say more on this!]
+Such tables are called <em>matrices</em> or two-dimensional arrays. In Python any table can be represented as a list of lists (a list, where each element is in turn a list).
+For example, here's the program that creates a numerical table with two rows and three columns, and then makes some manipulations with it:
+
+{% program %}
+a = [[1, 2, 3], [4, 5, 6]]
+print(a[0])
+print(a[1])
+b = a[0]
+print(b)
+print(a[0][2])
+a[0][1] = 7
+print(a)
+print(b)
+b[2] = 9
+print(a[0])
+print(b)
+{% endprogram %}
+
+<p>The first element of <code>a</code> here &mdash; <code>a[0]</code> &mdash; is a list of numbers
+<code>[1, 2, 3]</code>. The first element of <em>this</em> new list is <code>a[0][0] == 1</code>; moreover,
+<code>a[0][1] == 2</code>, <code>a[0][2] == 3</code>,
+<code>a[1][0] == 4</code>, <code>a[1][1] == 5</code>,
+<code>a[1][2] == 6</code>.
+
+<p>To process 2-dimensional array, you typically use nested
+loops. The first loop iterates through the row number, the second loop runs through the elements inside of a row.
+For example, that's how you display two-dimensional numerical list on the screen line by line,
+separating the numbers with spaces:
+
+{% program %}
+a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        print(a[i][j], end=' ')
+    print()
+{% endprogram %}
+
+<p>We have already tried to explain that a for-loop variable in Python can iterate not only over a <code>range()</code>, but generally over all the elements of any sequence. Sequences in Python are lists and strings (and some other objects that we haven't met yet). Look how you can print a two-dimensional array, using this handy feature of loop <code>for</code>:
+
+{% program %}
+a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+for row in a:
+    for elem in row:
+        print(elem, end=' ')
+    print()
+{% endprogram %}
+
+<p>Naturally, to output a single line you can use
+method <code>join()</code>:
+
+{% noprogram %}
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
+{% endnoprogram %}
+
+<p>This is how you can use 2 nested loops to calculate the sum of all
+the numbers in the 2-dimensional list:
+
+{% program %}
+a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+s = 0
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        s += a[i][j]
+print(s)
+{% endprogram %}
+
+<p>Or the same with iterating by elements, not by the variables <code>i</code> and <code>j</code>:
+{% program %}
+a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+s = 0
+for row in a:
+    for elem in row:
+        s += elem
+print(s)
+{% endprogram %}
+{% endsection %}
+
+
+
+{% section "Nested lists: creating" %}
+<p>Suppose that two numbers are given: the number of rows of <code>n</code> and the number of columns
+<code>m</code>. You must create a list of size <code>n</code>&times;<code>m</code>, filled with, say, zeros.
+
+<p>The obvious solution appears to be wrong:
+
+{% noprogram %}
+a = [[0] * m] * n
+{% endnoprogram %}
+
+<p>This can be easily seen if you set the value of <code>a[0][0]</code>
+to <code>5</code>, and then print the value of <code>a[1][0]</code>&nbsp;&mdash; it will also be equal to 5. The reason is,
+<code>[0] * m</code> returns just a <em>reference</em> to a list of <code>m</code> zeros, but not a list.
+The subsequent repeating of this element creates a list of <code>n</code>
+items that all reference to the same list (just
+as well as the operation <code>b&nbsp;=&nbsp;a</code> for lists does not create
+the new list), so all rows in the resulting list are actually
+the same string.
+<p>Using our visualizer, keep track of the id of lists. If two lists have the same id number, it's actually the same list in memory.
+
+{% program %}
+n = 3
+m = 4
+a = [[0] * m] * n
+a[0][0] = 5
+print(a[1][0])
+{% endprogram %}
+
+<p>Thus, a two-dimensional list cannot be created simply by
+repeating a string. What to do?..
+
+<p>A possible way: you can create a list of <code>n</code> elements
+(say, of <code>n</code> zeros) and then make each of the elements a link to another one-dimensional list of <code>m</code>
+elements:
+
+{% program %}
+n = 3
+m = 4
+a = [0] * n
+for i in range(n):
+    a[i] = [0] * m
+{% endprogram %}
+
+<p>Another (but similar) way: create an empty list and then <code>append</code> a new element to it <code>n</code>
+times (this element should be a list of length <code>m</code>):
+
+{% program %}
+n = 3
+m = 4
+a = []
+for i in range(n):
+a.append([0] * m)
+{% endprogram %}
+
+<p>But the easiest way is to use generator, creating a list of
+<code>n</code> elements, each of which is a list of <code>m</code> zeros:
+
+{% program %}
+n = 3
+m = 4
+a = [[0] * m for i in range(n)]
+{% endprogram %}
+
+<p>In this case each element is created independently from the others.
+The list <code>[0] * m</code> is <code>n</code> times consructed as the new one, and no copying of references occurs.
+{% endsection %}
+
+
+
+{% section "How do you input a two-dimensional array?" %}
+<p>Say, a program takes on input two-dimensional array in the form of
+<code>n</code> rows, each of which contains <code>m</code>
+numbers separated by spaces. How do you force the program to read it? An example of how you can do it:
+
+{% program %}
+# the first line of input is the number of rows of the array
+n = int(input()) 
+a = []
+for i in range(n):
+    a.append([int(j) for j in input().split()])
+{% inputdata %}
+3
+1 2 3 4
+5 6
+7 8 9
+{% endinputdata %}
+{% endprogram %}
+
+<P>Or, without using sophisticated nested calls:
+{% program %}
+# the first line of input is the number of rows of the array
+n = int(input()) 
+a = []
+for i in range(n):
+    row = input().split()
+    for i in range(len(row)):
+        row[i] = int(row[i])
+    a.append(row)
+{% inputdata %}
+3
+1 2 3 4
+5 6
+7 8 9
+{% endinputdata %}    
+{% endprogram %}
+
+<p>You can do the same with generators:
+{% program %}
+# the first line of input is the number of rows of the array
+n = int(input()) 
+a = [[int(j) for j in input().split()] for i in range(n)]
+{% inputdata %}
+3
+1 2 3 4
+5 6
+7 8 9
+{% endinputdata %}    
+{% endprogram %}
+{% endsection %}
+
+
+
+{% section "Processing a two-dimensional array: an example" %}
+<p>Suppose you are given a square array (an array of <code>n</code> rows and <code>n</code> columns). And suppose you have to set elements of the main diagonal equal to 1 (that is, those elements <code>a[i][j]</code> for which <code>i==j</code>), to set elements above than that diagonal equal to 0, and to set elements below that diagonal equal to 2.
+That is, you need to produce such an array
+(example for <code>n==4</code>):
+
+{% noprogram %} 
+1 0 0 0
+2 1 0 0
+2 2 1 0
+2 2 2 1
+{% endnoprogram %}
+
+(In this case you can do it manually by setting <code>a[0][0] = 1</code>, <code>a[0][1] = 0</code> and so on, but you won't do it manually for arrays of 100 rows and 100 columns, which are often the case.)
+
+<p>We are eager to show you several ways of solving this problem. First, note that elements that lie above the main diagonal&nbsp;&ndash; are elements
+<code>a[i][j]</code> for which <code>i&lt;j</code>, and that for elements below the main diagonal <code>i&gt;j</code>. Thus, we can
+compare the values <code>i</code> and <code>j</code>, which determines the value of <code>a[i][j]</code>. We get the following algorithm:
+
+
+{% program %}
+n = 4
+a = [[0] * n for i in range(n)]
+for i in range(n):
+    for j in range(n):
+        if i < j:
+            a[i][j] = 0
+        elif i > j:
+            a[i][j] = 2
+        else:
+            a[i][j] = 1
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
+{% endprogram %}
+   <p>This algorithm is slow: it uses two loops and for each pair <code>(i,j)</code> executes one or two <code>if</code> instructions. 
+If we complicate the algorithm, we will be able to do it without a conditional statement.
+
+<p>First, fill the main diagonal, for which we will need one loop:
+
+{% noprogram %}
+for i in range(n):
+    a[i][i] = 1
+{% endnoprogram %}
+<p>Then fill with zeros all the elements above the main diagonal. To make this, for each row
+with the number <code>i</code> you need to assign a value to <code>a[i][j]</code> for <code>j</code>=<code>i+1</code>, ..., <code>n-1</code>. To do that, you need nested loops:
+
+
+{% noprogram %}
+for i in range(n):
+    for j in range(i + 1, n):
+        a[i][j] = 0
+{% endnoprogram %}
+<p>By analogy, for <code>j</code>=<code>0</code>, ..., <code>i-1</code> set the elements <code>a[i][j]</code> equal to <code>2</code>: 
+
+
+{% noprogram %}
+for i in range(n):
+    for j in range(0, i):
+        a[i][j] = 2
+{% endnoprogram %}
+
+<p>You can combine all this code and receive another solution:
+{% program %}
+n = 4
+a = [[0] * n for i in range(n)]
+for i in range(n):
+    for j in range(0, i):
+        a[i][j] = 2
+    a[i][i] = 1
+    for j in range(i + 1, n):
+        a[i][j] = 0
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
+{% endprogram %}
+
+<p>Here's another solution, which repeats lists to build the next rows of the list. The <code>i</code>-th line of the list consists of <code>i</code> numbers
+<code>2</code>, followed by one integer <code>1</code>, followed by <code>n-i-1</code> zeros:
+
+{% program %}
+n = 4
+a = [0] * n
+for i in range(n):
+    a[i] = [2] * i + [1] + [0] * (n - i - 1)
+for row in a:
+    print(' '.join([str(elem) for elem in row]))    
+{% endprogram %}
+
+<p>As usual, you can replace the loop with the generator:
+
+{% program %}
+n = 4
+a = [0] * n
+a = [[2] * i + [1] + [0] * (n - i - 1) for i in range(n)]
+for row in a:
+    print(' '.join([str(elem) for elem in row]))    
+{% endprogram %}
+{% endsection %}
+
+
+
+{% section "Two-dimensional arrays: nested generators" %}
+<p>You can use nested generators to create two-dimensional arrays, placing
+the generator of the list which is a string, inside the generator of all the strings. Recall that you can create a list of <code>n</code> rows and <code>m</code> columns using the generator (which
+creates a list of <code>n</code> elements, where each element is a list of
+<code>m</code> zeros):
+
+{% noprogram %}
+[[0] * m for i in range(n)]
+{% endnoprogram %}
+
+<p>But the internal list can also be created using, for example, such generator:
+<code>[0 for j in range(m)]</code>. Nesting one generator into another, we obtain
+
+{% noprogram %}
+[[0 for j in range(m)] for i in range(n)]
+{% endnoprogram %}
+
+<p>How is it related to our problem? The thing is, if the number 0 is replaced by some expression that depends on <code>i</code> (the line number) and <code>j</code> (the column number), you get the matrix filled
+according to some formula.
+
+<p>For example, suppose you need to initialize the following array (for convenience, extra spaces are added between items):
+
+{% noprogram %}
+0  0  0  0  0  0
+0  1  2  3  4  5
+0  2  4  6  8 10
+0  3  6  9 12 15
+0  4  8 12 16 20
+{% endnoprogram %}
+
+<p>In this array there are <code>n = 5</code> rows, <code>m = 6</code> columns, and the element
+with row index <code>i</code> and column index <code>j</code> is calculated by the formula
+
+<code>a[i][j] = i * j</code>.
+
+<p>As always, you could use generator to create such an array:
+{% noprogram %}
+[[i * j for j in range(m)] for i in range(n)]
+{% endnoprogram %}
+{% endsection %}

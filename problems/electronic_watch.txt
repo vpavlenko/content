@@ -1,0 +1,43 @@
+Name:
+Digital clock
+
+Statement:
+Given the integer N - the number of minutes that is passed since midnight.
+How many hours and minutes are displayed on the 24h digital clock?
+<p>
+The program should print the two numbers: the number of hours (between 0 and 23) and the number of minutes
+(between 0 and 59).
+<p>
+For example, if N = 150, then 150 minutes are passed since midnight - i.e. now is 2:30 am. So the
+program should print <code>2 30</code>.
+
+
+Test:
+150
+
+Answer:
+2 30
+
+Test:
+180
+
+Answer:
+3 0
+
+Test:
+444
+
+Answer:
+7 24
+
+Test:
+1111
+
+Answer:
+18 31
+
+Test:
+1439
+
+Answer:
+23 59

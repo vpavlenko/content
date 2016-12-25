@@ -1,0 +1,35 @@
+Name:
+The number of distinct numbers
+
+Statement:
+<p>Given a list of integers.
+Determine how many distinct numbers there are.</p>
+
+<p>This task can be solved in one line of code.</p>
+
+Test:
+1 2 3 2 1
+
+Answer:
+3
+
+
+Test:
+1 2 3 4 5 6 7 8 9 10
+
+Answer:
+10
+
+
+Test:
+1 2 3 4 5 1 2 1 2 7 3
+
+Answer:
+6
+
+
+Test:
+1 1 1 1 1 1 1 1 1 1 1 1
+
+Answer:
+1

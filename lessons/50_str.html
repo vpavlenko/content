@@ -1,0 +1,268 @@
+{% section "Strings" %}
+<p>A string can be read from the standard input using the function <code>input()</code>
+or defined in single or double quotes. Two strings can be concatenated, and we
+can also repeat a string n times multiplying it by integer:
+{% program %}
+print('>_< ' * 5)  # >_< >_< >_< >_< >_<
+{% endprogram %}
+
+<p>A string in Python is a sequence of characters. The function <code>len(some_string)</code>
+returns how many characters there are in a string:
+{% program %}
+print(len('abcdefghijklmnopqrstuvwxyz'))  # 26
+{% endprogram %}
+
+<p>Every object in Python can be converted to string using the function <code>str(some_object)</code>.
+So we can convert numbers to strings:
+{% program %}
+s = str(2 ** 100)
+print(s)  # 1267650600228229401496703205376
+print(len(s))  # 31
+{% endprogram %}
+
+{% endsection %}
+
+
+
+{% section "Slices" %}
+{% section "Single character" %}
+<p>A slice gives from the given string one character or some fragment:
+substring or subsequence.
+
+<p>There are three forms of slices. The simplest form of the slice: a single character
+slice <code>S[i]</code> gives <code>i</code>th character of the string. We count characters starting
+from 0. That is, if <code><nobr>S = 'Hello'</nobr></code>, 
+<code><nobr>S[0] == 'H'</nobr></code>, <code><nobr>S[1] == 'e'</nobr></code>, <code><nobr>S[2] == 'l'</nobr></code>,
+<code><nobr>S[3] == 'l'</nobr></code>, <code><nobr>S[4] == 'o'</nobr></code>.
+
+Note that in Python there is no separate type for characters of the string. <code>S[i]</code>
+also has the type <code>str</code>, just as the source string.
+
+<p>Number <code>i</code> in <code>S[i]</code> is called an <em>index</em>.
+
+<p>If you specify a negative index, then it is counted
+from the end, starting with the number <code>-1</code>. That is, <code><nobr>S[-1] == 'o'</nobr></code>,
+<code><nobr>S[-2] == 'l'</nobr></code>, <code><nobr>S[-3] == 'l'</nobr></code>, <code><nobr>S[-4] == 'e'</nobr></code>,
+<code><nobr>S[-5] == 'H'</nobr></code>. 
+
+<p>Let's summarize it in the table:
+
+<table border='1' cellspacing="0" cellpadding="3"> 
+<tr> 
+<th>String S</th> 
+<td align="center">H</td> 
+<td align="center">e</td> 
+<td align="center">l</td> 
+<td align="center">l</td> 
+<td align="center">o</td> 
+</tr> 
+<tr> 
+<th>Index</th> 
+<td align="center">S[0]</td> 
+<td align="center">S[1]</td> 
+<td align="center">S[2]</td> 
+<td align="center">S[3]</td> 
+<td align="center">S[4]</td> 
+</tr> 
+<tr> 
+<th>Index</th> 
+<td align="center">S[-5]</td> 
+<td align="center">S[-4]</td> 
+<td align="center">S[-3]</td> 
+<td align="center">S[-2]</td> 
+<td align="center">S[-1]</td> 
+</tr> 
+</table>
+
+<p>If the index in the slice <code>S[i]</code> is greater than or equal to <code>len(S)</code>,
+or less than <code>-len(S)</code>, the following error is caused <code>IndexError: string index out of range</code>.
+
+{% endsection %}
+
+{% section "Substring" %}
+
+<p>Slice with two parameters <code>S[a:b]</code> 
+returns the substring of length <code>b - a</code>,
+starting with the character at index <code>a</code> and
+lasting until the character at index </code>b</code>, not including the last one.
+For example, <code>S[1:4] == 'ell'</code>, and you can get the same substring using <code>S[-4:-1]</code>.
+You can mix positive and negative indexes in the same slice, for example, <code>S[1:-1]</code> is
+a substring without the first and the last character of the string (the slice begins with the character with index 1 and 
+ends with an index of -1, not including it).
+
+<p>Slices with two parameters never cause <code>IndexError</code>. For example, for <code>S == 'Hello'</code> 
+the slice <code>S[1:5]</code> 
+returns the string <code>'ello'</code>, and the result is the same even
+if the second index is very large, like
+<code>S[1:100]</code>.
+
+<p>If you omit the second parameter (but preserve the colon),
+then the slice goes to the end of string. For example, to remove
+the first character from the string (its index is 0)
+take the slice <code>S[1:]</code>. Similarly
+if you omit the first parameter, then Python takes the slice from the beginning of the string.
+That is, to remove the last character from the string, you can use slice
+<code>S[:-1]</code>. The slice <code>S[:]</code> matches the string
+<code>S</code> itself.
+
+{% endsection %}
+
+{% section "Immutability of strings" %}
+
+<p>
+Any slice of a string creates a new string and never modifies the original one.
+In Python strings are immutable, i.e they can not be changed as the objects.
+You can only assign the variable to the new string, but the old one stays in memory.
+
+<p>In fact in Python there is no variables. There are only the names that are associated with any objects.
+You can first associate a name with one object, and then &mdash; with another. Can several names
+be associated with one and the same object.</p>
+
+<p>Let's demonstrate that:
+{% program %}
+s = 'Hello'
+t = s  # s and t point to the same string
+t = s[2:4]  # now t points to the new string 'll'
+print(s)  # prints 'Hello' as s is not changed
+print(t)  # prints 'll'
+{% endprogram %}
+ 
+{% endsection %}
+
+{% section "Subsequence" %}
+
+<p>If you specify a slice with three parameters <code>S[a:b:d]</code>,
+the third parameter specifies the step, same as for function
+<code>range()</code>. In this case only the characters with the following index are taken:
+<code>a</code> <nobr><code>a + d</code></nobr>, <nobr><code>a + 2 * d</code></nobr> and so on, until and not 
+including the character with index <code>b</code>.
+If the third parameter equals to 2, the slice takes
+every second character, and if the step of the slice equals to
+<code>-1</code>, the characters go in reverse order. 
+For example, you can reverse a string like this: <code>S[::-1]</code>.
+
+Let's see the examples:
+
+{% program %}
+s = 'abcdefg'
+print(s[1])
+print(s[-1])
+print(s[1:3])
+print(s[1:-1])
+print(s[:3])
+print(s[2:])
+print(s[:-1])
+print(s[::2])
+print(s[1::2])
+print(s[::-1])
+{% endprogram %}
+
+
+Note how the third parameter of the slice is similar to the third parameter of the function <code>range()</code>:
+
+{% program %}
+s = 'abcdefghijklm'
+print(s[0:10:2])
+for i in range(0, 10, 2):
+    print(i, s[i])
+{% endprogram %}
+
+{% endsection %}
+
+{% endsection %}
+
+
+
+{% section "String methods" %}
+
+<p>A method is a function that is bound to the object. When the method is called,
+the method is applied to the object and does some computations related to it.
+Methods are invoked as <code>object_name.method_name(arguments)</code>.
+For example, in <code>s.find(&quot;e&quot;)</code>&nbsp; the string method <code>find()</code> is applied to
+the string <code>s</code> with one argument <code>&quot;e&quot;</code>.
+
+{% section "find() and rfind() methods" %}
+<p>Method <code>find()</code> searchs a substring, passed as an argument,
+inside the string on which it's called.
+The function returns the index of the first occurrence of the substring.
+If the substring is not found, the method returns -1. 
+
+{% program %}
+s = 'Hello'
+print(s.find('e'))
+# 1
+print(s.find('ll'))
+# 2
+print(s.find('L'))
+# -1
+{% endprogram %}
+
+<p>Similarly, the method <code>rfind()</code> returns the index of the last occurrence
+of the substring.
+
+{% program %}
+s = 'abracadabra'
+print(s.find('b'))
+# 1
+print(s.rfind('b'))
+# 8
+{% endprogram %}
+
+<p>If you call <code>find()</code> with three arguments
+<code>s.find(substring, left, right)</code>, the search is performed
+inside the slice <code>s[left:right]</code>. If you specify only two arguments, like
+<code>s.find(substring, left)</code>, the search is performed
+in the slice <code>s[left:]</code>, that is, starting with the character at index
+<code>left</code> to the end of the string. Method <code>s.find(substring, left, right)</code>
+returns the absolute index, relatively to the whole string <code>s</code>, and not to the slice.
+
+{% program %}
+s = 'my name is bond, james bond, okay?'
+print(s.find('bond'))
+# 11
+print(s.find('bond', 12))
+# 23
+{% endprogram %}
+
+{% endsection %}
+
+
+
+{% section "replace() method" %}
+<p>Method <code>replace()</code> replaces all occurrences of a given substring with another one. Syntax:
+<code>s.replace(old, new)</code>&nbsp; takes the string <code>S</code> and replaces
+all occurrences of substring <code>old</code> with the substring <code>new</code>. Example:
+
+{% program %}
+print('a bar is a bar, essentially'.replace('bar', 'pub'))
+# 'a pub is a pub, essentially'
+{% endprogram %}
+
+<p>One can pass the third argument <code>count</code>, like this: <code>s.replace(old, new, count)</code>.
+It makes <code>replace()</code> to replace only first <code>count</code> occurrences and then stop.
+
+{% program %}
+print('a bar is a bar, essentially'.replace('bar', 'pub', 1))
+# 'a pub is a bar, essentially'
+{% endprogram %}
+{% endsection %}
+
+{% section "count() method" %}
+<p>This method counts the number of occurrences of one string within another string. The simplest
+form is this one: <code>s.count(substring)</code>. Only non-overlapping occurrences are taken into account:
+
+{% program %}
+print('Abracadabra'.count('a'))
+# 4
+print(('aaaaaaaaaa').count('aa'))
+# 5
+{% endprogram %}
+
+
+<p>If you specify three parameters <code><nobr>s.count(substring, left, right)</nobr></code>,
+the count is performed within the slice <code>s[left:right]</code>.
+{% endsection %}
+
+{% endsection %}
+
+<!-- ord, chr -->

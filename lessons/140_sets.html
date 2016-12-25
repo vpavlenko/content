@@ -1,0 +1,275 @@
+{% section "What is a set" %}
+<p><em>Set</em> in Python is a data structure 
+equivalent to sets in mathematics. It may consist
+of various elements; the order of elements in a set is undefined.
+You can add and delete elements of a set, you can iterate
+the elements of the set, you can perform standard operations on sets
+(union, intersection, difference). Besides that, you can check if an element belongs to a set.</p>
+
+<p>Unlike arrays, where the elements are stored as ordered
+list, the order of elements in a set is undefined (moreover,
+the set elements are usually not stored in order of appearance in the set; this allows checking if an element belongs to a set faster than just going through all the elements of the set).
+
+<p>Any immutable data type can be an element of a set:
+a number, a string, a tuple. Mutable (changeable) data types cannot be
+elements of the set. In particular, list cannot be an element of a set (but tuple can), and another set cannot be an element of a set. The requirement of immutability follows from the way how do computers represent sets in memory.
+
+{% endsection %}
+
+
+
+{% section "How to define a set" %}
+
+<p>You can define a set as simple as by naming all of its elements in brackets. 
+The only exception is <em>empty set</em>, which can be created using
+the function <code>set()</code>. If <code>set(..)</code> has a
+list, a string or a tuple as a parameter, it will return a set composed of its elements. For example,
+
+{% program %}
+A = {1, 2, 3}
+A = set('qwerty')
+print(A)
+{% endprogram %}
+<p>will print <code>{'e', 'q', 'r', 't', 'w', 'y'}</code> as the output.
+
+<p>The order of elements is
+unimportant. For example, the program
+{% program %}
+A = {1, 2, 3}
+B = {3, 2, 3, 1}
+print(A == B)
+{% endprogram %}
+<p>will print <code>True</code>, because <code>A</code> and <code>B</code> are equal
+sets.
+
+<p>Each element may enter the set only once. <code>set('Hello')</code>
+returns the set of four elements: <code>{'H', 'e', 'l', 'o'}</code>.
+
+{% endsection %}
+
+
+
+{% section "Operations with elements" %}
+
+<p>You can get the number of elements in the set using the function <code>len</code>.
+
+<p>You can also iterate over all the elements of the set (in an undefined order!) using the loop <code>for</code>:
+
+{% program %}
+primes = {2, 3, 5, 7, 11}
+for num in primes:
+    print(num)
+{% endprogram %}
+
+<p>You can check whether an element belongs to a set using the keyword 
+<code>in</code>: expressions like <code>a in A</code> return a value of type <code>bool</code>.
+Similarly there's the opposite operation <code>not in</code>. 
+To add an element to the set there is the method <code>add</code>:
+
+{% program %}
+A = {1, 2, 3}
+print(1 in A, 4 not in A)
+A.add(4)
+{% endprogram %}
+
+<p>There are two methods to remove an element from a set:
+<code>discard</code> and <code>remove</code>. Their behavior varies
+only in case if the deleted item was not in the set.
+In this case the method <code>discard</code> does nothing and the method
+<code>remove</code> throws exception <code>KeyError</code>.
+
+<p>Finally, <code>pop</code> removes one random element from the set and returns its value. If the set is empty, <code>pop</code> generates
+the exception <code>KeyError</code>.
+
+<p>You can transform a set to list using the function <code>list</code>.
+
+{% endsection %}
+
+{% section "Operations on sets" %}
+
+<p>This is how you perform the well-known <a href="https://en.wikipedia.org/wiki/Set_(mathematics)#Basic_operations">operations on sets</a> in Python:
+
+<table border="1" cellpadding="5">
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A | B
+</br>
+A.union(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;">
+Returns a set which is the union of sets <code>A</code> and <code>B</code>.
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A |= B
+</br>
+A.update(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Adds all elements of array <code>B</code> to the set <code>A</code>.
+</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A &amp; B
+</br>
+A.intersection(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;">
+Returns a set which is the intersection of sets <code>A</code> and <code>B</code>.
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A &= B
+</br>
+A.intersection_update(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;">
+Leaves in the set <code>A</code> only items that belong to the set <code>B</code>.
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A - B
+</br>
+A.difference(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Returns the set difference of <code>A</code> and <code>B</code> (the elements included in <code>A</code>,
+but not included in <code>B</code>).
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A -= B
+</br>
+A.difference_update(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Removes all elements of <code>B</code> from the set <code>A</code>.
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A ^ B
+</br>
+A.symmetric_difference(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Returns the symmetric difference of sets <code>A</code> and <code>B</code> (the elements belonging to either <code>A</code>
+or <code>B</code>, but not to both sets simultaneously).
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A ^= B
+</br>
+A.symmetric_difference_update(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Writes in <code>A</code> the symmetric difference of sets <code>A</code> and <code>B</code>.
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A &lt;= B
+</br>
+A.issubset(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Returns <code>true</code> if <code>A</code> is a subset of <code>B</code>.
+</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A &gt;= B
+</br>
+A.issuperset(B)
+</div>
+</td>
+<td>
+<div style="margin:5px;">
+Returns <code>true</code> if <code>B</code> is a subset of <code>A</code>.
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A &lt; B
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Equivalent to <code>A &lt;= B and A != B</code>
+</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<div style="margin:5px; font-weight: bold;">
+A &gt; B
+</div>
+</td>
+<td>
+<div style="margin:5px;"> 
+Equivalent to <code>A &gt;= B and A != B</code>
+</div>
+</td>
+</tr>
+
+</table>
+{% endsection %}

@@ -1,0 +1,111 @@
+Name:
+Родословная: число потомков
+
+Statement:
+<p>Для каждого элемента дерева определите число всех его потомков (не считая его самого).</p>
+
+<p>
+Формат выходных данных совпадает с
+<a href="http://pythontutor.ru/lessons/sets/problems/genealogy_level_count/">задачей</a>. 
+</p><p>
+Выведите список всех элементов в лексикографическом
+порядке, для каждого элемента выводите количество всех его потомков.
+</p>
+
+Test:
+9
+Alexei Peter_I
+Anna Peter_I
+Elizabeth Peter_I
+Peter_II Alexei
+Peter_III Anna
+Paul_I Peter_III
+Alexander_I Paul_I
+Nicholaus_I Paul_I
+
+Answer:
+Alexander_I 0
+Alexei 1
+Anna 4
+Elizabeth 0
+Nicholaus_I 0
+Paul_I 2
+Peter_I 8
+Peter_II 0
+Peter_III 3
+
+
+Test:
+10
+AICHNG ZLNYXGO
+BDLHBJZWY BELAFXWA
+COXUC WVWNNC
+ELPPUINHJ BELAFXWA
+HIOSZOHQWG AICHNG
+UVRRAVHX BDLHBJZWY
+WVWNNC ELPPUINHJ
+YKYWCJBAX BDLHBJZWY
+ZLNYXGO BDLHBJZWY
+
+Answer:
+AICHNG 1
+BDLHBJZWY 5
+BELAFXWA 9
+COXUC 0
+ELPPUINHJ 2
+HIOSZOHQWG 0
+UVRRAVHX 0
+WVWNNC 1
+YKYWCJBAX 0
+ZLNYXGO 2
+
+
+Test:
+10
+ATGRVELXU VAFBFFU
+AXOLTFYBEU IELUG
+GJSBSGD PSLUWDJML
+NOVHFU ZGTKHDLCUG
+PSLUWDJML ATGRVELXU
+UTOEGJE VQJTQ
+VAFBFFU AXOLTFYBEU
+VQJTQ NOVHFU
+ZGTKHDLCUG GJSBSGD
+
+Answer:
+ATGRVELXU 6
+AXOLTFYBEU 8
+GJSBSGD 4
+IELUG 9
+NOVHFU 2
+PSLUWDJML 5
+UTOEGJE 0
+VAFBFFU 7
+VQJTQ 1
+ZGTKHDLCUG 3
+
+
+Test:
+10
+BVBSQST YYKHZ
+DLPJBFWD BVBSQST
+LWHPUKU MMDVH
+MMDVH AGHTYJZKGG
+NMOGF QKZQHV
+QKZQHV YYKHZ
+TXIGBES MMDVH
+YGQSXD QKZQHV
+YYKHZ AGHTYJZKGG
+
+Answer:
+AGHTYJZKGG 9
+BVBSQST 1
+DLPJBFWD 0
+LWHPUKU 0
+MMDVH 2
+NMOGF 0
+QKZQHV 2
+TXIGBES 0
+YGQSXD 0
+YYKHZ 5
+

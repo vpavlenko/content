@@ -1,0 +1,62 @@
+Name:
+Swap min and max
+
+Statement:
+Given the list. All its elements are distinct. Swap the minimal and maximal elements of this list.
+
+Test:
+3 4 5 2 1
+
+Answer:
+3 4 1 2 5 
+
+
+Test:
+1 5 4 3 2
+
+Answer:
+5 1 4 3 2 
+
+
+Test:
+-30000 30000
+
+Answer:
+30000 -30000 
+
+
+Test:
+1
+
+Answer:
+1 
+
+
+Test:
+2147483647 -2147483648
+
+Answer:
+-2147483648 2147483647 
+
+
+Test:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 17 16 15 14
+
+Answer:
+18 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 1 17 16 15 14 
+
+
+Test:
+1 2 3 4 5 6 7 8 9 10
+
+Answer:
+10 2 3 4 5 6 7 8 9 1 
+
+
+Test:
+10 9 8 7 6 5 4 3 2 1
+
+Answer:
+1 9 8 7 6 5 4 3 2 10 
+
+

@@ -1,0 +1,108 @@
+Name:
+Neighbors of the same sign
+
+Statement:
+Given a list of numbers. If there are two adjacent elements of the same sign, print these numbers. If there's no such pairs, leave the output blank. If there are many such pairs, print the first one.
+
+Test:
+-1 2 3 -1 -2
+
+Answer:
+2 3
+
+
+Test:
+1 -3 4 -2 1
+
+Answer:
+
+
+Test:
+1 2 -3 -4 -5
+
+Answer:
+1 2
+
+
+Test:
+1 -2 3 -4 -5
+
+Answer:
+-4 -5
+
+
+Test:
+1 -2 3 -4 5 6
+
+Answer:
+5 6
+
+
+Test:
+-1 2 -3 4 -5 6
+
+Answer:
+
+
+Test:
+1 -2 3 -4 5 -6
+
+Answer:
+
+
+Test:
+1 -2 3 -4
+
+Answer:
+
+
+Test:
+-1 2 -3 4
+
+Answer:
+
+
+Test:
+1 2 3 4
+
+Answer:
+1 2
+
+
+Test:
+-1 -2 -3 -4
+
+Answer:
+-1 -2
+
+
+Test:
+1 -1 1 -1 -1 1 -1 1 -1 1
+
+Answer:
+-1 -1
+
+
+Test:
+1 -1 1 -1 1 1 -1 1 -1 1
+
+Answer:
+1 1
+
+
+Test:
+1 -1 1 -1 1
+
+Answer:
+
+
+Test:
+-1 1 -1 1 -1
+
+Answer:
+
+
+
+
+
+

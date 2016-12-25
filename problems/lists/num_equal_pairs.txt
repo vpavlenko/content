@@ -1,0 +1,75 @@
+Name:
+The number of pairs of equal
+
+Statement:
+Given a list of numbers. Count how many pairs of elements are there such that the elements of the pair are equal to each other. Any
+two elements that are equal to each other should be counted exactly once.
+
+Test:
+1 2 3 2 3
+
+Answer:
+2
+
+
+Test:
+1 1 1 1 1
+
+Answer:
+10
+
+
+Test:
+1 2 3
+
+Answer:
+0
+
+
+Test:
+1 1 1
+
+Answer:
+3
+
+
+Test:
+2 3
+
+Answer:
+0
+
+
+Test:
+2 2
+
+Answer:
+1
+
+
+Test:
+0 0
+
+Answer:
+1
+
+
+Test:
+0 0 6 1 1 4 2 1 2 2 
+
+Answer:
+7
+
+
+Test:
+0 1 43 10 13 33 15 8 18 21 
+
+Answer:
+0
+
+
+Test:
+3 2 1 2 2 4 3 2 5 3 2 
+
+Answer:
+13

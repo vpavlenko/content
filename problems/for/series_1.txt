@@ -1,0 +1,37 @@
+Name:
+Series - 1
+
+Statement:
+Given two integers A and B (A &le; B). Print all numbers from A to B inclusively.
+
+
+Test:
+1
+10
+
+Answer:
+1 2 3 4 5 6 7 8 9 10 
+
+
+Test:
+-3
+14
+
+Answer:
+-3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 
+
+
+Test:
+0
+0
+
+Answer:
+0 
+
+
+Test:
+20
+20
+
+Answer:
+20

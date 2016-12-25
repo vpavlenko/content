@@ -1,0 +1,84 @@
+Name:
+Slices
+
+Statement:
+<p>You are given a string.
+
+<p>In the first line, print the third character of this string.
+
+<p>In the second line, print the second last character of this string.
+
+<p>In the third line, print the first five characters of this string.
+
+<p>In the fourth line, print the entire string, except the last two characters.
+
+<p>In the fifth line, print all the symbols with even indices (keeping in mind that
+indexing starts at 0, so the characters are displayed starting with the first).
+
+<p>The sixth line should contain all symbols with odd indices (i.e. starting with the second character in the string).
+
+<p>In the seventh line, print all the characters in reverse order.
+
+<p>In the eighth line, print all the even characters in reverse order.
+
+<p>In the ninth line, print the length of the given string.
+
+
+Test:
+Abrakadabra
+
+Answer:
+r
+r
+Abrak
+Abrakadab
+Arkdba
+baaar
+arbadakarbA
+abdkrA
+11
+
+
+Test:
+Hello
+
+Answer:
+l
+l
+Hello
+Hel
+Hlo
+el
+olleH
+olH
+5
+
+
+Test:
+qwertyuiop
+
+Answer:
+e
+o
+qwert
+qwertyui
+qetuo
+wryip
+poiuytrewq
+piyrw
+10
+
+
+Test:
+asdfghjklzxcv
+
+Answer:
+d
+c
+asdfg
+asdfghjklzx
+adgjlxv
+sfhkzc
+vcxzlkjhgfdsa
+vxljgda
+13
