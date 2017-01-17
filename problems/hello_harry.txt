@@ -4,6 +4,9 @@ Hello, Harry!
 Statement:
 Write a program that greets the user by printing the word "Hello", the comma, the name of the user and the exclamation mark after it.
 See the examples below.
+<p>
+<b>Warning.</b> There shouldn't be any space between the name and the exclamation mark. You can use <code>+</code> operator to
+concatenate two strings. See the lesson for details.
 
 Test:
 Harry
