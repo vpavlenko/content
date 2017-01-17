@@ -329,9 +329,7 @@ print(input())
     'program': '''
 print(input())
 ''',
-    "instructions": '''
-Type <code>23</code> in your input section, then run the program and see what happens.
-''',
+    "input_data": "23",
     "expected_output": "23",
 },
 
