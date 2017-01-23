@@ -14,19 +14,7 @@ print(a)
 print(b)
 print(your_string)
 ''',
-'tasks': [
-    {
-        "instruction": 'Fill the input field with something you like.',
-        'expected_output': '',
-    },
-    {
-        "instruction": 'Run the program.',
-        'expected_output': '''
-        No man is an island
-		Who is John Galt?
-		My string''',
-    },
-],
+    "input_data": "write something here",
     "allfine": '',
 },
 
