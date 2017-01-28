@@ -13,6 +13,9 @@ The rules in Gregorian calendar are as follows:
     <li>a year is always a leap year if its number is exactly divisible by 400
 </ul>
 
+<p>
+<b>Warning.</b> The words <code>LEAP</code> and <code>COMMON</code> should be printed all caps.
+
 
 Test:
 2012
