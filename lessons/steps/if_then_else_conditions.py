@@ -80,9 +80,6 @@ print("first line")
     print("second line")
 
 ''',
-    "expected_output": """
-IndentationError: unexpected indent
-""",
     "allfine": "",
 },
 

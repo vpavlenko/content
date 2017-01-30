@@ -267,23 +267,34 @@ In general, this is inconvenient; usually, you are in need to print all the elem
 <code>elem</code> will take the values <code>'red'</code>,
 <code>'green'</code>, <code>'blue'</code> successively.
 """,
-    "instructions": 'Type <code>print(a[i])</code> in the loop body (the third line) and click "Run" to see what happens in output. Then uncomment three line printing the list in a single line.',
+    "instructions": '',
     "program": '''
-a = [1, 2, 3, 4, 5]
+a = [10, 20, 30, 40, 50]
 for i in range(len(a)):
     # Your code here!
 
-# a = [1, 2, 3, 4, 5]
 # for elem in a:
 #     print(elem, end=' ')
 ''',
-    'expected_output': """1
-2
-3
-4
-5
-1 2 3 4 5 
-""",
+'tasks': [
+    {
+        "instruction": '''Type <code>print(a[i])</code> in the loop body (the third line) and click "Run" to see what happens in output.''',
+        'expected_output': '''10
+20
+30
+40
+50''',
+    },
+    {
+        "instruction": "Then uncomment two lines printing the list in a single line.",
+        'expected_output': '''10
+20
+30
+40
+50
+10 20 30 40 50''',
+    },
+],
 },
 
 

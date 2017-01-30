@@ -513,7 +513,6 @@ Every <a href="https://en.wikipedia.org/wiki/Real_number">real number</a> can be
 The type of an object specifies what kind of operations may be applied to it.
 For instance, if the two variables <code>"first"</code> and <code>"second"</code> are pointing to the objects of type <code>int</code>, Python can multiply them. However, Python can't multiply strings.
 """,
-    'highlight': "$('.visualizer_explain_mode').addClass('snakify-blinking');",
     'program': '''
 first = 5
 second = 7
@@ -524,12 +523,6 @@ first = '5'
 second = "7"
 print(first * second)
     ''',
-
-    "expected_output": """
-35
-TypeError: can't multiply sequence by non-int of type 'str'
-""",
-
         'allfine':
 '''The first three lines of code here successfully gave us the result of multiplication, and the last three lines granted us with the error.'''
 

@@ -218,12 +218,6 @@ s = "Don't print 1000-th symbol"
         "instruction": "Print the last symbol.",
         'expected_output': 'l',
     },
-    {
-        "instruction": "Try to print the symbol with index bigger than last by one, and enjoy the IndexError :3",
-        'expected_output': """
-IndexError: string index out of range
- """,
-    },
 ],
 "hint": """
 print(len(s))

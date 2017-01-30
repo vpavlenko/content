@@ -97,11 +97,9 @@ for row in a:
     print(' '.join([str(elem) for elem in row]))
 ''',
     'expected_output': 
-"""
-1 2 3 4 
-5 6 
-7 8 9 
-""",
+"""1 2 3 4
+5 6
+7 8 9""",
     "allfine": "Let's move on!",
 },
 
