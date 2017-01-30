@@ -137,30 +137,6 @@ print(a)
 <p>This program will print you the numbers 1 and 0. Despite the fact that the value of the variable <code>a</code> 
 changed inside the function, outside the function it remains the same! This is done in order to
 &laquo;protect&raquo; global variables from inadvertent changes of function.
-For example, if the function is called from the loop variable <code>i</code> and this function
-uses the variable <code>i</code>, these variables must
-be different. If you haven't understood the last sentence, take a look at the following code and think about how it worked,
-if inside the function changed the variable <code>i</code>.
-{% program %}
-def factorial(n):
-    res = 1
-    for i in range(1, n + 1):
-        res *= i
-    return res
-
-for i in range(1, 6):
-    print(i, '! = ', factorial(i), sep='')
-{% endprogram %}
-
-If the global variable <code>i</code> is changed inside the function, we would get this:
-{% noprogram %}
-5! = 1
-5! = 2
-5! = 6
-5! = 24
-5! = 120
-{% endnoprogram %}
-
 So, if some variable is modified inside the function,
 the variable becomes a local variable, and its modification will not
 change a global variable with the same name.
