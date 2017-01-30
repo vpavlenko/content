@@ -2,7 +2,7 @@ Name:
 Factorial
 
 Statement:
-In mathematics, the factorial of of an integer \(n\), denoted by \(n!\) is the following product: 
+In mathematics, the factorial of an integer \(n\), denoted by \(n!\) is the following product: 
 $$n! = 1 \times 2 \times \ldots \times n$$
 
 <p>
