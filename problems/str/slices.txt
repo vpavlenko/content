@@ -19,7 +19,7 @@ indexing starts at 0, so the characters are displayed starting with the first).
 
 <p>In the seventh line, print all the characters in reverse order.
 
-<p>In the eighth line, print all the even characters in reverse order.
+<p>In the eighth line, print every second character in reverse order, starting from the last one.
 
 <p>In the ninth line, print the length of the given string.
 
