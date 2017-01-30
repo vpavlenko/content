@@ -385,7 +385,6 @@ N = numerator/denominator
 
 print(N)
 ''',
-    'expected_output': '42.8097902097902',
     'allfine':
 '''Breaking your complex expressions to variables makes your code far more readable and prevents you from silly mistakes.'''
 },
