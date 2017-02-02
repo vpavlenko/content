@@ -2,16 +2,12 @@ Name:
 Sign function
 
 Statement:
-The sign function <code>sign(x)</code> in mathematics is defined as follows:
-<br>
-<code>sign(x) = 1,   if x > 0, 
-<br>
-sign(x) = -1, if x < 0, 
-<br>
-sign(x) = 0,   if x = 0.</code>
 
 <p>
-For the given integer X print the value <code>sign(x)</code>.
+For the given integer X print <code>1</code> if it's positive, <code>-1</code> if it's negative, or <code>0</code>
+if it's equal to zero.
+
+<p>
 Try to use the cascade <code>if-elif-else</code> for it.
 
 Test:
@@ -37,3 +33,9 @@ Test:
 
 Answer:
 1
+
+Test:
+-100
+
+Answer:
+-1
