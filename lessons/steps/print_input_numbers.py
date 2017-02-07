@@ -358,8 +358,8 @@ print(a)
         'expected_output': '9',
     },
     {
-        "instruction": 'Erase the line <code>print(a * a)</code>. Type <code>b = a * a</code>, type <code>print(b)</code> on the next line, then run the code and see what happens.',
-        'expected_output': '9',
+        "instruction": 'Erase the line <code>print(a * a)</code>. Type <code>b = a * a * a</code>, type <code>print(b)</code> on the next line, then run the code and see what happens.',
+        'expected_output': '27',
     },
 ],
 
