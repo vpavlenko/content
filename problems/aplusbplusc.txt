@@ -3,7 +3,7 @@ Sum of three numbers
 
 Statement:
 Write a program that takes three numbers and prints their sum.
-Every number is given in a separate line.
+Every number is given on a separate line.
 
 Test:
 2

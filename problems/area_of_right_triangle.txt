@@ -1,0 +1,34 @@
+Name:
+Area of right-angled triangle
+
+Statement:
+Write a program that reads the length of the base and the height of a right-angled triangle and prints the area.
+Every number is given on a separate line.
+
+Test:
+3
+5
+
+Answer:
+7.5
+
+Test:
+10
+2
+
+Answer:
+10.0
+
+Test:
+179
+1534
+
+Answer:
+137293.0
+
+Test:
+1543
+57
+
+Answer:
+43975.5

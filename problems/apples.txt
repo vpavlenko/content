@@ -2,9 +2,9 @@ Name:
 Apple sharing
 
 Statement:
-N students take K apples and distribute them among each other evenly. The remaining (the undivisible) part remains in the basket. How many apples will each single student get? How many apples will remain in the basket?
+<code>N</code> students take <code>K</code> apples and distribute them among each other evenly. The remaining (the undivisible) part remains in the basket. How many apples will each single student get? How many apples will remain in the basket?
 <p>
-The program gets the numbers N and K. It should print the two numbers: answers for the questions above.
+The program reads the numbers <code>N</code> and <code>K</code>. It should print the two answers for the questions above.
 
 Test:
 6

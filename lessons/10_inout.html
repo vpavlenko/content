@@ -1,29 +1,30 @@
 {% section "How to read and write in Python" %}
 
 <p>
-Every program is eventually a data processor, so we should know how to input data
-into it and how to output them. There's a function <code>print()</code> to output data from Python program.
-To use it, fill in its parentheses with a comma-separated list of the values
-that you want to print. Let's see an example. Press "run" and then "next" to see how the program
+Every program is eventually a data processor, so we should know how to input and output data within it. There exists a function, <code>print()</code>, to output data from any Python program.
+To use it, pass a comma separated list of arguments
+that you want to print to the <code>print()</code> function.
+Let's see an example. Press "run" and then "next" to see how the program
 is being executed line by line:
 
 {% program %}
 print(5 + 10)
 print(3 * 7, (17 - 2) * 8)
-print(2 ** 16)  # two stars are used for exponentiation
+print(2 ** 16)  # two stars are used for exponentiation (2 to the power of 16)
 print(37 / 3)  # single forward slash is a division
 print(37 // 3)  # double forward slash is an integer division
+        # it returns only the quotient of the division (i.e. no remainder)
 print(37 % 3)  # percent sign is a modulus operator
         # it gives the remainder of the left value divided by the right value
 {% endprogram %}
 </p>
 
 <p>
-Use the function <code>input()</code> to input data into the program. This function reads a single text line as a string.
+To input data into a program, we use <code>input()</code>. This function reads a single line of text, as a String.
 </p>
 
 <p>
-Here's a program that reads the user's name and greets him:
+Here's a program that reads the user's name and greets them:
 {% program %}
 print('What is your name?')
 name = input()  # read a single line and store it in the variable "name"
@@ -43,10 +44,11 @@ John
 <p>
 Let's try to write a program that inputs two numbers and prints their sum. We read the two numbers
 and store them in the variables <code>a</code> and <code>b</code> using the assignment operator <code>=</code>.
-On the left side of an assignment operator we put the name of the variable. The name could be a string of latin characters.
+On the left side of an assignment operator we put the name of the variable. The name could be a string of latin characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code>)
+        but <strong>must</strong> start with a letter in the range <code>A-Z</code> or <code>a-z</code>.
 On the right side of an assignment operator we put any expression that Python can evaluate.
 The name starts pointing to the result of the evaluation.
-Read this example, run it and look at its output:
+Read this example, run it and look at the output:
     {% program %}
 a = input()
 b = input()
@@ -68,8 +70,8 @@ called "string concatenation".
 </p>
 
 <p>
-Do you see in the right side that the values bound to variables <code>a</code> and <code>b</code>
-are wrapped in quotes? That means that the values there are string, not numbers. Strings and values
+Do you see in the variable inspector, on the right hand side, that the values bound to variables <code>a</code> and <code>b</code>
+are wrapped in quotes? That means that the values there are string, not numbers. Strings and numbers
 are represented in Python differently.
 </p>
 
@@ -92,11 +94,11 @@ print(first * second)
 </p>
 
 <p>
-To cast the string of digits into an integer number, we can use the function <code>int()</code>. Eg., <code>int('23')</code> gives an int object <code>23</code>. 
+To cast (convert) the string of digits into an integer number, we can use the function <code>int()</code>. For example, <code>int('23')</code> gives an int object with value <code>23</code>. 
 </p>
 
 <p>
-    Given the information above, we can now fix our wrong program to sum the two numbers:
+    Given the information above, we can now fix the incorrect output and output the sum of the two numbers correctly:
     {% program %}
 a = int(input())
 b = int(input())
