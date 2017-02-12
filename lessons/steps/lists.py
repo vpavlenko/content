@@ -84,25 +84,16 @@ if we had to print out all the elements of a sequence
 in ascending order (&quot;sort a sequence&quot;).
 
 You can obtain the number of elements in a list with the function <code>len</code> (meaning <i>length of the list</i>), e.g. 
-<code>len(Primes)&nbsp;==&nbsp;6</code>.
+<code>len(primes)&nbsp;==&nbsp;6</code>.
 """,
-    'tasks': [
-    {
-        "instruction": 'Calculate the length of <code>Primes</code> list. (We hope you know that there are infinite number of prime numbers!)',
-        'expected_output': '6',
-    },
-    {
-        "instruction": 'Calculate the length of <code>Rainbow</code> list.',
-        'expected_output': '7',
-    },
-],
-"hint":
+    "instructions": 'Calculate the length of <code>primes</code> list. (We hope you know that there are infinite number of prime numbers!)',
+    'expected_output': '6',
+    "hint":
 """
-Of course all you have to do is to <code>print(len(Primes))</code>, and then <code>print(len(Rainbow))</code>.
+Of course all you have to do is to <code>print(len(primes))</code>.
 """,
     "program": '''
-Primes = [2, 3, 5, 7, 11, 13]
-Rainbow = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+primes = [2, 3, 5, 7, 11, 13]
 ''',
 },
 
