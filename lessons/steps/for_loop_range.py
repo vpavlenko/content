@@ -190,7 +190,7 @@ Generally, you're not interested in creating empty ranges.
     "instructions": 'Click "Run" to see what happens in output!',
     "program": '''
 for i in range(-5):
-    print('This won't be printed')
+    print("This won't be printed")
 for k in range(8, 6):
     print('Nothing will be printed')
 ''',
