@@ -2,11 +2,10 @@ Name:
 The second occurrence
 
 Statement:
-<p>Given a string. Find this line <b>second</b> occurrence
-the letter <code>f</code>, and output the index of this entry. If
-the letter <code>f</code> in the given string contains only one
-time, print the number <code>-1</code>, and if not found
-never, output the number of <code>-2</code>.
+<p>Given a string that may or may not contain the letter of interest. 
+Print the index location of the <b>second</b> occurrence of the letter <code>f</code>.
+If the string contains the letter <code>f</code> only once, then print <code>-1</code>, 
+and if the string does not contain the letter <code>f</code>, then print <code>-2</code>.
 
 Test:
 comfort
