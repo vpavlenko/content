@@ -2,8 +2,8 @@ Name:
 To swap the two words
 
 Statement:
-<p>Given a string consisting of exactly two words separated by a space. Rearrange these words
-places. Write the result to a string and print the resulting string.
+<p>Given a string consisting of exactly two words separated by a space. 
+Print a new string with the first and second word positions swapped (the second word is printed first).
 
 <p>This task should not use loops and <code>if</code>.
 
