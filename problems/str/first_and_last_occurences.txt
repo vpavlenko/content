@@ -2,12 +2,12 @@ Name:
 The first and last occurrence
 
 Statement:
-<p>Given a string. If in this line the letter <code>f</code> occurs
-only once, then output its index. If it occurs two or more times,
-print the index of its first and last appearance. If the letter is
-<code>f</code> in this string is not found, nothing to print.
+<p>Given a string that may or may not contain a letter of interest. 
+Print the index location of the first and last appearance of <code>f</code>. 
+If the letter <code>f</code> occurs only once, then output its index.
+If the letter <code>f</code> does not occur, then do not print anything.
 
-<p>Don't use the loops in this task.
+<p>Don't use loops in this task.
 
 Test:
 comfort
