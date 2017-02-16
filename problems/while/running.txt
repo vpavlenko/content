@@ -5,7 +5,7 @@ Morning jog
 Statement:
 <p>As a future athlete you just started your practice for an upcoming event.
 Given that on the first day you run <i>x</i> miles, and by the event you must be able to run <i>y</i> miles.
-<p>Calculate the number of days required for you to finally exceed the required distance for the event, if you 
+<p>Calculate the number of days required for you to finally reach the required distance for the event, if you 
 increases your distance each day by 10% from the previous day.
 <p>Print one integer representing the number of days to reach the required distance. 
 
