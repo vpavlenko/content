@@ -2,7 +2,7 @@ Name:
 List of squares
 
 Statement:
-For a given integer N, print all the squares of integer numbers less or equal than N, in ascending order.
+For a given integer N, print all the squares of integer numbers where the square is less than or equal to N, in ascending order.
 
 Test:
 50
