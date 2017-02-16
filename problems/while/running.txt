@@ -3,13 +3,11 @@ Morning jog
 
 
 Statement:
-<p>On the first day of the athlete ran <i>x</i> miles,
-and then every day it increased the mileage by 10% from the previous value.
-For the given number <i>y</i> determine the number of the day on which the mileage of the athlete will be
-not less than <i>y</i> miles.
-
-<p>The program takes two real numbers <i>x</i> and <i>y</i> and should print one integer
-number.
+<p>As a future athlete you just started your practice for an upcoming event.
+Given that on the first day you run <i>x</i> miles, and by the event you must be able to run <i>y</i> miles.
+<p>Calculate the number of days required for you to finally exceed the required distance for the event, if you 
+increases your distance each day by 10% from the previous day.
+<p>Print one integer representing the number of days to reach the required distance. 
 
 Test:
 10
