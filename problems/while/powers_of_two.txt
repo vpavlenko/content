@@ -2,8 +2,8 @@ Name:
 The power of two
 
 Statement:
-<p>For a given integer number N find the greatest integer that is a power of two, less or equal than N.
-Print the exponent and the power of two itself.</p>
+<p>For a given integer <b>N</b>, find the greatest integer <b>x</b> where $$ 2^x $$ is less than or equal to <b>N</b>. 
+Print the exponent value and the result of the expression  $$ 2^x $$.</p>
 
 <p>Don't use the operation <code>**</code>.</p>
 
