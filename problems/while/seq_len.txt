@@ -3,10 +3,9 @@ The length of the sequence
 
 
 Statement:
-<p>The program takes a sequence of non-negative integers,
-each number is written in a separate line. The sequence ends with a number
-0. After reaching 0 the program should stop and print
-length of the sequence before it (not counting the final 0).
+<p>Given a sequence of non-negative integers, where each number is written in a separate line. 
+Determine the length of the sequence, where the sequence ends when the integer is equal to 0.
+Print the length of the sequence (not counting the integer 0).
 The numbers following the number 0 should be omitted.
 
 Test:
