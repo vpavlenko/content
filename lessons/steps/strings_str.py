@@ -220,10 +220,10 @@ s = "Don't print 1000-th symbol"
     },
 ],
 "hint": """
-print(len(s))
-last = len(s) - 1  
-print(s[last]) 
-print(s[last+1]) 
+<pre>print(len(s))
+last = len(s) - 1
+print(last)
+print(s[last])</pre>
 """,
     "allfine": '',
 },
