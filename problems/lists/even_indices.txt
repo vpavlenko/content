@@ -2,7 +2,7 @@ Name:
 Even indices
 
 Statement:
-Print all the list elements with even index
+Given a list of numbers, find and print all the list elements with an even index number.
 (i.e. <code>A[0]</code>, <code>A[2]</code>, <code>A[4]</code>, ...).
 
 Test:

@@ -2,7 +2,9 @@ Name:
 The largest element
 
 Statement:
-Given a list of numbers. Print the value of the largest element in the list, then the index of this element in the list. If the highest element is not unique, print the index of the first of them.
+Given a list of numbers. Determine the element in the list with the largest value. Print the value of the largest element and then the index number. 
+
+If the highest element is not unique, print the index of the first instance.
 
 Test:
 1 2 3 2 1

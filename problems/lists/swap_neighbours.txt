@@ -2,9 +2,9 @@ Name:
 Swap neighbours
 
 Statement:
-Swap the adjacent list items in pairs (<code>A[0]</code> with <code>A[1]</code>,
-<code>A[2]</code> with <code>A[3]</code>,&nbsp;etc).
-If a list has an odd number of elements, the last element stays in its place.
+Given a list of numbers, swap adjacent items in pairs (<code>A[0]</code> with <code>A[1]</code>, <code>A[2]</code> with <code>A[3]</code>,&nbsp;etc.). Print the resulting list. 
+
+If a list has an odd number of elements, leave the last element in place.
 
 Test:
 1 2 3 4 5

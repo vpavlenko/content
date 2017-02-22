@@ -2,7 +2,7 @@ Name:
 Swap min and max
 
 Statement:
-Given the list. All its elements are distinct. Swap the minimal and maximal elements of this list.
+Given a list of unique numbers, swap the minimal and maximal elements of this list. Print the resulting list.
 
 Test:
 3 4 5 2 1

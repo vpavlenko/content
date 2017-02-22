@@ -2,8 +2,10 @@ Name:
 Even elements
 
 Statement:
-Print all even elements of a list. In this case use a for-loop that iterates over
-the <u>list</u>, and not over its indices! That is, don't use <code>range()</code>
+Given a list of numbers, find and print all elements that are an even number. 
+
+In this case use a for-loop that iterates over the <u>list</u>, 
+and not over its indices! That is, don't use <code>range()</code>
 
 Test:
 1 2 2 3 3 3 4

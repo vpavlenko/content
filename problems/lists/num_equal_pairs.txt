@@ -2,8 +2,9 @@ Name:
 The number of pairs of equal
 
 Statement:
-Given a list of numbers. Count how many pairs of elements are there such that the elements of the pair are equal to each other. Any
-two elements that are equal to each other should be counted exactly once.
+Given a list of numbers, count how many element pairs have the same value (are equal). 
+
+Any two elements that are equal to each other should be counted exactly once.
 
 Test:
 1 2 3 2 3

@@ -2,7 +2,7 @@ Name:
 Greater than previous
 
 Statement:
-Given a list of numbers. Print all its elements that are greater than the previous element.
+Given a list of numbers, find and print all the elements that are greater than the previous element.
 
 Test:
 1 5 2 4 3

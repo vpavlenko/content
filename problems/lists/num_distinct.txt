@@ -2,7 +2,7 @@ Name:
 The number of distinct elements
 
 Statement:
-Given a list with all elements sorted in non-decreasing order. Determine how many distinct elements are in it.
+Given a list of numbers with all of its elements sorted in ascending order, determine and print the quantity of distinct elements in it.
 
 Test:
 1 2 2 3 3 3

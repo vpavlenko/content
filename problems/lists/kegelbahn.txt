@@ -2,16 +2,9 @@ Name:
 The bowling alley
 
 Statement:
-<i>N</i> pins are put in a row, they are enumerated from <i>1</i> to <i>N</i>.
-<i>K</i> balls were thrown towards this row and <i>i</i>-th ball knocked down all the pins with numbers from
-<i>l<sub>i</sub></i> to <i>r<sub>i</sub></i>, inclusively. Determine which pins remain standing in place.
+In bowling, the player starts wtih 10 pins at the far end of a lane. The object is to knock all the pins down. For this exercise, the number of pins and balls will vary.
 
-<p>The program gets the number of pins <i>N</i> and the number of balls thrown <i>K</i>.
-Next given <i>K</i> pairs of integers <i>l<sub>i</sub></i>, <i>r<sub>i</sub></i>, <i>1&le; l<sub>i</sub>&le; r<sub>i</sub>&le; N</i>.
-
-<p>The program should print a sequence of <i>N</i> characters, where <i>j</i>-th character
-there is &ldquo;<code>I</code>&rdquo; if <i>j</i>-th pin is left standing, or
-&ldquo;<code>.</code>&rdquo; if <i>j</i>-th pin was knocked down.
+Given the number of pins <i>N</i> and then the number of balls <i>K</i> to be rolled, followed by <i>K</i> pairs of numbers (one for each ball rolled), determine which pins remain standing after all the balls have been rolled.  The balls are numbered from 1 to <i>N</i> (inclusive) for this situation. The subsequent number pairs, one for each <i>K</i> represent the start to stop (inclusive) positions of the pins that were knocked down with each role.  Print a sequence of <i>N</i> characters, where <code>"I"</code> represents a pin left standing and <code>"."</code> represents a pin knocked down.  
 
 Test:
 10 3
