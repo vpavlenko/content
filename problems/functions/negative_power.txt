@@ -2,9 +2,9 @@ Name:
 Negative exponent
 
 Statement:
-<p>Given a positive real number <i>a</i> and <b>integer</b> <i>n</i>.
+<p>Given a positive real number \( a \) and <b>integer</b> \( n \).
 
-<p>Compute <i>a<sup>n</sup></i>. Write a function <code>power(a, n)</code> that calculates it and call this function.
+<p>Compute \( a^{n} \). Write a function <code>power(a, n)</code> to calculate the results using the function and print the result of the expression.
 
 <p>Don't use the same function from the standard library.
 

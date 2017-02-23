@@ -2,9 +2,9 @@ Name:
 Reverse the sequence
 
 Statement:
-Given a sequence of integers ending with 0. Print the sequence in reverse order.
+Given a sequence of integers that end with a \( 0 \). Print the sequence in reverse order.
 
-<p>Don't use lists or other data structures. Use the force of recursion instead.
+<p>Don't use lists or other data structures. Use the <i>force</i> of recursion instead.
 
 
 Test:

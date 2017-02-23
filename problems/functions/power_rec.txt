@@ -2,9 +2,7 @@ Name:
 Exponentiation
 
 Statement:
-<p>Given a positive real number <i>a</i> and a non-negative integer <i>n</i>.
-Calculate <i>a<sup>n</sup></i> without using loops, <code>**</code> operator or <code>math.pow()</code>. Instead 
-use recursion and the relation <i>a<sup>n</sup>=a&sdot;a<sup>n-1</sup></i>.
+<p>Given a positive real number \( a \) and a non-negative integer \( n \). Calculate \( a^{n} \) without using loops, <code>**</code> operator or the built in function <code>math.pow()</code>. Instead, use recursion and the relation \( a^{n} = a \dot a^{n-1} \). Print the result.
 
 <p>Form the function <code>power(a, n)</code>.
 

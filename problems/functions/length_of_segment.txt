@@ -2,12 +2,9 @@ Name:
 The length of the segment
 
 Statement:
-Given four real numbers: <i>x<sub>1</sub></i>, <i>y<sub>1</sub></i>, <i>x<sub>2</sub></i>, <i>y<sub>2</sub></i>. Write a function
-<code>distance(x1, y1, x2, y2)</code> that computes the distance
-between the points <i>(x<sub>1</sub>,y<sub>1</sub>)</i> and <i>(x<sub>2</sub>,y<sub>2</sub>)</i>. Read four real numbers
-and print the result of this function.
+Given four real numbers representing cartesian coordinates: \( \left (  x_{1}, y_{1} \right ), \left ( x_{2}, y_{2} \right ) \). Write a function <code>distance(x1, y1, x2, y2)</code> to compute the distance between the points \( \left (  x_{1}, y_{1} \right ) \) and \( \left ( x_{2}, y_{2} \right ) \). Read four real numbers and print the resulting distance calculated by the function.
 
-<p>The formula for distance between two points can be found on <a href="http://mathworld.wolfram.com/Distance.html">Wolfram</a>.
+<p>The formula for distance between two points can be found at <a href="http://mathworld.wolfram.com/Distance.html">Wolfram</a>.
 
 Test:
 0
