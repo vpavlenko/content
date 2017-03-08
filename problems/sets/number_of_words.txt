@@ -2,12 +2,9 @@ Name:
 The number of words in the text
 
 Statement:
-<p>Given the text: the first line contains the number of rows, followed by the strings themselves. 
-Determine how many different words contained in this text.</p>
+<p>Given a number \( N \), followed by \( N \) lines of text the text, determine how many different words exist in all the text. Print the number of unique words in the text.</p>
 
-<p>For this particular task we define by word is a sequence of non-whitespace characters.
-Two consecutive words are separated by one or more spaces
-or newline characters. Punctiation marks are a part of a word, by this definition.</p>
+<p>For this, we define a word as sequence of non-whitespace characters, seperated by one or more white space or new line characters. Punctuation marks are part of a word, in this definition.</p>
 
 
 Test:

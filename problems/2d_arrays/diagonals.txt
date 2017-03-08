@@ -2,7 +2,14 @@ Name:
 The diagonal parallel to the main
 
 Statement:
-<p>Given an integer <code>n</code>. Create an array of size <code>n&times;n</code> and complete it according to the following rule. On the main diagonal write 0. On the diagonals adjacent to the main, number 1. On the next two diagonals of 2 and so on.
+<p>Given an integer \( n \), produce a two-dimensional array of size \( \left ( n \times n \right ) \) and complete it according to the following rules, and print with a single space between characters:
+<ul>
+  <li>On the main diagonal write <code> 0 </code>.
+  <li>On the diagonals adjacent to the main, write <code> 1 </code>. 
+  <li>On the next adjacent diagonals write <code> 2 </code> and so forth.
+</ul>
+
+<p>Print the elements of the resulting array.
 
 Test:
 5

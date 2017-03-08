@@ -2,14 +2,9 @@ Name:
 Polyglots
 
 Statement:
-<p>Each of some set of students of a certain school speaks a number of languages.
-You need to determine how many languages are spoken by all students and how many languages are spoken by at least one of them.</p>
+<p>Each student at a certain school speaks a number of languages. We need to determine which languges are spoken by all the students, which languages are spoken by at least one student.</p>
 
-<p>The first line contains the number of students.
-For each of the students firstly given the number of languages that he speaks and then the languages, one per line.</p>
-
-<p>In the first line print the number of languages that is spoken by all the students. Starting from the second row print such languages in lexicographical order. Then print the number of languages that is spoken by least one student, and then
-print such languages, again in lexicographical order.</p>
+<p>Given, the number of students, and then for each student given the number of languages they speak followed by the name of each language spoken, find and print the number of languages spoken by all the students, followed by a list the languages by name, then print the number of languages spoken by at least one student, followed by the list of the languages by name. Print the languages in alphabetical order.</p>
 
 Test:
 3
@@ -22,7 +17,7 @@ Russian
 English
 1
 English
-
+ 
 Answer:
 1
 English

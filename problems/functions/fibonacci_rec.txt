@@ -2,7 +2,11 @@ Name:
 Fibonacci numbers
 
 Statement:
+<<<<<<< HEAD
+Given an integer \( n \), write a function <code>fib(n)</code> which takes the non-negative integer \( n \) and returns the \( nth \) term in the Fibonacci sequence.  Calculate and print the \( nth \) Fibonacci number.
+=======
 Given an integer \( n \), write a function <code>fib(n)</code> which takes the non-negative integer \( n \) and returns the \( n \)th term in the Fibonacci sequence.  Calculate and print the \( n \)th Fibonacci number.
+>>>>>>> upstream/master
 
 <p>Don't use loops, use the <i>flair</i> of recursion instead.
 

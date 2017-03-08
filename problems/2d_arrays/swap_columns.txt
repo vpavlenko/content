@@ -2,11 +2,11 @@ Name:
 Swap the columns
 
 Statement:
-<p>Given a matrix and two integers: <code>i</code> and <code>j</code>. Swap the array columns with the numbers <code>i</code> and <code>j</code> and print the result.
+<p>Given two integers representing the rows and columns \( \left ( m \times n \right ) \), and then the subsequent \( m \) rows of \( n \) elements, followed by two more integers representing two columns \( i \) and \( j \).
 
-<p>the Program takes the size of the array <code>n</code> and <code>m</code>, then the elements of the array, then two number of <code>i</code> and <code>j</code>.
+Swap the values in the array column \( i \) with those in array column \( j \) and print the result.
 
-<p>Write a function <code>swap_columns(a, i, j)</code> and call it.
+<p>Write a function <code>swap_columns(a, i, j)</code> and call it to switch the columns.
 
 Test:
 3 4

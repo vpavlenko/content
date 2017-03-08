@@ -2,20 +2,14 @@ Name:
 Side diagonal
 
 Statement:
-<p>Given an integer <code>n</code>. Create an array of size <code>n&times;n</code> and populate it as follows: 
-
+<p>Given an integer \( n \), create a two-dimensional array of size \( \left ( n \times n \right ) \) and populate it as follows, with spaces between each character: 
 <ul>
-<li>The numbers on the diagonal from the upper right to the lower left corner equal to 1. 
-
-<li>The numbers above this diagonal are equal to 0. 
-
-<li>The numbers below the diagonal are equal 2. 
+  <li>The positions on the <a href=https://en.wikipedia.org/wiki/Main_diagonal> minor diagonal </a> (from the upper right to the lower left corner) receive <code> 1 </code>. 
+  <li>The positions above this diagonal recieve <code> 0 </code>. 
+  <li>The positions below the diagonal receive <code> 2 </code>. 
 </ul>
 
-<p>Print the elements of such array.
-
-
-
+<p>Print the elements of the resulting array.
 
 Test:
 4

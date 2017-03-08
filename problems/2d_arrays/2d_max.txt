@@ -2,10 +2,8 @@ Name:
 Maximum
 
 Statement:
-<p>Find the index of the first occurrence of the maximum element. Print two numbers: the row number and the column number where the largest element in a two-dimensional array is. If there are several such elements, print the one with smaller row number. If there are many maximums with the smallest row number, output the one which has the least column number. 
+<p>Given two integers representing the rows and columns \( \left ( m \times n \right ) \), and subsequent \( m \) rows of \( n \) elements, find the index position of the maximum element and print two numbers representing the index \( \left ( i \times j \right ) \) or the row number and the column number. If there exist multiple such elements in different rows, print the one with smaller row number. If there multiple such elements occur on the same row, output the smallest column number.
 
-<p>Program reads the size of the array <code>n</code> (number of rows) and <code>m</code> (number of columns),
-then <code>n</code> lines by <code>m</code> numbers each.
 
 Test:
 3 4

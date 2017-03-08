@@ -2,7 +2,7 @@ Name:
 Chess board
 
 Statement:
-<p>Given two numbers <code>n</code> and <code>m</code>. Create a two-dimensional array of size <code>n&times;m</code> and populate it with the characters <code>&quot;.&quot;</code> and <code>&quot;*&quot;</code> in a checkerboard pattern. Top left corner should have <code>&quot;.&quot;</code>.
+<p>Given two numbers \( n \) and \( m \). Create a two-dimensional array of size \( \left ( n \times m \right ) \) and populate it with the characters <code> "." </code> and <code> "*" </code> in a checkerboard pattern. The top left corner should have the character <code> "." </code>.
 
 Test:
 3 4

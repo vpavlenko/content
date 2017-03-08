@@ -2,11 +2,19 @@ Name:
 Uppercase
 
 Statement:
+<<<<<<< HEAD
+Given a line of lowercase ASCII words (text separated by a single space), use a function <code>capitalize(lowerCaseWord)</code>, that takes the lower case word and returns the the word with the first letter capitalized. Print the original line of words with the first letter of each capitalized.
+
+<p>Eg., <code>print(capitalize('word'))</code> should print the word <code>Word</code>.
+
+<p>In Python there is a function <code>ord()</code>, which returns its character code in <a href="http://en.wikipedia.org/wiki/ASCII">the ASCII chart</a>, and the function <code>chr()</code>, which returns the character itself from the ASCII code. For example, <code>ord('a') == 97</code>, <code>chr(97) == 'a'</code>.
+=======
 <p>Write a function <code>capitalize(lower_case_word)</code> that takes the lower case word and returns the word with the first letter capitalized. Eg., <code>print(capitalize('word'))</code> should print the word <code>Word</code>.
 
 <p>Then, given a line of lowercase ASCII words (text separated by a single space), print it with the first letter of each word capitalized using the your own function <code>capitalize()</code>.
 
 <p>In Python there is a function <code>ord(character)</code>, which returns character code in <a href="http://en.wikipedia.org/wiki/ASCII">the ASCII chart</a>, and the function <code>chr(code)</code>, which returns the character itself from the ASCII code. For example, <code>ord('a') == 97</code>, <code>chr(97) == 'a'</code>.
+>>>>>>> upstream/master
 
 Test:
 harry potter

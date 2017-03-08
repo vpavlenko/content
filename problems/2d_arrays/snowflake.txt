@@ -2,8 +2,7 @@ Name:
 Snowflake
 
 Statement:
-<p>Given an odd number <code>n</code>. Create a two-dimensional array of <code>n</code>&times;<code>n</code> elements filling it with characters <code>&quot;.&quot;</code> (each array element is a string of one character). Then fill in the characters <code>&quot;*&quot;</code> to the middle row, to the middle column, to the main diagonal and to the side diagonal. As a result the array will have the image of a snowflake. Print the array on the screen, separating the array elements by spaces.
-
+<p>Given an odd number integer \( n \), produce a two-dimensional array of size \( \left ( n \times n \right ) \). Fill each element with a single character string of <code> "." </code>. Then fill the middle row, the middle column and the diagnals with the single character string of <code> "*" </code> (an image of a snow flake). Print the array elements in \( \left ( n \times n \right ) \) rows and columns and separate the characters with a single space.
 
 Test:
 5

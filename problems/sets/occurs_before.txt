@@ -1,11 +1,8 @@
 Name:
-Is the number met before
+Has the number been encountered before
 
 Statement:
-<p>The input string contains the sequence of numbers.
-For each number, print the word <code>YES</code> (in a separate line),
-if this number is met earlier in the sequence or <code>NO</code>,
-if it's not.</p>
+<p>Given a sequence of numbers, determine if the next number has already been encountered. For each number, print the word <code>YES</code> (in a separate line) if this number has already been encountered, and print <code>NO</code>, if it has not already been encountered.</p>
 
 Test:
 1 2 3 2 3 4
