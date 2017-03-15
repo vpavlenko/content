@@ -184,7 +184,7 @@ print(  3  * 7, (  17 - 2) *   8)
     "text": """
 See the English phrases after the sign <code>#</code>? They don't look like the other code. They are just text, they are remarks.
 
-They are called comments. A <em>comment</em> is text. You write comments to clarify what happens in the code. If Python sees the sign <code>#</code>, it ignores the rest of the line and starts reading the next line, so feel free to swear after the sign <code>#</code>.
+They are called comments. A <em>comment</em> is text. You write comments to clarify what happens in the code. If Python sees the sign <code>#</code>, it ignores the rest of the line and starts reading the next line, so feel free to write anything after the sign <code>#</code>.
 
 In another words, comments are explanatory text that has no effect on program execution.
 This text starts with <code>#</code> and lasts till the end of the line.
