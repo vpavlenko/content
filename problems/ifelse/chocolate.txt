@@ -3,7 +3,7 @@ Chocolate bar
 
 Statement:
 Chocolate bar has the form of a rectangle divided into \(n \times m\) portions. Chocolate bar can be split into
-two parts according to the pattern. Determine whether it is possible to split it so that one of the parts will have
+two rectangular parts by breaking it along a selected straight line on its pattern. Determine whether it is possible to split it so that one of the parts will have
 exactly k squares.
 
 <p>
