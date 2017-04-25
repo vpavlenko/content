@@ -2,9 +2,11 @@ Name:
 Fibonacci numbers
 
 Statement:
-Given an integer \( n \), write a function <code>fib(n)</code> which takes the non-negative integer \( n \) and returns the \( n \)th term in the Fibonacci sequence.  Calculate and print the \( n \)th Fibonacci number.
+Given a non-negative integer \( n \), print the \( n \)th Fibonacci number.  Do this by writing a function <code>fib(n)</code> which takes the non-negative integer \( n \) and returns the \( n \)th Fibonacci number.
 
 <p>Don't use loops, use the <i>flair</i> of recursion instead.
+However, you should think about why the recursive method is much slower than using loops.
+
 
 Test:
 6

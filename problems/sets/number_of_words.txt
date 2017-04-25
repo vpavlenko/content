@@ -1,10 +1,10 @@
 Name:
-The number of words in the text
+The number of distinct words in some text
 
 Statement:
-<p>Given a number \( N \), followed by \( N \) lines of text the text, determine how many different words exist in all the text. Print the number of unique words in the text.</p>
+<p>Given a number \( n \), followed by \( n \) lines of text, print the number of distinct words that appear in the text.</p>
 
-<p>For this, we define a word as sequence of non-whitespace characters, seperated by one or more white space or new line characters. Punctuation marks are part of a word, in this definition.</p>
+<p>For this, we define a word to be a sequence of non-whitespace characters, seperated by one or more whitespace or newline characters. Punctuation marks are part of a word, in this definition.</p>
 
 
 Test:

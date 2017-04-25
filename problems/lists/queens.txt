@@ -2,10 +2,10 @@ Name:
 Queens
 
 Statement:
-In chess tt is known that it is possible to place 8 queens on a chess board 8&times;8 such none of them can attack another. Given a placement of 8 queens on the board, determine if there is a pair
+In chess it is known that it is possible to place 8 queens on an 8&times;8 chess board such that none of them can attack another. Given a placement of 8 queens on the board, determine if there is a pair
 of queens that can attach each other on the next move. Print the word <code>NO</code> if no queen can attack another, otherwise print <code>YES</code>.
 
-The program reads eight coordinate number pairs, each representing 1 of 8 queen position on a standard chess board. 
+The input consists of eight coordinate pairs, one pair per line, with each pair giving the position of a queen on a standard chess board with rows and columns numbered starting at 1.
 
 Test:
 1 7

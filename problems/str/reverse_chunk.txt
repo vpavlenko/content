@@ -3,9 +3,9 @@ Reverse the fragment
 
 Statement:
 <p>Given a string in which the letter <code>h</code> occurs
-at least two times. Reverse the sequence of characters
-enclosed between the first and last the appearance of the letters
-<code>h</code>.
+at least two times, reverse the sequence of characters
+enclosed between the first and last appearances.
+
 
 Test:
 In the hole in the ground there lived a hobbit

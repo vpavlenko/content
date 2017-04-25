@@ -1,14 +1,13 @@
 Name:
-Fibonacci number
+Fibonacci numbers
 
 Statement:
 The Fibonacci sequence is defined as follows:
-<p align="center"><i>&phi;</i><sub>0</sub> = 0,&nbsp;&nbsp;<i>&phi;</i><sub>1</sub> = 1,&nbsp;&nbsp;<i>&phi;</i><sub><i>n</i></sub> = <i>&phi;</i><sub><i>n</i>-1</sub> + <i>&phi;</i><sub><i>n</i>-2</sub>.</p>
+$$ \phi_0 = 0, \ \phi_1 = 1, \ \phi_n = \phi_{n-1} + \phi_{n-2} . $$
+Given a non-negative integer \( n \), print the \( n \)th Fibonacci number \( \phi_n \).
+
 <p>
-For the given number <i>n</i> define <i>n</i>th Fibonacci number <i>&phi;<sub>n</sub></i>.
-</p>
-<p>
-This problem can also be solved with the <code>for</code> loop.
+This problem can also be solved with a <code>for</code> loop.
 </p>
 
 Test:

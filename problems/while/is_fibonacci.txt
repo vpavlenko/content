@@ -1,8 +1,10 @@
 Name:
-The index of Fibonacci number
+The index of a Fibonacci number
 
 Statement:
-Given an integer number <i>A</i>. Determine its index among the Fibonacci numbers, that is, print the number <i>n</i>, <i>&phi;<sub>n</sub> = A</i>. If <i>A</i> is not a Fibonacci number, print -1.
+The Fibonacci sequence is defined as follows:
+$$ \phi_0 = 0, \ \phi_1 = 1, \ \phi_n = \phi_{n-1} + \phi_{n-2} . $$
+Given an integer \( a \), determine its index among the Fibonacci numbers, that is, print the number \( n \) such that \( \phi_n = a \). If \( a \) is not a Fibonacci number, print -1.
 
 Test:
 8

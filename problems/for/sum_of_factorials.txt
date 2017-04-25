@@ -1,9 +1,9 @@
 Name:
-The sum of the factorials
+Adding factorials
 
 
 Statement:
-<p>For given integer \(n\) compute the sum \(1!+2!+3!+...+n!\).
+<p>Given an integer \(n\), print the sum \(1!+2!+3!+...+n!\).
 
 <p>
 This problem has a solution with only one loop, so try to discover it. And don't use the math library :)
