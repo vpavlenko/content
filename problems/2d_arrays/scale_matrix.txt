@@ -1,0 +1,82 @@
+Name:
+Scale a matrix
+
+Statement:
+<p>Given two positive integers \( m \) and \( n \),
+\( m \) lines of \( n \) elements, giving an \( m \times n \) matrix \( A \),
+followed by one integer \( c \),
+multiply every entry of the matrix by \( c \) and print the result.
+
+Test:
+3 4
+11 12 13 14
+21 22 23 24
+31 32 33 34
+2
+
+Answer:
+22 24 26 28
+42 44 46 48
+62 64 66 68
+
+
+Test:
+2 2
+1 2
+3 4
+0
+
+Answer:
+0 0
+0 0
+
+
+Test:
+10 1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+-1
+
+Answer:
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+-9
+-10
+
+
+Test:
+4 3
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+1
+
+Answer:
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+
+
+Test:
+1 1
+9
+9
+
+Answer:
+81

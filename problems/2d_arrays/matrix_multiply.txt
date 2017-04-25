@@ -1,0 +1,67 @@
+Name:
+Multiply two matrices
+
+Statement:
+<p>Given three positive integers \( m \), \( n \) and \( r \),
+\( m \) lines of \( n \) elements, giving an \( m \times n \) matrix \( A \), and
+\( n \) lines of \( r \) elements, giving an \( n \times r \) matrix \( B \),
+form the product matrix \( A B \), which is the \( m \times r \) matrix
+whose \( (i,k) \) entry is the sum
+
+$$ A[i][1] * B[1][k] + \cdots + A[i][n] * B[n][k] $$
+
+and print the result.
+
+
+Test:
+3 4 2
+0 1 2 3
+4 5 6 7
+8 9 10 11
+2 3
+0 4
+5 -1
+1 1
+
+Answer:
+13 5
+45 33
+77 61
+
+
+Test:
+2 2 2
+1 2
+3 4
+5 4
+3 2
+
+Answer:
+11 8
+27 20
+
+
+Test:
+1 1 1
+5
+7
+
+Answer:
+35
+
+
+Test:
+4 3 1
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+1
+2
+3
+
+Answer:
+14
+32
+50
+68
