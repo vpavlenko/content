@@ -2,7 +2,7 @@ Name:
 Previous and next
 
 Statement:
-Write a program that reads an integer number and prints its previous and next numbers. See the examples below.
+Write a program that reads an integer number and prints its previous and next numbers. See the examples below for the exact format your answers should take.
 
 Remember that you can convert the numbers to strings using the function <code>str</code>.
 
