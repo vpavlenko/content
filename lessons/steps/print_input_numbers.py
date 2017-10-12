@@ -28,11 +28,11 @@ Of course you can perform any other mathematical operations!
         'expected_output': '4',
     },
     {
-        "instruction": 'Then type <code>print(4 * 5)</code> and press "Run"',
+        "instruction": 'Then delete the previous code, type <code>print(4 * 5)</code>, and press "Run"',
         'expected_output': '20',
     },
     {
-        "instruction": 'Then type <code>print(5 / 3)</code> and press "Run"',
+        "instruction": 'Then delete the previous code, type <code>print(5 / 3)</code>, and press "Run"',
         'expected_output': '1.6666666666666667',
     },
 ],
@@ -45,7 +45,7 @@ Now you can use Snakify as your personal calculator.
  {
     "header": """Reach out and touch faith.""",
     "text": """
-We are excited to show you some more mathematical operations. In Python, you can easily calculate the value of some number <em>in a power</em> of another number. How to calculate 2<sup>16</sup>? Just type in: <code>print(2 ** 16)</code>
+We are excited to show you some more mathematical operations. In Python, you can easily calculate the value of some number <em>to the power</em> of another number. How to calculate 2<sup>16</sup> (2 to the power of 16)? Just type in: <code>print(2 ** 16)</code>
 
 """,
     "program": '''
@@ -68,14 +68,14 @@ As you see, two stars <code>**</code> are used for exponentiation.
     "header": """Weird arithmetic comes in""",
     "text": """
 
-Moreover, you can perform integer division and division with remainder. If you are interested in result of division, you print <code>print(37 // 3)</code>. If you are interested in remainder, you print <code>print(37 % 3)</code>.
+Moreover, you can perform integer division and division with remainder. If you are interested in an integer result of division, you print <code>print(37 // 3)</code>. If you are interested in the remainder, you print <code>print(37 % 3)</code>.
 
 """,
     "tasks": [{
         'instruction': 'Type in the program window: <code>print(37 // 3)</code> and press "Run".',
         'expected_output': '12',
     }, {
-        'instruction': 'Then type <code>print(37 % 3)</code> and press "Run".',
+        'instruction': 'Then delete the previous code and type <code>print(37 % 3)</code> and press "Run".',
         'expected_output': '1',
     }, ],
     "allfine": '''
@@ -91,7 +91,7 @@ You may print any number of values on one line.
 
 """,
     "instructions": '''
-Just type <code>print(3*7, (17 - 2) * 8)</code> to ensure.
+Just type <code>print(3*7, (17 - 2) * 8)</code> to see how this works.
 ''',
     'expected_output': '21 120',
     "allfine": '''
@@ -140,11 +140,10 @@ print(3 * 7, (17 - 2) * 8)
 Note that you are allowed
 <ul>
   <li>to make spaces between the lines</li>
-  <li>to make spaces inside any line:</li>
+  <li>to make spaces inside any line</li>
 </ul>
 
 
- :
 """,
     'program': '''
 print(5 + 10)
@@ -307,7 +306,7 @@ Now print <code>5 % (101 % 3)</code> and <code>(76 // 3) * 4</code> on one line.
     "text": """
 So far, this section was empty in our programs.
 
-But getting a serious programmer, you will want to make some of your programs universal: each time you launch them, you will want to pass different data to input. (Generally, that means you will get different data at output.) 
+But as a serious programmer, you will want to make some of your programs universal: each time you launch them, you will want to pass different data to input. (Generally, that means you will get different data at output.) 
 
 To read your data from input, the function <code>input()</code> exists.
 """,
@@ -340,13 +339,13 @@ print(input())
     "text": """
 Writing a complex program, you usually can't print the answer of your calculation right away. You use <em>variables</em> to keep intermediate results there.
 
-Look at the code section. On the left to assignment operator side we put a name of variable (in this case, <code>a</code>). The name could be a string of latin characters mixed with numbers, but should not start with a number. So, <code>much3q1</code> is valid name for variable, and <code>2pac</code> is not.
+Look at the code section. To the left of the assignment operator* we put a name of variable (in this case, <code>a</code>). The name could be a string of latin characters mixed with numbers, but should not start with a number. So, <code>much3q1</code> is a valid name for a variable, and <code>2pac</code> is not.
 
-On the right side to assignment operator we put any expression that Python can evaluate. It can be <code>3</code> as in the code, or it can be, say, <code>1 + (2 ** 8) % 5</code>.
+To the right of the assignment operator* we put any expression that Python can evaluate. It can be <code>3</code> as in the code below, or it can be, say, <code>1 + (2 ** 8) % 5</code>.
 
-The assignment operator is <code>=</code>.
+*The assignment operator is <code>=</code>.
 
-Look what we've done: we assigned to the variable <code>a</code> the value of <code>3</code>. All right, now 
+Look what we've done: we assigned to the variable <code>a</code> the value of <code>3</code>. We can read this as "a is assigned the value of 3" or "a gets 3". All right, now.
 """,
     "program": '''
 a = 3
@@ -370,7 +369,7 @@ print(a)
  {
     "header": """The more variables the better""",
     "text": """
-Never hesitate introducing different variables! The more variables you introduce, the more readable your code would be.
+Never hesitate to introduce different variables! The more variables you introduce, and the more logical the names are, the more readable your code will be.
 """,
     'program': '''
 # Compare this:
@@ -405,7 +404,7 @@ print('Hi ' + name + '!')
 John
 ''',
     "instructions": '''
-Write your own name to the input section! Let it greet you!
+Write your own name in the input section! Let the program greet you!
 ''',
     "checker": "return stdin != 'John';",
     'expected_output': 'Hi John!',
@@ -422,7 +421,7 @@ We read the two numbers and store them in the variables <code>a</code> and <code
 
 """,
     "instructions": '''
-Read the code, run it and look at its output:
+Read the code, run it and look at its output.
 ''',
     'program': '''
 a = input()
@@ -442,7 +441,7 @@ print(s)
  {
     "header": """Oops: you summed strings, not numbers""",
     "text": """
-After running the example we can see that it prints <code>57</code>. As we were taught in school,
+After running the previous example we can see that it prints <code>57</code>. As we were taught in school,
 <code>5&nbsp;+&nbsp;7</code> gives <code>12</code>. What happened?
 
 So, the program works badly, and it is important to understand why.
@@ -463,7 +462,7 @@ print(s)
 7
 ''',
     "instructions": '''
-Use two another numbers as inputs (modifying the input section), and then watch they are glued to each other, not summed :(
+Use two another numbers as inputs (modify the input section), and then watch they are glued to each other, not summed :(
 '''},
 
 
@@ -472,7 +471,7 @@ Use two another numbers as inputs (modifying the input section), and then watch 
     "header": """What are strings and what are numbers""",
     "text": """
 
-Look at the code side. Do you see that the values bound to variables <code>s</code> and <code>que</code>
+Look at the code below. Do you see that the values bound to variables <code>s</code> and <code>que</code>
 are wrapped in quotes?
 
 That means these values are strings, not numbers. Strings and numbers
@@ -523,7 +522,7 @@ second = "7"
 print(first * second)
     ''',
         'allfine':
-'''The first three lines of code here successfully gave us the result of multiplication, and the last three lines granted us with the error.'''
+'''The first three lines of code here successfully gave us the result of multiplication, and the last three lines gave us the error.'''
 
 },
 
@@ -533,11 +532,11 @@ print(first * second)
     "header": """Transformers: transforming strings to integers""",
     "text": """
 <p>
-To cast the string of digits into an integer number, we can use the function <code>int()</code>. Eg., <code>int('23')</code> transforms the string '23' into the number <code>23</code>.
+To cast the string of digits into an integer number, we can use the function <code>int()</code>. Eg., <code>int('23')</code> transforms the string '23' into the number <code>23</code>, and <code>int(input())</code> transforms the input string into an integer (if the input is made of digits!).
 </p>
 
 """,
-"instructions": "Read the number from input, then transform it to integer using <code>int()</code>.",
+"instructions": "Read the number from input, then transform it to integer using <code>int()</code> and print the result.",
     'input_data': '''
 364
 ''',    "expected_output": """
@@ -556,7 +555,7 @@ Using the magic of <code>int()</code>, we can now fix our incorrent program to s
 a = int(input())
 # the function input() reads the first string, then int() casts it into the integer 5 
 b = int(input())
-# reads the first string, then casts it into the integer 7
+# reads the second string, then casts it into the integer 7
 s = a + b
 print(s)
     ''',
