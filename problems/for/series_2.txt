@@ -2,8 +2,8 @@ Name:
 Series - 2
 
 Statement:
-Given two integers A and B. Print all numbers from A to B inclusively, in increasing order, if A &lt; B, or
-in decreasing order, if A &ge; B.
+Given two integers A and B. Print all numbers from A to B inclusively, in ascending order, if A &lt; B, or
+in descending order, if A &ge; B.
 
 
 Test:
