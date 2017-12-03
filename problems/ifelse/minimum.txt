@@ -2,7 +2,7 @@ Name:
 Minimum of two numbers
 
 Statement:
-Given the two integers, print the least of them.
+Given two integers, print the smaller value.
 
 Test:
 3

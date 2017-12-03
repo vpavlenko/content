@@ -2,7 +2,7 @@ Name:
 Minimum of three numbers
 
 Statement:
-Given the three integers, print the least of them.
+Given three integers, print the smallest value.
 
 Test:
 5
