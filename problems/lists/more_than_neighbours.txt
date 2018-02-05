@@ -2,7 +2,7 @@ Name:
 Greater than neighbours
 
 Statement:
-Given a list of numbers, determine and print the quantity of elemets that are greater than both of their neighbors.
+Given a list of numbers, determine and print the quantity of elements that are greater than both of their neighbors.
 
 <p>
 The first and the last items of the list shouldn't be considered because they don't have two neighbors.

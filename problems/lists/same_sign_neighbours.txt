@@ -2,7 +2,7 @@ Name:
 Neighbors of the same sign
 
 Statement:
-Given a list of numbers, find and print the first adjacent elemets which have the same sign.
+Given a list of numbers, find and print the first adjacent elements which have the same sign.
 If there is no such pair, leave the output blank.
 
 Test:
