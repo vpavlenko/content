@@ -1,0 +1,61 @@
+{% section "JavaScript" %}
+<p>Our site now supports JavaScript.
+The code editor now has an indicator in the top right corner showing which language you are using: Python or JavaScript
+You can change language by pressing corresponding button on the top panel.
+Currently this feature is only present in problems and on some other pages including this one.</p>
+
+<p>In your code you can use all features of JavaScript that you are used to, but for the sake of convenience we added two functions that you need to use to read input and write output.
+They are called <code>input()</code> and <code>print</code>. They work as simplified variants of Python 3 functions.</p>
+
+<p>Here is a little example. This program reads string from input and prints it with preceding "Simon says: ".
+Try it out:</p>
+
+{#<p></p>#}
+{#<code></code>#}
+{% jsprogram %}
+// First, we create a variable and read string from input
+var string = input(); //
+
+// Then we print the concatination of "Simon says: " and our variable using + operator
+print("Simon says: " + string);
+{% inputdata %}
+    jump
+{% endinputdata %}
+{% endjsprogram %}
+
+<p>And here is a program that sums three numbers from input:</p>
+
+{% jsprogram %}
+var a = parseInt(input());
+var b = parseInt(input());
+var c = parseInt(input());
+print(a + b + c);
+{% inputdata %}
+1
+3
+6
+{% endinputdata %}
+{% endjsprogram %}
+
+<p>Of course you can define functions in your programs. Here is that previous example but with function:</p>
+
+{% jsprogram %}
+function sum3(a, b, c) {
+    return a + b + c;
+}
+
+var a = parseInt(input());
+var b = parseInt(input());
+var c = parseInt(input());
+print(sum3(a, b, c));
+{% inputdata %}
+1
+3
+6
+{% endinputdata %}
+{% endjsprogram %}
+
+<p>You can solve any problem from the huge set on our site using JavaScript. For example, you can start from
+<a href="/lessons/print_input_numbers/problems/apple_sharing/">"Apple sharing"</a> or <a href="/lessons/if_then_else_conditions/problems/signum/">"Sign function"</a>.</p>
+
+{% endsection %}
