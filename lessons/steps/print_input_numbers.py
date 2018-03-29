@@ -244,7 +244,7 @@ Scott + Mary = peace, love and death metal
  {
     "header": """Step by step""",
     "text": """
-You've already seen this code, but you haven't seen the might of our visualizer yet. To do it, set the tick "step by step" on and then click "Run":
+You've already seen this code, but you haven't seen the might of our visualizer. To do so, turn on "step by step", click "Run", then use "Forward" to run the code one line at a time:
 
 """,
     'program': '''
@@ -260,7 +260,7 @@ print(3 * 7, (17 - 2) * 8)
 ''',
     'highlight': "$('.visualizer_explain_mode').addClass('snakify-blinking');",
     'allfine':
-'''Impressed? You shall always execute programs line by line when you need to keep track of all the variables. Professional coders call it <em>debugging</em>.''',
+'''Impressed? You should always execute programs line by line when you need to keep track of all the variables. Professional coders call it <em>debugging</em>.''',
 },
 
 
@@ -337,9 +337,11 @@ print(input())
  {
     "header": """Variables""",
     "text": """
-Writing a complex program, you usually can't print the answer of your calculation right away. You use <em>variables</em> to keep intermediate results there.
+When writing a complex program, you usually can't print the answer of your calculation right away. Instead you use <em>variables</em> to store intermediate results.
 
-Look at the code section. To the left of the assignment operator* we put a name of variable (in this case, <code>a</code>). The name could be a string of latin characters mixed with numbers, but should not start with a number. So, <code>much3q1</code> is a valid name for a variable, and <code>2pac</code> is not.
+Look at the code section. The first line has three parts: a = 3
+
+To the left of the assignment operator* we put a name of variable, in this case, <code>a</code>. The name can be any string of latin characters mixed with numbers and the underscore _ but cannot start with a number. So, <code>much3q1</code> is a valid name for a variable, and <code>2pac</code> is not.
 
 To the right of the assignment operator* we put any expression that Python can evaluate. It can be <code>3</code> as in the code below, or it can be, say, <code>1 + (2 ** 8) % 5</code>.
 
@@ -401,13 +403,13 @@ name = input()  # read a single line and store it in the variable "name"
 print('Hi ' + name + '!')
     ''',
     'input_data': '''
-John
+YOURNAME
 ''',
     "instructions": '''
 Write your own name in the input section! Let the program greet you!
 ''',
-    "checker": "return stdin != 'John';",
-    'expected_output': 'Hi John!',
+    "checker": "return stdin != 'YOURNAME';",
+    'expected_output': 'Hi YOURNAME!',
 },
 
 
@@ -439,16 +441,15 @@ print(s)
 
 
  {
-    "header": """Oops: you summed strings, not numbers""",
+    "header": """Oops: you added strings, not numbers""",
     "text": """
 After running the previous example we can see that it prints <code>57</code>. As we were taught in school,
 <code>5&nbsp;+&nbsp;7</code> gives <code>12</code>. What happened?
 
-So, the program works badly, and it is important to understand why.
+So, the program does not give the expected result, and it is important to understand why.
 
-The reason is, in the line <code>s&nbsp;=&nbsp;a&nbsp;+&nbsp;b</code> Python has <i>summed</i> two strings, rather than two numbers.
-The sum of two strings in Python works as follows: they are just glued one after another. It's also sometimes
-called <em>string concatenation</em>.
+The reason is, in the line <code>s&nbsp;=&nbsp;a&nbsp;+&nbsp;b</code> Python has <i>joined</i> two <b>strings</b>, rather than 
+adding two <b>numbers</b>. Applying + to two strings in Python just glues one after the other. This is called <em>string concatenation</em>.
 
 """,
     "program": '''
@@ -462,7 +463,7 @@ print(s)
 7
 ''',
     "instructions": '''
-Use two another numbers as inputs (modify the input section), and then watch they are glued to each other, not summed :(
+Put two different numbers into the 'input' section, and then watch as they are glued to each other, not added :(
 '''},
 
 
@@ -549,7 +550,7 @@ To cast the string of digits into an integer number, we can use the function <c
  {
     "header": """Summing numbers, not strings""",
     "text": """
-Using the magic of <code>int()</code>, we can now fix our incorrent program to sum the two numbers:
+Using the magic of <code>int()</code>, we can now fix our incorrect program to sum the two numbers:
 """,
     'program': '''
 a = int(input())
