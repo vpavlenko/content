@@ -1,0 +1,193 @@
+{
+    "title": "50_str.html",
+    "sections": [
+        {
+            "title": "Strings",
+            "blocks": [
+                {
+                    "content": "<p>A string can be read from the standard input using the function <code>input()</code>\nor defined in single or double quotes. Two strings can be concatenated, and we\ncan also repeat a string n times multiplying it by integer:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print('>_< ' * 5)  # >_< >_< >_< >_< >_<\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>A string in Python is a sequence of characters. The function <code>len(some_string)</code>\nreturns how many characters there are in a string:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print(len('abcdefghijklmnopqrstuvwxyz'))  # 26\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Every object in Python can be converted to string using the function <code>str(some_object)</code>.\nSo we can convert numbers to strings:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "s = str(2 ** 100)\nprint(s)  # 1267650600228229401496703205376\nprint(len(s))  # 31\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Slices: single character",
+            "blocks": [
+                {
+                    "content": "<p>A slice gives from the given string one character or some fragment:\nsubstring or subsequence.\n\n<p>There are three forms of slices. The simplest form of the slice: a single character\nslice <code>S[i]</code> gives <code>i</code>th character of the string. We count characters starting\nfrom 0. That is, if <code><nobr>S = 'Hello'</nobr></code>, \n<code><nobr>S[0] == 'H'</nobr></code>, <code><nobr>S[1] == 'e'</nobr></code>, <code><nobr>S[2] == 'l'</nobr></code>,\n<code><nobr>S[3] == 'l'</nobr></code>, <code><nobr>S[4] == 'o'</nobr></code>.\n\nNote that in Python there is no separate type for characters of the string. <code>S[i]</code>\nalso has the type <code>str</code>, just as the source string.\n\n<p>Number <code>i</code> in <code>S[i]</code> is called an <em>index</em>.\n\n<p>If you specify a negative index, then it is counted\nfrom the end, starting with the number <code>-1</code>. That is, <code><nobr>S[-1] == 'o'</nobr></code>,\n<code><nobr>S[-2] == 'l'</nobr></code>, <code><nobr>S[-3] == 'l'</nobr></code>, <code><nobr>S[-4] == 'e'</nobr></code>,\n<code><nobr>S[-5] == 'H'</nobr></code>. \n\n<p>Let's summarize it in the table:\n\n<table border='1' cellspacing=\"0\" cellpadding=\"3\"> \n<tr> \n<th>String S</th> \n<td align=\"center\">H</td> \n<td align=\"center\">e</td> \n<td align=\"center\">l</td> \n<td align=\"center\">l</td> \n<td align=\"center\">o</td> \n</tr> \n<tr> \n<th>Index</th> \n<td align=\"center\">S[0]</td> \n<td align=\"center\">S[1]</td> \n<td align=\"center\">S[2]</td> \n<td align=\"center\">S[3]</td> \n<td align=\"center\">S[4]</td> \n</tr> \n<tr> \n<th>Index</th> \n<td align=\"center\">S[-5]</td> \n<td align=\"center\">S[-4]</td> \n<td align=\"center\">S[-3]</td> \n<td align=\"center\">S[-2]</td> \n<td align=\"center\">S[-1]</td> \n</tr> \n</table>\n\n<p>If the index in the slice <code>S[i]</code> is greater than or equal to <code>len(S)</code>,\nor less than <code>-len(S)</code>, the following error is caused <code>IndexError: string index out of range</code>.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Slices: substring",
+            "blocks": [
+                {
+                    "content": "<p>Slice with two parameters <code>S[a:b]</code> \nreturns the substring of length <code>b - a</code>,\nstarting with the character at index <code>a</code> and\nlasting until the character at index <code>b</code>, not including the last one.\nFor example, <code>S[1:4] == 'ell'</code>, and you can get the same substring using <code>S[-4:-1]</code>.\nYou can mix positive and negative indexes in the same slice, for example, <code>S[1:-1]</code> is\na substring without the first and the last character of the string (the slice begins with the character with index 1 and \nends with an index of -1, not including it).\n\n<p>Slices with two parameters never cause <code>IndexError</code>. For example, for <code>S == 'Hello'</code> \nthe slice <code>S[1:5]</code> \nreturns the string <code>'ello'</code>, and the result is the same even\nif the second index is very large, like\n<code>S[1:100]</code>.\n\n<p>If you omit the second parameter (but preserve the colon),\nthen the slice goes to the end of string. For example, to remove\nthe first character from the string (its index is 0)\ntake the slice <code>S[1:]</code>. Similarly\nif you omit the first parameter, then Python takes the slice from the beginning of the string.\nThat is, to remove the last character from the string, you can use slice\n<code>S[:-1]</code>. The slice <code>S[:]</code> matches the string\n<code>S</code> itself.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Slices: immutability of strings",
+            "blocks": [
+                {
+                    "content": "<p>\nAny slice of a string creates a new string and never modifies the original one.\nIn Python strings are immutable, i.e they can not be changed as the objects.\nYou can only assign the variable to the new string, but the old one stays in memory.\n\n<p>In fact in Python there is no variables. There are only the names that are associated with any objects.\nYou can first associate a name with one object, and then &mdash; with another. Can several names\nbe associated with one and the same object.</p>\n\n<p>Let's demonstrate that:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "s = 'Hello'\nt = s  # s and t point to the same string\nt = s[2:4]  # now t points to the new string 'll'\nprint(s)  # prints 'Hello' as s is not changed\nprint(t)  # prints 'll'\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Slices: subsequence",
+            "blocks": [
+                {
+                    "content": "<p>If you specify a slice with three parameters <code>S[a:b:d]</code>,\nthe third parameter specifies the step, same as for function\n<code>range()</code>. In this case only the characters with the following index are taken:\n<code>a</code> <nobr><code>a + d</code></nobr>, <nobr><code>a + 2 * d</code></nobr> and so on, until and not \nincluding the character with index <code>b</code>.\nIf the third parameter equals to 2, the slice takes\nevery second character, and if the step of the slice equals to\n<code>-1</code>, the characters go in reverse order. \nFor example, you can reverse a string like this: <code>S[::-1]</code>.\n\nLet's see the examples:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "s = 'abcdefg'\nprint(s[1])\nprint(s[-1])\nprint(s[1:3])\nprint(s[1:-1])\nprint(s[:3])\nprint(s[2:])\nprint(s[:-1])\nprint(s[::2])\nprint(s[1::2])\nprint(s[::-1])\n",
+                    "type": "code"
+                },
+                {
+                    "content": "Note how the third parameter of the slice is similar to the third parameter of the function <code>range()</code>:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "s = 'abcdefghijklm'\nprint(s[0:10:2])\nfor i in range(0, 10, 2):\n    print(i, s[i])\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "String methods: find() and rfind()",
+            "blocks": [
+                {
+                    "content": "<p>A method is a function that is bound to the object. When the method is called,\nthe method is applied to the object and does some computations related to it.\nMethods are invoked as <code>object_name.method_name(arguments)</code>.\nFor example, in <code>s.find(&quot;e&quot;)</code>&nbsp; the string method <code>find()</code> is applied to\nthe string <code>s</code> with one argument <code>&quot;e&quot;</code>.\n\n<p>Method <code>find()</code> searches a substring, passed as an argument,\ninside the string on which it's called.\nThe function returns the index of the first occurrence of the substring.\nIf the substring is not found, the method returns -1.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "s = 'Hello'\nprint(s.find('e'))\n# 1\nprint(s.find('ll'))\n# 2\nprint(s.find('L'))\n# -1\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Similarly, the method <code>rfind()</code> returns the index of the last occurrence\nof the substring.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "s = 'abracadabra'\nprint(s.find('b'))\n# 1\nprint(s.rfind('b'))\n# 8\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>If you call <code>find()</code> with three arguments\n<code>s.find(substring, left, right)</code>, the search is performed\ninside the slice <code>s[left:right]</code>. If you specify only two arguments, like\n<code>s.find(substring, left)</code>, the search is performed\nin the slice <code>s[left:]</code>, that is, starting with the character at index\n<code>left</code> to the end of the string. Method <code>s.find(substring, left, right)</code>\nreturns the absolute index, relatively to the whole string <code>s</code>, and not to the slice.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "s = 'my name is bond, james bond, okay?'\nprint(s.find('bond'))\n# 11\nprint(s.find('bond', 12))\n# 23\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "String methods: replace()",
+            "blocks": [
+                {
+                    "content": "<p>Method <code>replace()</code> replaces all occurrences of a given substring with another one. Syntax:\n<code>s.replace(old, new)</code>&nbsp; takes the string <code>S</code> and replaces\nall occurrences of substring <code>old</code> with the substring <code>new</code>. Example:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print('a bar is a bar, essentially'.replace('bar', 'pub'))\n# 'a pub is a pub, essentially'\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>One can pass the third argument <code>count</code>, like this: <code>s.replace(old, new, count)</code>.\nIt makes <code>replace()</code> to replace only first <code>count</code> occurrences and then stop.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print('a bar is a bar, essentially'.replace('bar', 'pub', 1))\n# 'a pub is a bar, essentially'\n",
+                    "type": "code"
+                }
+            ]
+        },
+        {
+            "title": "String methods: count()",
+            "blocks": [
+                {
+                    "content": "<p>This method counts the number of occurrences of one string within another string. The simplest\nform is this one: <code>s.count(substring)</code>. Only non-overlapping occurrences are taken into account:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print('Abracadabra'.count('a'))\n# 4\nprint(('aaaaaaaaaa').count('aa'))\n# 5\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>If you specify three parameters <code><nobr>s.count(substring, left, right)</nobr></code>,\nthe count is performed within the slice <code>s[left:right]</code>.",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}

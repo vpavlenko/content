@@ -1,0 +1,73 @@
+{
+    "title": "10_inout.html",
+    "sections": [
+        {
+            "title": "How to read and write in Python",
+            "blocks": [
+                {
+                    "content": "<p>\nEvery program is eventually a data processor, so we should know how to input and output data within it. There exists a function, <code>print()</code>, to output data from any Python program.\nTo use it, pass a comma separated list of arguments\nthat you want to print to the <code>print()</code> function.\nLet's see an example. Press \"run\" and then \"next\" to see how the program\nis being executed line by line:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print(5 + 10)\nprint(3 * 7, (17 - 2) * 8)\nprint(2 ** 16)  # two stars are used for exponentiation (2 to the power of 16)\nprint(37 / 3)  # single forward slash is a division\nprint(37 // 3)  # double forward slash is an integer division\n        # it returns only the quotient of the division (i.e. no remainder)\nprint(37 % 3)  # percent sign is a modulus operator\n        # it gives the remainder of the left value divided by the right value\n",
+                    "type": "code"
+                },
+                {
+                    "content": "</p>\n\n<p>\nTo input data into a program, we use <code>input()</code>. This function reads a single line of text, as a String.\n</p>\n\n<p>\nHere's a program that reads the user's name and greets them:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "John\n    ",
+                    "content": "print('What is your name?')\nname = input()  # read a single line and store it in the variable \"name\"\nprint('Hi ' + name + '!')\n    ",
+                    "type": "code"
+                },
+                {
+                    "content": "</p>",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Sum of numbers and strings",
+            "blocks": [
+                {
+                    "content": "<p>\nLet's try to write a program that inputs two numbers and prints their sum. We read the two numbers\nand store them in the variables <code>a</code> and <code>b</code> using the assignment operator <code>=</code>.\nOn the left side of an assignment operator we put the name of the variable. The name could be a string of latin characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code>)\n        but <strong>must</strong> start with a letter in the range <code>A-Z</code> or <code>a-z</code>.\nOn the right side of an assignment operator we put any expression that Python can evaluate.\nThe name starts pointing to the result of the evaluation.\nRead this example, run it and look at the output:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "5\n7\n    ",
+                    "content": "a = input()\nb = input()\ns = a + b\nprint(s)\n    ",
+                    "type": "code"
+                },
+                {
+                    "content": "</p>\n\n<p>\nAfter running the example we can see that it prints <code>57</code>. As we were taught in school,\n<code>5 + 7</code> gives <code>12</code>. So, the program is wrong, and it's important to understand why.\nThe thing is, in the third line <code>s = a + b</code> Python has \"summed\" two strings, rather than two numbers.\nThe sum of two strings in Python works as follows: they are just glued one after another. It's also sometimes\ncalled \"string concatenation\".\n</p>\n\n<p>\nDo you see in the variable inspector, on the right hand side, that the values bound to variables <code>a</code>\u00a0and\u00a0<code>b</code>\nare wrapped in quotes? That means that the values there are string, not numbers. Strings and numbers\nare represented in Python differently.\n</p>\n\n<p>\nAll the values in Python are called \"objects\". Every object has a certain type. The number 2 corresponds to an object \"number 2\" of type \"int\"\n(i.e., an integer number). The string <code>'hello'</code> corresponds to an object \"string 'hello'\" of type \"str\".\nEvery floating-point number is represented as an object of type \"float\". The type\nof an object specifies what kind of operations may be applied to it.\nFor instance, if the two variables <code>\"first\"</code> and <code>\"second\"</code> are pointing to the objects of type <code>int</code>, Python can multiply them. However, if they are pointing to the objects of type <code>str</code>, Python can't do that:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "first = 5\nsecond = 7\nprint(first * second)\n\n# you can use single or double quotes to define a string\nfirst = '5'\nsecond = \"7\"\nprint(first * second)\n    ",
+                    "type": "code"
+                },
+                {
+                    "content": "</p>\n\n<p>\nTo cast (convert) the string of digits into an integer number, we can use the function\u00a0<code>int()</code>. For example,\u00a0<code>int('23')</code> gives an int object\u00a0with value <code>23</code>. \n</p>\n\n<p>\n    Given the information above, we can now fix the incorrect output and output the sum of the two numbers correctly:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "5\n7\n    ",
+                    "content": "a = int(input())\nb = int(input())\ns = a + b\nprint(s)\n    ",
+                    "type": "code"
+                },
+                {
+                    "content": "</p>",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "title": "00_introduction.html",
+    "sections": [
+        {
+            "title": "Code in your browser",
+            "blocks": [
+                {
+                    "content": "<style type=\"text/css\">\n    video {\n        padding-bottom: 70px;\n        width: 100%;\n        margin: 0 auto;\n        z-index: -2;\n    }\n\n    .snakify-alumni {\n        background-color: #eeeeee;\n        padding-top: 80px;\n        padding-bottom: 50px;\n    }\n\n    .snakify-alumni-card {\n        display: inline-block;\n        background-color: #efe;\n        width: 300px;\n        min-height: 400px;\n        vertical-align: top;\n        margin-bottom: 40px;\n        margin-top: 20px;\n    }\n\n    .snakify-alumni-card:not(:last-of-type) {\n        margin-right: 40px;\n    }\n\n    .snakify-alumni-card-name {\n        font-size: 24px;\n        padding-top: 50px;\n    }\n\n    .snakify-alumni-card-location {\n        font-size: 14px;\n        padding-top: 15px;\n    }\n\n    .snakify-alumni-card img {\n        width: 150px;\n        padding-top: 30px;\n    }\n\n    .snakify-alumni-card-reference {\n        font-size: 14px;\n        padding: 30px 20px 30px 20px;\n    }\n\n    .snakify-facts {\n        margin-left: -100px;\n        background-color: #eeffee;\n        padding-left: 200px;\n        margin-top: 60px;\n        /*padding-right: 40px;*/\n    }\n\n    .snakify-facts h6 {\n        font-size: 20px;\n        font-weight: 200;\n        margin-bottom: 20px;\n    }\n\n    .snakify-facts .column {\n        text-align: center;\n        padding-top: 60px;\n        padding-bottom: 40px;\n    }\n\n    .snakify-facts .column h5 {\n        font-size: 26px;\n        margin-bottom: 0;\n    }\n\n    button.snakify-button-start {\n        background-color: #ff4444;\n        width: 500px;\n        height: 80px;\n        color: white;\n        font-size: 34px;\n        border: 0;\n        margin: 70px auto 0 auto;\n        display: block;\n    }\n\n    button.snakify-button-start a {\n        color: white;\n    }\n\n    .school-logo {\n        height: 60px;\n        margin: 20px;\n    }\n</style>\n\n<p>Let's see how to add two numbers in Python. Run this example:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "a = 5\nb = 7\nprint(a + b)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p><b>Now let's do it in a more general way.</b> This time the program reads two numbers from its input. Run this example:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "3\n8\n",
+                    "content": "a = int(input())\nb = int(input())\nprint(a + b)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<script type=\"text/javascript\">\n    var problem_name = 'aplusbplusc';\n</script>\n\n<p><b>Now it's your turn.</b> Write a program that reads <i>three</i> numbers from its input and prints their sum:\n\n<div id=\"visualizer\"></div>\n\n<pre class=\"input\" style=\"display: none\">2\n3\n6</pre>\n\n<div style=\"display: none;\" id=\"awesome\"><b>Awesome, you did it!</b> How about trying <a href=\"/lessons/print_input_numbers/problems/area_of_right_triangle/\">the next problem</a>?</div>",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "About this course",
+            "blocks": [
+                {
+                    "content": "<p>\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-md-4\">\n            <iframe width=\"420\" height=\"315\" src=\"https://www.youtube.com/embed/drnBv_rquXQ\" frameborder=\"0\" allowfullscreen></iframe>\n        </div>\n\n        <div class=\"col-md-8\">\n            <video autoplay id=\"bgvid\" preload=\"auto\" loop>\n                <source src=\"/static/video/demo_debug_720p.mp4\" type=\"video/mp4\">\n                <source src=\"/static/video/demo_debug.webm\" type=\"video/webm\">\n            </video>\n        </div>\n    </div>\n</div>\n\n<p>Welcome to our interactive manual of Python 3 programming language.\nThis is an introductory course that is way different from the others.\n\n<p>\nWhat do we have here:\n<ul>\n    <li><b>Basic lessons</b> - we start from scratch but go in depth to what you'll really need in production\n    <li><b>Challenging problems</b> - handful of brain teasers to practice in any lesson\n    <li><b>In-browser code runner</b> - you don't need to setup anything to get started\n    <li><b>Web and mobile support</b> - code from any gadget you have\n    <li><b>Visualizer</b> - a perfect way to debug by step back and forth through program execution to see the variables\n</ul>\n\n<p>\nSearching for a means to teach Python at Key Stage 3, AP Computer Science Principles or CS1? Our course is right for you.\n\n<div style=\"padding: 20px 20px 10px 20px; border-radius: 10px; background-color: #effbee; box-shadow: 0 0 1px 0px #0cb500, 0 0 2px 0px #12FF01;\">\nWe're serious here about the interesting problems you can solve online. Look at these:\n<ul>\n    <li><b><a href=\"/lessons/if_then_else_conditions/problems/rook_move/\">Rook move</a> [topic: conditions]</b> - given two chessboard coordinates, tell if a rook can move from one to the other in one move.\n    <li><b><a href=\"/lessons/while_loop/problems/least_divisor/\">Least divisor</a> [topic: while loop]</b> - find the least divisor of the given integer.\n    <li><b><a href=\"/lessons/dictionaries_dicts/problems/number_of_occurrences_before/\">Number of occurrences</a> [topic: dictionaries]</b> - count how many times you've seen each word as you scan the given text.\n</ul>\n</div>\n\n<div class=\"container snakify-facts\">\n    <div class=\"row\">\n        <div class=\"col-md-2 column\">\n            <h5>24k</h5>\n            <h6>enrolled students</h6>\n        </div>\n        <div class=\"col-md-2 column\">\n            <h5>11</h5>\n            <h6>lessons</h6>\n        </div>\n        <div class=\"col-md-2 column\">\n            <h5>100+</h5>\n            <h6>coding problems</h6>\n        </div>\n        <div class=\"col-md-3 column\">\n            <h5>no</h5>\n            <h6>required technical level</h6>\n        </div>\n    </div>\n</div>",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Schools that use us",
+            "blocks": [
+                {
+                    "content": "<img class=\"school-logo\" src=\"/static/images/schools/pitt.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/ucsc.png\">\n\n<img class=\"school-logo\" src=\"/static/images/schools/guilsborough.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/glossopdale.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/pennmanor.png\">\n\n<img class=\"school-logo\" src=\"/static/images/schools/wirral.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/sandringham.gif\">\n<img class=\"school-logo\" src=\"/static/images/schools/uptonhigh.jpg\">\n<img class=\"school-logo\" src=\"/static/images/schools/aragon.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/sthelens.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/niles.jpeg\">\n<img class=\"school-logo\" src=\"/static/images/schools/smhs.jpg\">\n\n<img class=\"school-logo\" src=\"/static/images/schools/lytchett.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/hazelwick.jpg\">\n\n<img class=\"school-logo\" src=\"/static/images/schools/boswells.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/williamellis.gif\">\n<img class=\"school-logo\" src=\"/static/images/schools/carshalton.jpg\">\n\n<img class=\"school-logo\" src=\"/static/images/schools/msu.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/kfu.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/mipt.jpg\">\n<img class=\"school-logo\" src=\"/static/images/schools/itmo.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/hse.png\">\n\n<img class=\"school-logo\" src=\"/static/images/schools/horbury.jpg\">\n<img class=\"school-logo\" src=\"/static/images/schools/putteridge.png\">\n<img class=\"school-logo\" src=\"/static/images/schools/stem.png\">",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "What do our alumni say?",
+            "blocks": [
+                {
+                    "content": "<div class=\"snakify-full-width\" style=\"text-align: center;\">\n    <div class=\"snakify-alumni-card\">\n        <div class=\"snakify-alumni-card-name\">John Sloan</div>\n        <div class=\"snakify-alumni-card-location\">Dublin, Ireland</div>\n        <img src=\"/static/images/alumni/sloan.jpeg\">\n        <div class=\"snakify-alumni-card-reference\">\u201cI was a linguist looking to move into computational linguistics but had no background in CS. Snakify took me from absolute beginner to top of the class. I have now designed a website with online English classes and received funding for further research.\u201d</div>\n    </div>\n\n\n    <div class=\"snakify-alumni-card\">\n        <div class=\"snakify-alumni-card-name\">Evgeny Serebryakov</div>\n        <div class=\"snakify-alumni-card-location\">Saint-Petersburg, Russia</div>\n        <img src=\"/static/images/alumni/serebryakov.png\">\n        <div class=\"snakify-alumni-card-reference\">\u201cI was studying molecular biophysics at my university. In spring 2015 I completed this course and then in winter I found a first internship as a Python/Django web developer.\u201d</div>\n    </div>\n</div>",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Why do I learn programming?",
+            "blocks": [
+                {
+                    "content": "<p><b>Programming improves your life.</b>\nWhatever you do in your life, you can start hacking it right away.\n<ul>\n    <li><b>Scientists</b> collect and process data using programs to do research\n    <li><b>Illustrators and musicians</b> automate daily routines using scripts\n    <li><b>Students</b> can get a very well-paid job in months. Just look at the salaries of\n    Software Engineers at Glassdoor\n</ul>",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Why do I learn Python?",
+            "blocks": [
+                {
+                    "content": "<p>Python is a great choice whether it's your first or next programming language.\n<ul>\n    <li><b>Python is very easy and flexible.</b> The programs in Python are tinier than in other languages.\n    <li><b>Powerful.</b> Due to its huge community Python is very popular as a server-side language. Google (spider, search engine, Google Maps), Netflix and Pinterest\n    use it a lot. Youtube, Quora, Reddit, Dropbox, Yahoo, Battlefield 2, Civilization 4, NASA, AlphaGene &mdash; all of them use Python; see the entire list <a href=\"https://wiki.python.org/moin/OrganizationsUsingPython\">here</a>.\n    <li><b>High demand for programmers.</b> See open job positions on <a href=\"https://careers.stackoverflow.com/jobs?searchTerm=python\">StackOverflow</a>",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "What websites/apps are coded in Python?",
+            "blocks": [
+                {
+                    "content": "<p>Python is a great choice whether it's your first or next programming language. Here's the list of few projects/organizations that use Python: \n<ul>\n    <li>Google, Netflix and Pinterest\n    use it a lot. Youtube, Quora, Reddit, Dropbox, Google Maps. Yahoo, Battlefield 2, Civilization 4, NASA, AlphaGene &mdash; all of them use Python; see the entire list <a href=\"https://wiki.python.org/moin/OrganizationsUsingPython\">here</a>.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Okay, how to learn Python?",
+            "blocks": [
+                {
+                    "content": "<p>There is a ton of way to do this, really. You can read books, or you can watch Youtube videos.\nHowever, <b>you better solve coding problems</b>, as you should start thinking like a programmer &mdash; and\nthis skill comes with hard work.\n\n<p style=\"font-size: 30px;\">Ready?\n<button class=\"snakify-button-start\">Jump to the first lesson</button>\n<script>\n$(function() {\n    $('.snakify-button-start').click(function() {\n        location.href = 'https://snakify.org/lessons/print_input_numbers/';\n    });\n});\n</script>\n</p>",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}

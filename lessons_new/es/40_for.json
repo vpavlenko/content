@@ -1,0 +1,132 @@
+{
+    "title": "40_for.html",
+    "sections": [
+        {
+            "title": "For loop",
+            "blocks": [
+                {
+                    "content": "<p>In the previous lessons we dealt with sequential programs and conditions.\nOften the program needs to repeat some block several times. That's where the loops come in handy.\nThere are <code>for</code> and <code>while</code> loop operators in Python, in this lesson we cover <code>for</code>.\n\n<p><code>for</code> loop iterates over any sequence.\nLet's see the simplest example of using for:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "i = 1\nfor color in 'red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet':\n    print('#', i, 'color of rainbow is', color)\n    i = i + 1\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>In this example the variable <code>color</code> iterates over the values <code>'red'</code>,\n<code>'orange'</code> etc, and for each value the underlying loop block is executed. Loop block contains two\noperators: call of the function <code>print()</code> that prints new data and assignment operator\nthat increases the value of the variable <code>i</code> by one.\n \n<p>Loop variable can iterate over the objects of different types.\nIn the next example the variable <code>i</code> is pointing to <code>int</code> object for the\nfirst three iterations and to <code>str</code> object for the last three iterations:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for i in 1, 2, 3, 'one', 'two', 'three':\n    print(i)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "In all these examples the sequence like <code>'red', 'orange', 'yellow'</code> is actually\na compound Python object itself. It has a type <code>tuple</code> which we'll dig into more in the next lessons.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "For loop with range",
+            "blocks": [
+                {
+                    "content": "<p>In the previous lessons we dealt with sequential programs and conditions.\nOften the program needs to repeat some block several times. That's where the loops come in handy.\nThere are <code>for</code> and <code>while</code> loop operators in Python, in this lesson we cover <code>for</code>.\n\n<p><code>for</code> loop iterates over any sequence. For instance, any string in Python is a sequence of\nits characters, so we can iterate over them using <code>for</code>:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for character in 'hello':\n    print(character)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Another use case for a for-loop is to iterate some integer variable in increasing or decreasing order.\nSuch a sequence of integer can be created using the function <code>range(min_value, max_value)</code>:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for i in range(5, 8):\n    print(i, i ** 2)\nprint('end of loop')\n# 5 25\n# 6 36\n# 7 49\n# end of loop\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Function <code>range(min_value, max_value)</code> generates a sequence with numbers\n<code>min_value</code>, <code>min_value + 1</code>, ..., <code>max_value - 1</code>. The last number is not\nincluded.\n\n<p>There's a reduced form of range() - <code>range(max_value)</code>, in which case min_value is implicitly\nset to zero:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for i in range(3):\n    print(i)\n# 0\n# 1\n# 2\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>This way we can repeat some action several times:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for i in range(2 ** 2):\n    print('Hello, world!')\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Same as with if-else, indentation is what specifies which instructions are controlled by <code>for</code> and which aren't.\n\n<p>Range() can define an empty sequence, like <code>range(-5)</code> or <code>range(7, 3)</code>. In this\ncase the for-block won't be executed:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for i in range(-5):\n    print('Hello, world!')\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Let's have more complex example and sum the integers from 1 to n inclusively.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "result = 0\nn = 5\nfor i in range(1, n + 1):\n    result += i\n    # this ^^ is the shorthand for\n    # result = result + i\nprint(result)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Pay attention that maximum value in range() is <code>n + 1</code> to make <code>i</code>\nequal to n on the last step.\n \n<p>To iterate over a decreasing sequence, we can use an extended form of range() with three\narguments - <code>range(start_value, end_value, step)</code>. When omitted, the step is implicitly\nequal to 1. However, can be any non-zero value. The loop always includes start_value and excludes end_value\nduring iteration:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for i in range(10, 0, -2):\n    print(i)\n# 10\n# 8\n# 6\n# 4\n# 2\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "setting the function print()",
+            "blocks": [
+                {
+                    "content": "By default, the function <code>print()</code> prints all its arguments separating them by a space and the puts\na newline symbol after it. This behavior can be changed using keyword arguments <code>sep</code> (separator) and <code>end</code>.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print(1, 2, 3)\nprint(4, 5, 6)\nprint(1, 2, 3, sep=', ', end='. ')\nprint(4, 5, 6, sep=', ', end='. ')\nprint()\nprint(1, 2, 3, sep='', end=' -- ')\nprint(4, 5, 6, sep=' * ', end='.')\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}

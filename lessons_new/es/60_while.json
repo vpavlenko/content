@@ -1,0 +1,195 @@
+{
+    "title": "60_while.html",
+    "sections": [
+        {
+            "title": "While loop",
+            "blocks": [
+                {
+                    "content": "<p><code>while</code> loop repeats\nthe sequence of actions many times until some condition evaluates to <code>False</code>.\nThe condition is given before the loop body and is checked before each execution of the loop body.\nTypically, the <code>while</code> loop is used when it is impossible\nto determine the exact number of loop iterations in advance.\n\n<p>The syntax of the <code>while</code> loop in the simplest case looks like this:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "while some condition:\n    a block of statements\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Python firstly checks the condition.\nIf it is False, then the loop is terminated and control\nis passed to the next statement after the <code>while</code> loop body.\nIf the condition is True, then the loop body is executed, and then the condition\nis checked again.\nThis continues while the condition is True.\nOnce the condition becomes False, the loop terminates and\ncontrol is passed to the next statement after the loop.\n\n<p>For example, the following program fragment prints\nthe squares of all integers from 1 to 10. Here one can replace the \"while\" loop by the \n<code>for ... in range(...)</code> loop:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "5678\n",
+                    "content": "n = int(input())\nlength = 0\nwhile n > 0:\n    n //= 10  # this is equivalent to n = n // 10\n    length += 1\nprint(length)  # 4\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>In this example, the variable <code>i</code> inside the loop iterates from 1 to 10.\nSuch a variable whose value changes with each new loop iteration\nis called a counter. Note that after executing this fragment\nthe value of the variable <code>i</code> is defined and is equal to <code>11</code>,\nbecause when <code>i == 11</code> the condition <code>i &lt;= 10</code> is False for the first time.\n\n\n<p>Here is another example use of the <code>while</code> loop\nto determine the number of digits of an integer <code>n</code>:",
+                    "type": "html"
+                },
+                {
+                    "content": "<p>On each iteration we cut the last digit of the number\nusing integer division by 10 (<code>n //= 10</code>). In the variable \n<code>length</code> we count how many times we did that.\n\n<p>In Python there is another, easier way to solve this problem:\n<code><nobr>length = len(str(i))</nobr></code>.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Loop control flow: else",
+            "blocks": [
+                {
+                    "content": "<p>One can write an <code>else:</code> statement after a loop body which is executed\n<i>once</i> after the end of the loop:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "i = 1\nwhile i <= 10:\n    print(i)\n    i += 1\nelse:\n    print('Loop ended, i =', i)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>At the first glance, this statement doesn't seem to have sense, because the <code>else:</code> statement\nbody can just be put <i>after</i> the end of the loop. \"else\" statement after a loop only has sense when used\nin combination with the instruction <code>break</code>. If during the execution of the loop Python interpreter encounters\n<code>break</code>, it immediately stops the loop execution and exits out of it.\nIn this case, the <code>else:</code> branch is not executed. So, <code>break</code> is used to abort the loop execution during\nthe middle of any iteration.\n\n<p>Here is a Black Jack-like example: a program that reads numbers and sums it\nuntil the total gets greater or equal to 21. The input sequence ends with 0\nfor the program to be able to stop even if the total sum of all numbers is less than 21.\n\n<p>Let's see how it behaves on the different inputs.\n\n<p><b>Version 1.</b> The loop is exited normally after checking the condition, so the \"else\"\nbranch is executed.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "2\n4\n7\n0\n",
+                    "content": "total_sum = 0\na = int(input())\nwhile a != 0:\n    total_sum += a\n    if total_sum >= 21:\n        print('Total sum is', total_sum)\n        break\n    a = int(input())\nelse:\n    print('Total sum is less than 21 and is equal to', total_sum, '.')\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p><b>Version 2.</b> The loop is aborted by <code>break</code>, so the \"else\"\nbranch is skipped.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "9\n9\n5\n4\n0\n",
+                    "content": "total_sum = 0\na = int(input())\nwhile a != 0:\n    total_sum += a\n    if total_sum >= 21:\n        print('Total sum is', total_sum)\n        break\n    a = int(input())\nelse:\n    print('Total sum is less than 21 and is equal to', total_sum, '.')\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>\"Else\" branch can also be used with the \"for\" loop. Let's look at the example when a program reads 5 integers\nbut stops right when the first negative integer is met.\n\n<p><b>Version 1.</b> The loop is exited normally, so the \"else\" branch is executed.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "3\n6\n2\n4\n5\n",
+                    "content": "for i in range(5):\n    a = int(input())\n    if a < 0:\n        print('Met a negative number', a)\n        break\nelse:\n    print('No negative numbers met')\n\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p><b>Version 2.</b> The loop is aborted, so the \"else\" branch isn't executed.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "3\n6\n-2\n4\n5\n",
+                    "content": "for i in range(5):\n    a = int(input())\n    if a < 0:\n        print('Met a negative number', a)\n        break\nelse:\n    print('No negative numbers met')\n\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Loop control flow: continue",
+            "blocks": [
+                {
+                    "content": "<p>Another instruction used to control the loop execution is\n<code>continue</code>. If Python interpreter meets <code>continue</code> somewhere in the middle of the loop iteration,\nit skips all the remaining instructions and proceeds to the next iteration.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for num in range(2, 10):\n    if num % 2 == 0:\n        print(\"Found an even number\", num)\n        continue\n    print(\"Found a number\", num)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>If the <code>break</code> and <code>continue</code> are placed inside several nested\nloops, they affect only the execution of the innermost one. Let's look at rather silly example\nto demonstrate it:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "for i in range(3):\n    for j in range(5):\n        if j > i:\n            # breaks only the for on line 2\n            break\n        print(i, j)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>The instructions <code>break</code> and <code>continue</code> \nare discouraged, if you can implement your idea without using them.\nHere is a typical example of a <i>bad usage</i> of the <code>break</code>:\nthis code counts the number of digits in an integer.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "567\n",
+                    "content": "n = int(input())\nlength = 0\nwhile True:\n    length += 1\n    n //= 10\n    if n == 0:\n        break\nprint('Length is', length)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>It's cleaner and easier-to-read to rewrite this loop with a meaningful loop condition:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "567\n",
+                    "content": "n = int(input())\nlength = 0\nwhile n != 0:\n    length += 1\n    n //= 10\nprint('Length is', length)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Multiple assignment",
+            "blocks": [
+                {
+                    "content": "<p>In Python it is possible for a single assignment statement to change the value of several variables. Let's see:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "a, b = 0, 1\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>The effect demonstrated above code can be written as:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "a = 0\nb = 1\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>The difference between the two versions is that multiple assignment changes the values of two variables simultaneously.\n\n<p>Multiple assignment is useful when you need to exchange the values of two variables. In older programming languages\n without the support of multiple assignment this can be done using the auxiliary variable:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "a = 1\nb = 2\ntmp = a\na = b\nb = tmp\nprint(a, b)\n# 2 1\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>In Python, the same swap can be written in one line:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "a = 1\nb = 2\na, b = b, a\nprint(a, b)\n# 2 1\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>The left-hand side of \"=\" should have a comma-separated list of variable names.\nThe right-hand side can be any expressions,\nseparated by commas. The left-hand side and the right-hand side lists should be of equal length.",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}

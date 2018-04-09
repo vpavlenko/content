@@ -1,0 +1,44 @@
+{
+    "title": "300_js.html",
+    "sections": [
+        {
+            "title": "JavaScript",
+            "blocks": [
+                {
+                    "content": "<p>Our site now supports JavaScript.\nThe code editor now has an indicator in the top right corner showing which language you are using: Python or JavaScript\nYou can change language by pressing corresponding button on the top panel.\nCurrently this feature is only present in problems and on some other pages including this one.</p>\n\n<p>In your code you can use all features of JavaScript that you are used to, but for the sake of convenience we added two functions that you need to use to read input and write output.\nThey are called <code>input()</code> and <code>print</code>. They work as simplified variants of Python 3 functions.</p>\n\n<p>Here is a little example. This program reads string from input and prints it with preceding \"Simon says: \".\nTry it out:</p>",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "    jump\n",
+                    "content": "// First, we create a variable and read string from input\nvar string = input(); //\n\n// Then we print the concatination of \"Simon says: \" and our variable using + operator\nprint(\"Simon says: \" + string);\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>And here is a program that sums three numbers from input:</p>",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "1\n3\n6\n",
+                    "content": "var a = parseInt(input());\nvar b = parseInt(input());\nvar c = parseInt(input());\nprint(a + b + c);\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Of course you can define functions in your programs. Here is that previous example but with function:</p>",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "1\n3\n6\n",
+                    "content": "function sum3(a, b, c) {\n    return a + b + c;\n}\n\nvar a = parseInt(input());\nvar b = parseInt(input());\nvar c = parseInt(input());\nprint(sum3(a, b, c));\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>You can solve any problem from the huge set on our site using JavaScript. For example, you can start from\n<a href=\"/lessons/print_input_numbers/problems/apple_sharing/\">\"Apple sharing\"</a> or <a href=\"/lessons/if_then_else_conditions/problems/signum/\">\"Sign function\"</a>.</p>",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}

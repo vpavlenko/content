@@ -1,0 +1,81 @@
+{
+    "title": "140_sets.html",
+    "sections": [
+        {
+            "title": "What is a set",
+            "blocks": [
+                {
+                    "content": "<p><em>Set</em> in Python is a data structure \nequivalent to sets in mathematics. It may consist\nof various elements; the order of elements in a set is undefined.\nYou can add and delete elements of a set, you can iterate\nthe elements of the set, you can perform standard operations on sets\n(union, intersection, difference). Besides that, you can check if an element belongs to a set.</p>\n\n<p>Unlike arrays, where the elements are stored as ordered\nlist, the order of elements in a set is undefined (moreover,\nthe set elements are usually not stored in order of appearance in the set; this allows checking if an element belongs to a set faster than just going through all the elements of the set).\n\n<p>Any immutable data type can be an element of a set:\na number, a string, a tuple. Mutable (changeable) data types cannot be\nelements of the set. In particular, list cannot be an element of a set (but tuple can), and another set cannot be an element of a set. The requirement of immutability follows from the way how do computers represent sets in memory.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "How to define a set",
+            "blocks": [
+                {
+                    "content": "<p>You can define a set as simple as by naming all of its elements in brackets. \nThe only exception is <em>empty set</em>, which can be created using\nthe function <code>set()</code>. If <code>set(..)</code> has a\nlist, a string or a tuple as a parameter, it will return a set composed of its elements. For example,",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "A = {1, 2, 3}\nA = set('qwerty')\nprint(A)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>will print <code>{'e', 'q', 'r', 't', 'w', 'y'}</code> as the output.\n\n<p>The order of elements is\nunimportant. For example, the program",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "A = {1, 2, 3}\nB = {3, 2, 3, 1}\nprint(A == B)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>will print <code>True</code>, because <code>A</code> and <code>B</code> are equal\nsets.\n\n<p>Each element may enter the set only once. <code>set('Hello')</code>\nreturns the set of four elements: <code>{'H', 'e', 'l', 'o'}</code>.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Operations with elements",
+            "blocks": [
+                {
+                    "content": "<p>You can get the number of elements in the set using the function <code>len</code>.\n\n<p>You can also iterate over all the elements of the set (in an undefined order!) using the loop <code>for</code>:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "primes = {2, 3, 5, 7, 11}\nfor num in primes:\n    print(num)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>You can check whether an element belongs to a set using the keyword \n<code>in</code>: expressions like <code>a in A</code> return a value of type <code>bool</code>.\nSimilarly there's the opposite operation <code>not in</code>. \nTo add an element to the set there is the method <code>add</code>:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "A = {1, 2, 3}\nprint(1 in A, 4 not in A)\nA.add(4)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>There are two methods to remove an element from a set:\n<code>discard</code> and <code>remove</code>. Their behavior varies\nonly in case if the deleted item was not in the set.\nIn this case the method <code>discard</code> does nothing and the method\n<code>remove</code> throws exception <code>KeyError</code>.\n\n<p>Finally, <code>pop</code> removes one random element from the set and returns its value. If the set is empty, <code>pop</code> generates\nthe exception <code>KeyError</code>.\n\n<p>You can transform a set to list using the function <code>list</code>.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Operations on sets",
+            "blocks": [
+                {
+                    "content": "<p>This is how you perform the well-known <a href=\"https://en.wikipedia.org/wiki/Set_(mathematics)#Basic_operations\">operations on sets</a> in Python:\n\n<table border=\"1\" cellpadding=\"5\">\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA | B\n</br>\nA.union(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\">\nReturns a set which is the union of sets <code>A</code> and <code>B</code>.\n</div>\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA |= B\n</br>\nA.update(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nAdds all elements of array <code>B</code> to the set <code>A</code>.\n</div>\n</td>\n</tr>\n\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA &amp; B\n</br>\nA.intersection(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\">\nReturns a set which is the intersection of sets <code>A</code> and <code>B</code>.\n</div>\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA &= B\n</br>\nA.intersection_update(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\">\nLeaves in the set <code>A</code> only items that belong to the set <code>B</code>.\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA - B\n</br>\nA.difference(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nReturns the set difference of <code>A</code> and <code>B</code> (the elements included in <code>A</code>,\nbut not included in <code>B</code>).\n</div>\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA -= B\n</br>\nA.difference_update(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nRemoves all elements of <code>B</code> from the set <code>A</code>.\n</div>\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA ^ B\n</br>\nA.symmetric_difference(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nReturns the symmetric difference of sets <code>A</code> and <code>B</code> (the elements belonging to either <code>A</code>\nor <code>B</code>, but not to both sets simultaneously).\n</div>\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA ^= B\n</br>\nA.symmetric_difference_update(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nWrites in <code>A</code> the symmetric difference of sets <code>A</code> and <code>B</code>.\n</div>\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA &lt;= B\n</br>\nA.issubset(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nReturns <code>true</code> if <code>A</code> is a subset of <code>B</code>.\n</div>\n</td>\n</tr>\n\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA &gt;= B\n</br>\nA.issuperset(B)\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\">\nReturns <code>true</code> if <code>B</code> is a subset of <code>A</code>.\n</div>\n</td>\n</tr>\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA &lt; B\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nEquivalent to <code>A &lt;= B and A != B</code>\n</div>\n</td>\n</tr>\n\n\n<tr>\n<td>\n<div style=\"margin:5px; font-weight: bold;\">\nA &gt; B\n</div>\n</td>\n<td>\n<div style=\"margin:5px;\"> \nEquivalent to <code>A &gt;= B and A != B</code>\n</div>\n</td>\n</tr>\n\n</table>",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}

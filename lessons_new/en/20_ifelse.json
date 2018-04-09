@@ -1,0 +1,126 @@
+{
+    "title": "20_ifelse.html",
+    "sections": [
+        {
+            "title": "Syntax",
+            "blocks": [
+                {
+                    "content": "<p>All the programs in the first lesson were executed sequentially, line by line.\nNo line could be skipped.\n\n<p>Let's consider the following problems: for the given integer X determine\nits absolute value. If X&gt;0 then the program should print the value X,\notherwise it should print -X. This behavior can't be reached using the sequential\nprogram. The program should conditionally select the next step. That's where the conditions help:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "-273\n",
+                    "content": "x = int(input())\nif x > 0:\n    print(x)\nelse:\n    print(-x)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>This program uses a conditional statement <code>if</code>. After the <code>if</code>\nwe put a condition <code>(x&nbsp;&gt;&nbsp;0)</code> following by a colon.\nAfter that we put a block of instructions which will be executed only if the condition\nis true (i.e. evaluates to <code>True</code>). This block may be followed by the word\n<code>else</code>, colon and another block of instructions which will be executed only if the condition is false\n(i.e. evaluates to <code>False</code>). Is the case above, the condition if false, so the else-block\nis executed. Each block should be indented using spaces.\n\n<p>To sum up, the conditional statement in Python has the following syntax:\n<pre>\nif <var>condition</var>:\n    <span style=\"color: green;\">true-block</span>\n    <span style=\"color: green;\">several instructions that are executed</span>\n    <span style=\"color: green;\">if the condition evaluates to True</span>\nelse:\n    <span style=\"color: red;\">false-block</span>\n    <span style=\"color: red;\">several instructions that are executed</span>\n    <span style=\"color: red;\">if the condition evaluates to False</span>\n</pre>\n\n<p>The <code>else</code> keyword with the false-block may be omitted in case nothing should be\ndone if the condition is false. For example, we can replace the variable <code>x</code>\nwith its absolute value like this:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "-273\n",
+                    "content": "x = int(input())\nif x < 0:\n    x = -x\nprint(x)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>In this example the variable <code>x</code> is assigned to <code>-x</code> only if <code>x &lt; 0</code>.\nIn contrast, the instruction <code>print(x)</code> is executed every time, because it's not indented,\nso it doesn't belong to the true-block.\n\n<p>Indentation is a general way in Python to separate blocks of code. All instructions within the same\nblock should be indented in the same way, i.e. they should have the same number of spaces\nat the beginning of the line. It's recommended to use 4 spaces for indentation.\n\n<p>The indentation is what makes Python different from the most of other language, in which\nthe curly braces <code>{</code> and <code>}</code> are used to form the blocks.\n\n<p>By the way, there's a builtin-function for absolute value in Python:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "-273\n",
+                    "content": "x = int(input())\nprint(abs(x))\n",
+                    "type": "code"
+                }
+            ]
+        },
+        {
+            "title": "Nested conditions",
+            "blocks": [
+                {
+                    "content": "<p>Any Python instruction may be put into true-blocks and false-block, including another conditional\nstatement. This way we get nested conditions. The blocks of inner conditions are indented\nusing twice more spaces (eg. 8 spaces). Let's see an example. Given the coordinates of the point\non the plane, print its quadrant.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "2\n-3\n",
+                    "content": "x = int(input())\ny = int(input())\nif x > 0:\n    if y > 0:\n        # x > 0, y > 0\n        print(\"Quadrant I\")\n    else:    \n        # x > 0, y <= 0\n        print(\"Quadrant IV\")\nelse:\n    if y > 0:\n        # x <= 0, y > 0\n        print(\"Quadrant II\")\n    else:    \n        # x <= 0, y <= 0\n        print(\"Quadrant III\")\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>In this example we use the comments: the explanatory text that has no effect on program execution.\nThis text starts with the hash <code>#</code> and lasts till the end of the line.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Comparison operators",
+            "blocks": [
+                {
+                    "content": "<p>Usually the condition after <code>if</code> has one or more of the following operators:\n\n <dl>\n<dt><code>&lt;</code><dd>less&nbsp;<!-- /@w -->&mdash; the condition is true if left side is less than right side. \n\n<br><dt><code>&gt;</code><dd>greater&nbsp;<!-- /@w -->&mdash; the condition is true if left side is greater than right side. \n<br><dt><code>&lt;=</code><dd>less or equal.\n<br><dt><code>&gt;=</code><dd>greater or equal.\n<br><dt><code>==</code><dd>equal.\n<br><dt><code>!=</code><dd>not equal.\n</dl>\n\n<p>For example, the condition <code>x&nbsp;*&nbsp;x&nbsp;&lt;&nbsp;1000</code>\nmeans &ldquo;the value of the expression <code>x&nbsp;*&nbsp;x</code> is less than 1000&rdquo;,\nand the condition <code>2&nbsp;*&nbsp;x&nbsp;!=&nbsp;y</code> means &ldquo;the doubled value\nof the variable <code>x</code> is not equal to the value of the variable <code>y</code>&rdquo;.\n\n<p>The comparison operators in Python may be chained like this: <nobr><code>a == b == c</code></nobr> or <nobr><code>x &lt;= y &gt;= 10</code></nobr>. It's a rare thing among programming languages.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "Bool objects and logical operators",
+            "blocks": [
+                {
+                    "content": "<p>When we sum two integer objects using the <code>+</code> operator, like <code>2 + 5</code>, we get a new object:\n<code>7</code>. In the same way, when we compare two integers using the <code>&lt;</code> operator, like\n<code>2 &lt; 5</code>, we get a new object: <code>True</code>.",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print(2 < 5)\nprint(2 > 5)\n",
+                    "type": "code"
+                },
+                {
+                    "content": "The <code>True</code> and <code>False</code> objects have a special type called <code>bool</code>.\nAs every type name can be used to cast objects into that type, let's see what this cast gives\nfor numbers:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": null,
+                    "content": "print(bool(-10))    # True\nprint(bool(0))      # False - zero is the only false number\nprint(bool(10))     # True\n\nprint(bool(''))     # False - empty string is the only false string\nprint(bool('abc'))  # True\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Sometimes you need to check several conditions at once.\nFor example, you can check if a number <code>n</code> is even using the condition\n<code>n&nbsp;%&nbsp;2&nbsp;==&nbsp;0</code>\n(<code>n</code> gives a remainder <code>0</code> when dividing by <code>2</code>).\nIf you need to check that two numbers <code>n</code> and <code>m</code> are both even, \nyou should check both <code>n&nbsp;%&nbsp;2&nbsp;==&nbsp;0</code>\nand <code>m&nbsp;%&nbsp;2&nbsp;==&nbsp;0</code>.\nTo do that, you join them using an operator <code>and</code>\n(logical AND): <code>n&nbsp;%&nbsp;2&nbsp;==&nbsp;0&nbsp;and&nbsp;m&nbsp;%&nbsp;2&nbsp;==&nbsp;0</code>.\n\n\n<p>\nPython has logical AND, logical OR and negation.\n\n<p>Operator <code>and</code> is a binary operator which evaluates to <code>True</code>\nif and only if both its left-hand side and right-hand side are <code>True</code>.\n\n<p>Operator <code>or</code> is a binary operator which evaluates to <code>True</code>\nif at least one of its sides is <code>True</code>.\n\n<p>Operator <code>not</code> is a unary negation, it's followed by some value.\nIt's evaluated to <code>True</code> if that value is <code>False</code> and vice versa.\n\n<p>Let's check that at least one of the two numbers ends with 0:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "15\n40\n",
+                    "content": "a = int(input())\nb = int(input())\nif a % 10 == 0 or b % 10 == 0:\n    print('YES')\nelse:\n    print('NO')\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>Let's check that the number <code>a</code> is positive and \nthe number <code>b</code> is non-negative:\n\n<pre>if a &gt; 0 and not (b &lt; 0):\n</pre>\n\n<p>Instead of <code> not (b&nbsp;&lt;&nbsp;0)</code> we can write <code>(b&nbsp;&gt;=&nbsp;0)</code>.",
+                    "type": "html"
+                }
+            ]
+        },
+        {
+            "title": "if-elif-else",
+            "blocks": [
+                {
+                    "content": "<p>If you have more than two options to tell apart using the conditional operator, you can use \n<code>if... elif... else</code> statement.\n\n<p>Let's show how it works by rewriting the example with point (x,y) on the plane and quadrants from above:",
+                    "type": "html"
+                },
+                {
+                    "language": "python3",
+                    "input": "-5\n7\n",
+                    "content": "x = int(input())\ny = int(input())\nif x > 0 and y > 0:\n    print(\"Quadrant I\")\nelif x > 0 and y < 0:\n    print(\"Quadrant IV\")\nelif y > 0:\n    print(\"Quadrant II\")\nelse:\n    print(\"Quadrant III\")\n",
+                    "type": "code"
+                },
+                {
+                    "content": "<p>In this case the conditions in <code>if</code> and <code>elif</code>s are checked one after another until\nthe first true condition is found. Then only the true-block for that condition is being executed. If all the \nconditions are false, the else-block is being executed, if it's present.",
+                    "type": "html"
+                }
+            ]
+        }
+    ]
+}
