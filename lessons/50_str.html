@@ -24,8 +24,7 @@ print(len(s))  # 31
 
 
 
-{% section "Slices" %}
-{% section "Single character" %}
+{% section "Slices: single character" %}
 <p>A slice gives from the given string one character or some fragment:
 substring or subsequence.
 
@@ -79,12 +78,12 @@ or less than <code>-len(S)</code>, the following error is caused <code>IndexErro
 
 {% endsection %}
 
-{% section "Substring" %}
+{% section "Slices: substring" %}
 
 <p>Slice with two parameters <code>S[a:b]</code> 
 returns the substring of length <code>b - a</code>,
 starting with the character at index <code>a</code> and
-lasting until the character at index </code>b</code>, not including the last one.
+lasting until the character at index <code>b</code>, not including the last one.
 For example, <code>S[1:4] == 'ell'</code>, and you can get the same substring using <code>S[-4:-1]</code>.
 You can mix positive and negative indexes in the same slice, for example, <code>S[1:-1]</code> is
 a substring without the first and the last character of the string (the slice begins with the character with index 1 and 
@@ -107,7 +106,7 @@ That is, to remove the last character from the string, you can use slice
 
 {% endsection %}
 
-{% section "Immutability of strings" %}
+{% section "Slices: immutability of strings" %}
 
 <p>
 Any slice of a string creates a new string and never modifies the original one.
@@ -129,7 +128,7 @@ print(t)  # prints 'll'
  
 {% endsection %}
 
-{% section "Subsequence" %}
+{% section "Slices: subsequence" %}
 
 <p>If you specify a slice with three parameters <code>S[a:b:d]</code>,
 the third parameter specifies the step, same as for function
@@ -169,11 +168,9 @@ for i in range(0, 10, 2):
 
 {% endsection %}
 
-{% endsection %}
 
 
-
-{% section "String methods" %}
+{% section "String methods: find() and rfind()" %}
 
 <p>A method is a function that is bound to the object. When the method is called,
 the method is applied to the object and does some computations related to it.
@@ -181,7 +178,6 @@ Methods are invoked as <code>object_name.method_name(arguments)</code>.
 For example, in <code>s.find(&quot;e&quot;)</code>&nbsp; the string method <code>find()</code> is applied to
 the string <code>s</code> with one argument <code>&quot;e&quot;</code>.
 
-{% section "find() and rfind() methods" %}
 <p>Method <code>find()</code> searches a substring, passed as an argument,
 inside the string on which it's called.
 The function returns the index of the first occurrence of the substring.
@@ -228,7 +224,7 @@ print(s.find('bond', 12))
 
 
 
-{% section "replace() method" %}
+{% section "String methods: replace()" %}
 <p>Method <code>replace()</code> replaces all occurrences of a given substring with another one. Syntax:
 <code>s.replace(old, new)</code>&nbsp; takes the string <code>S</code> and replaces
 all occurrences of substring <code>old</code> with the substring <code>new</code>. Example:
@@ -247,7 +243,7 @@ print('a bar is a bar, essentially'.replace('bar', 'pub', 1))
 {% endprogram %}
 {% endsection %}
 
-{% section "count() method" %}
+{% section "String methods: count()" %}
 <p>This method counts the number of occurrences of one string within another string. The simplest
 form is this one: <code>s.count(substring)</code>. Only non-overlapping occurrences are taken into account:
 
@@ -261,8 +257,6 @@ print(('aaaaaaaaaa').count('aa'))
 
 <p>If you specify three parameters <code><nobr>s.count(substring, left, right)</nobr></code>,
 the count is performed within the slice <code>s[left:right]</code>.
-{% endsection %}
-
 {% endsection %}
 
 <!-- ord, chr -->

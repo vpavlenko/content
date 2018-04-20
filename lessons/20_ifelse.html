@@ -26,7 +26,7 @@ is true (i.e. evaluates to <code>True</code>). This block may be followed by the
 is executed. Each block should be indented using spaces.
 
 <p>To sum up, the conditional statement in Python has the following syntax:
-<pre>
+<pre class="notranslate">
 if <var>condition</var>:
     <span style="color: green;">true-block</span>
     <span style="color: green;">several instructions that are executed</span>
@@ -130,7 +130,7 @@ of the variable <code>x</code> is not equal to the value of the variable <code>y
 
 
 
-{% section "Bool objects" %}
+{% section "Bool objects and logical operators" %}
 
 <p>When we sum two integer objects using the <code>+</code> operator, like <code>2 + 5</code>, we get a new object:
 <code>7</code>. In the same way, when we compare two integers using the <code>&lt;</code> operator, like
@@ -151,13 +151,6 @@ print(bool(10))     # True
 print(bool(''))     # False - empty string is the only false string
 print(bool('abc'))  # True
 {% endprogram %}
-
-
-
-
-
-
-{% section "Logical operators" %}
 
 <p>Sometimes you need to check several conditions at once.
 For example, you can check if a number <code>n</code> is even using the condition
@@ -200,11 +193,10 @@ else:
 <p>Let's check that the number <code>a</code> is positive and 
 the number <code>b</code> is non-negative:
 
-<pre>if a &gt; 0 and not (b &lt; 0):
+<pre class="notranslate">if a &gt; 0 and not (b &lt; 0):
 </pre>
 
 <p>Instead of <code> not (b&nbsp;&lt;&nbsp;0)</code> we can write <code>(b&nbsp;&gt;=&nbsp;0)</code>.
-{% endsection %}
 {% endsection %}
 
 

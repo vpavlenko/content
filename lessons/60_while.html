@@ -7,10 +7,10 @@ to determine the exact number of loop iterations in advance.
 
 <p>The syntax of the <code>while</code> loop in the simplest case looks like this:
 
-{% noprogram %}
+<pre class="notranslate">
 while some condition:
     a block of statements
-{% endnoprogram %}
+</pre>
 
 <p>Python firstly checks the condition.
 If it is False, then the loop is terminated and control
@@ -64,9 +64,7 @@ using integer division by 10 (<code>n //= 10</code>). In the variable
 
 
 
-{% section "Loop control flow" %}
-
-{% section "else" %}
+{% section "Loop control flow: else" %}
 
 <p>One can write an <code>else:</code> statement after a loop body which is executed
 <i>once</i> after the end of the loop:
@@ -180,7 +178,7 @@ else:
 {% endsection %}
 
 
-{% section "continue" %}
+{% section "Loop control flow: continue" %}
 
 <p>Another instruction used to control the loop execution is
 <code>continue</code>. If Python interpreter meets <code>continue</code> somewhere in the middle of the loop iteration,
@@ -238,8 +236,6 @@ print('Length is', length)
 567
 {% endinputdata %}
 {% endprogram %}
-
-{% endsection %}
 
 {% endsection %}
 

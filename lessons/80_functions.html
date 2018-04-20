@@ -226,15 +226,15 @@ print(f)
 
 <p>It is useful to say that functions can return more than one value. Here's the example of returning a <i>list</i> of two or more values:
 
-{% noprogram %}
+<pre class="notranslate">
 return [a, b]
-{% endnoprogram %}
+</pre>
  
 <p>You can call the function of such list and use it in multiple assignment:
 
-{% noprogram %}
+<pre class="notranslate">
 n, m = f(a, b)
-{% endnoprogram %}
+</pre>
 
 {% endsection %}
 
@@ -263,10 +263,10 @@ print(factorial(5))
 <p>The situation when function calls itself is called <em>recursion</em>, and such function is called recursive.
 
 <p>Recursive functions are powerful mechanism in programming. Unfortunately, they are not always effective and often lead to mistakes. The most common error is <em>infinite recursion</em>, when the chain of function calls never ends (well, actually, it ends when you run out of free memory in your computer). An example of infinite recursion:
-{% noprogram %}
+<pre class="notranslate">
 def f():
     return f()
-{% endnoprogram %}
+</pre>
 
 The two most common reasons causing infinite recursion:
 

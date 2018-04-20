@@ -50,10 +50,10 @@ for row in a:
 <p>Naturally, to output a single line you can use
 method <code>join()</code>:
 
-{% noprogram %}
+<pre class="notranslate">
 for row in a:
     print(' '.join([str(elem) for elem in row]))
-{% endnoprogram %}
+</pre>
 
 <p>This is how you can use 2 nested loops to calculate the sum of all
 the numbers in the 2-dimensional list:
@@ -86,9 +86,9 @@ print(s)
 
 <p>The obvious solution appears to be wrong:
 
-{% noprogram %}
+<pre class="notranslate">
 a = [[0] * m] * n
-{% endnoprogram %}
+</pre>
 
 <p>This can be easily seen if you set the value of <code>a[0][0]</code>
 to <code>5</code>, and then print the value of <code>a[1][0]</code>&nbsp;&mdash; it will also be equal to 5. The reason is,
@@ -207,12 +207,12 @@ a = [[int(j) for j in input().split()] for i in range(n)]
 That is, you need to produce such an array
 (example for <code>n==4</code>):
 
-{% noprogram %} 
+<pre class="notranslate"> 
 1 0 0 0
 2 1 0 0
 2 2 1 0
 2 2 2 1
-{% endnoprogram %}
+</pre>
 
 (In this case you can do it manually by setting <code>a[0][0] = 1</code>, <code>a[0][1] = 0</code> and so on, but you won't do it manually for arrays of 100 rows and 100 columns, which are often the case.)
 
@@ -240,27 +240,27 @@ If we complicate the algorithm, we will be able to do it without a conditional s
 
 <p>First, fill the main diagonal, for which we will need one loop:
 
-{% noprogram %}
+<pre class="notranslate">
 for i in range(n):
     a[i][i] = 1
-{% endnoprogram %}
+</pre>
 <p>Then fill with zeros all the elements above the main diagonal. To make this, for each row
 with the number <code>i</code> you need to assign a value to <code>a[i][j]</code> for <code>j</code>=<code>i+1</code>, ..., <code>n-1</code>. To do that, you need nested loops:
 
 
-{% noprogram %}
+<pre class="notranslate">
 for i in range(n):
     for j in range(i + 1, n):
         a[i][j] = 0
-{% endnoprogram %}
+</pre>
 <p>By analogy, for <code>j</code>=<code>0</code>, ..., <code>i-1</code> set the elements <code>a[i][j]</code> equal to <code>2</code>: 
 
 
-{% noprogram %}
+<pre class="notranslate">
 for i in range(n):
     for j in range(0, i):
         a[i][j] = 2
-{% endnoprogram %}
+</pre>
 
 <p>You can combine all this code and receive another solution:
 {% program %}
@@ -307,29 +307,29 @@ the generator of the list which is a string, inside the generator of all the str
 creates a list of <code>n</code> elements, where each element is a list of
 <code>m</code> zeros):
 
-{% noprogram %}
+<pre class="notranslate">
 [[0] * m for i in range(n)]
-{% endnoprogram %}
+</pre>
 
 <p>But the internal list can also be created using, for example, such generator:
 <code>[0 for j in range(m)]</code>. Nesting one generator into another, we obtain
 
-{% noprogram %}
+<pre class="notranslate">
 [[0 for j in range(m)] for i in range(n)]
-{% endnoprogram %}
+</pre>
 
 <p>How is it related to our problem? The thing is, if the number 0 is replaced by some expression that depends on <code>i</code> (the line number) and <code>j</code> (the column number), you get the matrix filled
 according to some formula.
 
 <p>For example, suppose you need to initialize the following array (for convenience, extra spaces are added between items):
 
-{% noprogram %}
+<pre class="notranslate">
 0  0  0  0  0  0
 0  1  2  3  4  5
 0  2  4  6  8 10
 0  3  6  9 12 15
 0  4  8 12 16 20
-{% endnoprogram %}
+</pre>
 
 <p>In this array there are <code>n = 5</code> rows, <code>m = 6</code> columns, and the element
 with row index <code>i</code> and column index <code>j</code> is calculated by the formula
@@ -337,7 +337,7 @@ with row index <code>i</code> and column index <code>j</code> is calculated by t
 <code>a[i][j] = i * j</code>.
 
 <p>As always, you could use generator to create such an array:
-{% noprogram %}
+<pre class="notranslate">
 [[i * j for j in range(m)] for i in range(n)]
-{% endnoprogram %}
+</pre>
 {% endsection %}
